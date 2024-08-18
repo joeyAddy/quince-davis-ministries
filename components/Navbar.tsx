@@ -57,7 +57,7 @@ const Navbar = ({
       <div
         className={cn(
           "px-6 md:px-12 lg:px-48 flex items-center justify-between py-2",
-          !isHome && "bg-white"
+          !isHome && "bg-white shadow-lg"
         )}
       >
         <div className="flex flex-row-reverse items-center">

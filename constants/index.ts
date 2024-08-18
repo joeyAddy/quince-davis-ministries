@@ -60,3 +60,44 @@ export const events = [
     date: "30 September, 2024",
   },
 ];
+
+export const services = [
+  {
+    image: "/assets/images/all our heart.jpg",
+    title: "Coaching and Training Sessions",
+    text: "Benefit from Quincy's wealth of experience in voice, having worked alongside Cheryl Porter. Davies also holds a music degree and offers extensive expertise. Your talent is well-cared for in our hands.",
+  },
+  {
+    image: "/assets/images/all our heart.jpg",
+    title: "Exclusive Collaboration and Outsourcing Opportunities",
+    text: "Enhance your music with our established music training programs, complemented by our studio's expert recording and production services.",
+  },
+  {
+    image: "/assets/images/all our heart.jpg",
+    title: "Sound System and Instruments",
+    text: "We have instruments for crusades, large-scale and small-scale events. Reinforce your events as we support you with musicians/band/sound & musical instruments.",
+  },
+  {
+    image: "/assets/images/all our heart.jpg",
+    title: "Quincy's Coner",
+    text: "Seek professional guidance and support through Quincy’s Coner, our counseling services. Quincy Bell is a certified psychotherapist and is available for sessions if you are dealing with grief or mental health concerns.",
+  },
+];
+
+export const ministers = [
+  {
+    image: "/assets/images/man.jpeg",
+    title: "Pastor John Doe",
+    text: "Senior Pastor",
+  },
+  {
+    image: "/assets/images/woman.jpeg",
+    title: "Reverend Sarah Smith",
+    text: "Worship Leader",
+  },
+  {
+    image: "/assets/images/all our heart.jpg",
+    title: "Bishop Michael Brown",
+    text: "Youth Ministry Coordinator",
+  },
+];
