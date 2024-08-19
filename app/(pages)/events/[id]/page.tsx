@@ -1,14 +1,37 @@
+"use client";
+
 import PageHeader from "@/components/PageHeader";
 import { events } from "@/constants";
 import React, { useState } from "react";
 import Image from "next/image";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import { useParams } from "next/navigation";
 
-const EventDetails = ({ params }: { params: { id: string } }) => {
-  const { id } = params;
+const EventDetails = () => {
+  const { id } = useParams();
 
   const event = events.find((event) => event.id === parseInt(id as string));
+
+  // State for form inputs
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+  });
+
+  // Handle input changes
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  // Handle form submission
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+  };
 
   return (
     <div>
@@ -105,15 +128,42 @@ const EventDetails = ({ params }: { params: { id: string } }) => {
                 Event Registration
               </div>
               <div className="rounded-bl-lg rounded-br-lg border-t-0 border-dotted border-4 p-10 space-y-8">
-                <Input type="name" placeholder="Name" className="h-12" />
-                <Input type="email" placeholder="Email" className="h-12" />
-                <Input type="phone" placeholder="Phone" className="h-12" />
-                <Button
-                  className="bg-green-500 hover:bg-green-500/80 capitalize font-bold"
-                  size="lg"
+                <form
+                  onSubmit={handleSubmit}
+                  className="rounded-bl-lg rounded-br-lg border-t-0 border-dotted border-4 p-10 space-y-8"
                 >
-                  Learn more about{" "}
-                </Button>
+                  <Input
+                    type="text"
+                    name="name"
+                    placeholder="Name"
+                    className="h-12"
+                    value={formData.name}
+                    onChange={handleChange}
+                  />
+                  <Input
+                    type="email"
+                    name="email"
+                    placeholder="Email"
+                    className="h-12"
+                    value={formData.email}
+                    onChange={handleChange}
+                  />
+                  <Input
+                    type="tel"
+                    name="phone"
+                    placeholder="Phone"
+                    className="h-12"
+                    value={formData.phone}
+                    onChange={handleChange}
+                  />
+                  <Button
+                    type="submit"
+                    className="bg-green-500 hover:bg-green-500/80 capitalize font-bold"
+                    size="lg"
+                  >
+                    Register
+                  </Button>
+                </form>
               </div>
             </div>
           </div>
@@ -124,10 +174,3 @@ const EventDetails = ({ params }: { params: { id: string } }) => {
 };
 
 export default EventDetails;
-
-// Generate static parameters for all events
-export async function generateStaticParams() {
-  return events.map((event) => ({
-    id: event.id.toString(),
-  }));
-}
