@@ -8,9 +8,10 @@ interface EventCardProps {
   title: string;
   text: string;
   date: string;
+  id: number;
 }
 
-const EventCard = ({ image, title, text, date }: EventCardProps) => {
+const EventCard = ({ image, title, text, date, id }: EventCardProps) => {
   return (
     <div className="rounded-lg shadow-lg flex flex-col gap-y-4 pb-6 min-h-[500px]">
       <div className="relative h-1/2">
@@ -28,13 +29,13 @@ const EventCard = ({ image, title, text, date }: EventCardProps) => {
         </Badge>
         <Link
           className="hover:text-green-500 font-bold text-xl px-6 border-l-4 border-dotted border-green-500"
-          href={`/events/${title}`}
+          href={`/events/${id}`}
         >
           {title}
         </Link>
         <p className="w-full line-clamp-3 px-6">{text}</p>
         <Link
-          href={`/events/${title}`}
+          href={`/events/${id}`}
           className="text-green-500 font-semibold underline underline-offset-4 w-fit pl-6 mt-auto"
         >
           Event details

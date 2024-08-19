@@ -42,22 +42,39 @@ export const testimonials = [
 
 export const events = [
   {
+    id: 1,
     image: "/assets/images/all our heart.jpg",
     title: "UNIVERSITY OF MARRIAGE",
     text: "The University of Marriage is a non-profit marriage school part of Quincy Davies Ministries. It offers programs such as The Third Option to strengthen marriages and families, focusing on practical skills and inner growth. The volunteers follow a ministry philosophy based on Ephesians 4:12, being spiritually gifted, humble, and dedicated to personal development.",
     date: "3 March, 2025",
   },
   {
+    id: 2,
     image: "/assets/images/all our heart.jpg",
     title: "LOVE LETTERS",
     text: "Love letters is a part of the University of Marriage, providing prompt solutions for marital challenges. This program runs from August to December.",
-    date: "3 December, 2024",
+    date: "August - December",
   },
   {
+    id: 3,
     image: "/assets/images/all our heart.jpg",
     title: "THE ASSIDUOUS WOMAN INTERNATIONAL CONFERENCE",
     text: "The Assiduous Woman (TAW) Int is a divine vision that highlights women's role as helpers and contributors in society as intended by God. We aim to empower women and make history together.",
-    date: "30 September, 2024",
+    date: "February - June",
+  },
+  {
+    id: 4,
+    image: "/assets/images/all our heart.jpg",
+    title: "STREET WORSHIP, EVANGELISM, AND WORSHIP NIGHT",
+    text: "Jesus didn't confine his presence to the synagogue; his kindness extended everywhere. Street worship serves as a platform where we can honor him openly and spread his message far and wide.",
+    date: "Every Thursday, 8pm - 10pm",
+  },
+  {
+    id: 5,
+    image: "/assets/images/all our heart.jpg",
+    title: "THE WORSHIPPER'S BLUEPRINT",
+    text: "Jesus didn't confine his presence to the synagogue; his kindness extended everywhere. Street worship serves as a platform where we can honor him openly and spread his message far and wideThis annual mentorship and workshop for worshippers and musicians aims to enhance not only their skills but also their ethics, character, and composure. The just concluded one was a massive success. Click here to see pictures from the meeting: (Take them to the Gallery section where these pictures are.)",
+    date: "Every Thursday, 8pm - 10pm",
   },
 ];
 

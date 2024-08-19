@@ -19,7 +19,7 @@ const Layout = ({ children }: LayoutProps) => {
         setOpenMobileNavbar={setOpenMobileNavbar}
         openMobileNavbar={openMobileNavbar}
       />
-      <main className="min-h-[60vh] container py-20">{children}</main>
+      <main className="min-h-[60vh]">{children}</main>
       <Footer />
     </div>
   );

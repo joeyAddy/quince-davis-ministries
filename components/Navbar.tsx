@@ -57,16 +57,23 @@ const Navbar = ({
       <div
         className={cn(
           "px-6 md:px-12 lg:px-48 flex items-center justify-between py-2",
-          !isHome && "bg-white shadow-lg"
+          !isHome && "bg-white"
         )}
       >
         <div className="flex flex-row-reverse items-center">
           <Image
-            src="/assets/images/QDM MINISTRY LOGO GOLD.png"
+            src={
+              isHome
+                ? "/assets/images/QDM MINISTRY LOGO GOLD.png"
+                : "/assets/images/QDM MINISTRY LOGO BLACK.png"
+            }
             alt="logo"
             width={100}
             height={100}
-            className="object-scale-down max-lg:size-16"
+            className={cn(
+              "object-scale-down max-lg:size-16",
+              !isHome && "size-16"
+            )}
           />
           <Button
             size="icon"

@@ -15,13 +15,14 @@ const Events = () => {
         subTitle="Special programmes and upcomming events"
       />
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 max-lg:w-full mx-auto mt-8">
-        {events.map((event) => (
+        {events.slice(0, 3).map((event) => (
           <EventCard
             key={event.title}
             title={event.title}
             text={event.text}
             image={event.image}
             date={event.date}
+            id={event.id}
           />
         ))}
       </div>
