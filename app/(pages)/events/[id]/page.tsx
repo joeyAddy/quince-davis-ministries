@@ -7,9 +7,15 @@ import Image from "next/image";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { useParams } from "next/navigation";
+import axios from "axios";
+import { FaSpinner } from "react-icons/fa";
 
 const EventDetails = () => {
   const { id } = useParams();
+
+  const [isLoading, setIsLoading] = useState(false);
+
+  const [message, setMessage] = useState("");
 
   const event = events.find((event) => event.id === parseInt(id as string));
 
@@ -17,7 +23,6 @@ const EventDetails = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    phone: "",
   });
 
   // Handle input changes
@@ -31,6 +36,30 @@ const EventDetails = () => {
   // Handle form submission
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    setIsLoading(true);
+
+    const data = {
+      sender: {
+        name: formData.name,
+        address: formData.email,
+      },
+      message: `I need more information about ${event?.title}`,
+      subject: `Quincy Davis Ministries - ${event?.title}`,
+    };
+
+    try {
+      const response = await axios.post("/api/email", { ...data });
+      console.log("EMAIL SENDING RESPONSE", response);
+      setMessage("Email sent successfully! We will get back to you soon.");
+    } catch (error) {
+      console.log("====================================");
+      console.log(error);
+      console.log("====================================");
+      setMessage("Something went wrong. Please try again");
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -149,21 +178,16 @@ const EventDetails = () => {
                   value={formData.email}
                   onChange={handleChange}
                 />
-                <Input
-                  type="tel"
-                  name="phone"
-                  required
-                  placeholder="Phone"
-                  className="h-12"
-                  value={formData.phone}
-                  onChange={handleChange}
-                />
                 <Button
                   type="submit"
                   className="bg-green-500 hover:bg-green-500/80 capitalize font-bold"
                   size="lg"
                 >
-                  Register
+                  {isLoading ? (
+                    <FaSpinner className="text-center animate-spin" />
+                  ) : (
+                    "Learn more"
+                  )}
                 </Button>
               </form>
             </div>

@@ -18,6 +18,7 @@ const ContactUs = () => {
     name: "",
     email: "",
     message: "",
+    subject: "",
   });
 
   // Handle input changes
@@ -38,8 +39,9 @@ const ContactUs = () => {
       sender: {
         name: formData.name,
         address: formData.email,
-        message: formData.message,
       },
+      message: formData.message,
+      subject: formData.subject,
     };
 
     try {
@@ -106,6 +108,15 @@ const ContactUs = () => {
             required
             className="h-12"
             value={formData.email}
+            onChange={handleChange}
+          />
+          <Input
+            type="subject"
+            name="subject"
+            placeholder="Subject"
+            required
+            className="h-12"
+            value={formData.subject}
             onChange={handleChange}
           />
           <Textarea
