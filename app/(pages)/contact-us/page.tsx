@@ -4,15 +4,19 @@ import PageHeader from "@/components/PageHeader";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import axios from "axios";
 import React, { useState } from "react";
+import { FaSpinner } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
 
 const ContactUs = () => {
+  const [isLoading, setIsLoading] = useState(false);
+
+  const [message, setMessage] = useState("");
   // State for form inputs
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    phone: "",
     message: "",
   });
 
@@ -27,6 +31,29 @@ const ContactUs = () => {
   // Handle form submission
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    setIsLoading(true);
+
+    const data = {
+      sender: {
+        name: formData.name,
+        address: formData.email,
+        message: formData.message,
+      },
+    };
+
+    try {
+      const response = await axios.post("/api/email", { ...data });
+      console.log("EMAIL SENDING RESPONSE", response);
+      setMessage("Email sent successfully! We will get back to you soon.");
+    } catch (error) {
+      console.log("====================================");
+      console.log(error);
+      console.log("====================================");
+      setMessage("Something went wrong. Please try again");
+    } finally {
+      setIsLoading(false);
+    }
   };
   return (
     <div>
@@ -57,11 +84,12 @@ const ContactUs = () => {
         </div>
       </div>
 
-      <div className="flex rounded-lg shadow-2xl mx-6 md:mx-12 lg:mx-48 my-20 pr-0">
+      <div className="lg:flex rounded-lg shadow-2xl mx-6 md:mx-12 lg:mx-48 my-10 lg:my-20 pr-0">
         <form
           onSubmit={handleSubmit}
           className="p-4 lg:p-10 space-y-4 lg:space-y-8 flex-1"
         >
+          {message !== "" && <p>{message}</p>}
           <Input
             type="text"
             name="name"
@@ -80,15 +108,6 @@ const ContactUs = () => {
             value={formData.email}
             onChange={handleChange}
           />
-          <Input
-            type="tel"
-            name="phone"
-            required
-            placeholder="Phone"
-            className="h-12"
-            value={formData.phone}
-            onChange={handleChange}
-          />
           <Textarea
             placeholder="Type your message here."
             value={formData.message}
@@ -104,10 +123,14 @@ const ContactUs = () => {
             className="bg-green-500 hover:bg-green-500/80 capitalize font-bold"
             size="lg"
           >
-            Submit
+            {isLoading ? (
+              <FaSpinner className="text-center animate-spin" />
+            ) : (
+              "Submit"
+            )}
           </Button>
         </form>
-        <div className="bg-[url(/assets/images/contact-form-bg.jpg)] bg-center bg-cover w-1/3 rounded-tr-lg rounded-br-lg"></div>
+        <div className=" max-lg:hidden bg-[url(/assets/images/contact-form-bg.jpg)] bg-center bg-cover w-1/3 rounded-tr-lg rounded-br-lg"></div>
       </div>
     </div>
   );
