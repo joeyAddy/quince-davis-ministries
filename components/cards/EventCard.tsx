@@ -20,7 +20,7 @@ const EventCard = ({ image, title, text, date, id }: EventCardProps) => {
           alt="story image"
           height={1000}
           width={500}
-          className="rounded-tr-lg rounded-tl-lg max-h-full"
+          className="rounded-tr-lg rounded-tl-lg max-h-full h-[300px]"
         />
       </div>
       <div className="flex flex-col gap-4 h-1/2 pt-2">

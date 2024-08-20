@@ -61,20 +61,22 @@ const Navbar = ({
         )}
       >
         <div className="flex flex-row-reverse items-center">
-          <Image
-            src={
-              isHome
-                ? "/assets/images/QDM MINISTRY LOGO GOLD.png"
-                : "/assets/images/QDM MINISTRY LOGO BLACK.png"
-            }
-            alt="logo"
-            width={100}
-            height={100}
-            className={cn(
-              "object-scale-down max-lg:size-16",
-              !isHome && "size-16"
-            )}
-          />
+          <Link href="/">
+            <Image
+              src={
+                isHome
+                  ? "/assets/images/QDM MINISTRY LOGO GOLD.png"
+                  : "/assets/images/QDM MINISTRY LOGO BLACK.png"
+              }
+              alt="logo"
+              width={100}
+              height={100}
+              className={cn(
+                "object-scale-down max-lg:size-16",
+                !isHome && "size-16"
+              )}
+            />
+          </Link>
           <Button
             size="icon"
             variant="ghost"

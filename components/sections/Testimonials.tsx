@@ -4,7 +4,7 @@ import TestimonialsSliders from "../sliders/TestimonialsSliders";
 
 const Testimonials = () => {
   return (
-    <div className="pt-20 px-6 md:px-12 lg:px-48">
+    <div className="py-20 px-6 md:px-12 lg:px-48">
       <SectionTitle
         title="Testimonials"
         subTitle="What people think about us"

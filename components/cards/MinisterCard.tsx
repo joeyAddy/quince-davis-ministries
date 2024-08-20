@@ -17,7 +17,7 @@ const MinisterCard = ({ image, title, text }: MinisterCardProps) => {
           alt="story image"
           height={1000}
           width={500}
-          className="h-full object-cover object-top"
+          className="size-full object-cover object-top"
         />
       </div>
       <div className="flex flex-col items-center gap-4 py-6 bg-slate-900 text-white">

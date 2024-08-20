@@ -17,7 +17,7 @@ const ServiceCard = ({ image, title, text }: ServiceCardProps) => {
           alt="story image"
           height={1000}
           width={500}
-          className="max-h-full"
+          className="max-h-full min-h-[250px]"
         />
       </div>
       <div className="flex flex-col gap-4 h-1/2 pt-2">

@@ -68,7 +68,7 @@ const EventDetails = () => {
       <div className="max-lg:w-full mx-auto container py-16 space-y-10">
         <div className="relative h-1/2">
           <Image
-            src={event?.image!}
+            src={event?.images[0]!}
             alt="story image"
             height={1000}
             width={500}
@@ -81,52 +81,42 @@ const EventDetails = () => {
               <h4 className="font-bold text-3xl">{event?.title}</h4>
               <p>{event?.text}</p>
               <div className="grid lg:grid-cols-2 gap-10">
-                <Image
-                  src={event?.image!}
-                  alt="story image"
-                  height={1000}
-                  width={500}
-                  className="rounded-lg object-cover object-center"
-                />{" "}
-                <Image
-                  src={event?.image!}
-                  alt="story image"
-                  height={1000}
-                  width={500}
-                  className="rounded-lg object-cover object-center"
-                />
+                {event &&
+                  event.images &&
+                  event.images.length > 1 &&
+                  event.images.map((image) => (
+                    <Image
+                      key={image}
+                      src={image}
+                      alt="story image"
+                      height={1000}
+                      width={500}
+                      className="rounded-lg object-cover object-center"
+                    />
+                  ))}
               </div>
             </div>
-            <div className="space-y-4">
-              <h4 className="font-bold text-3xl">Event Gallery</h4>
-              <p>
-                Here are images from of God&apos;s wonders from the previous
-                programmes.
-              </p>
-              <div className="grid lg:grid-cols-3 gap-10">
-                <Image
-                  src={event?.image!}
-                  alt="story image"
-                  height={1000}
-                  width={500}
-                  className="rounded-lg object-cover object-center"
-                />{" "}
-                <Image
-                  src={event?.image!}
-                  alt="story image"
-                  height={1000}
-                  width={500}
-                  className="rounded-lg object-cover object-center"
-                />
-                <Image
-                  src={event?.image!}
-                  alt="story image"
-                  height={1000}
-                  width={500}
-                  className="rounded-lg object-cover object-center"
-                />
+            {event && event.galleryImages && (
+              <div className="space-y-4">
+                <h4 className="font-bold text-3xl">Event Gallery</h4>
+                <p>
+                  Here are images from of God&apos;s wonders from the previous
+                  programmes.
+                </p>
+                <div className="grid lg:grid-cols-3 gap-10">
+                  {event.galleryImages.map((image) => (
+                    <Image
+                      key={image}
+                      src={image}
+                      alt="story image"
+                      height={1000}
+                      width={500}
+                      className="rounded-lg h-56 object-cover object-center"
+                    />
+                  ))}
+                </div>
               </div>
-            </div>
+            )}
           </div>
           <div className="lg:col-span-1 space-y-10">
             <div className="">
