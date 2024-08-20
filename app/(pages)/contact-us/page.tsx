@@ -104,7 +104,7 @@ const ContactUs = () => {
             className="bg-green-500 hover:bg-green-500/80 capitalize font-bold"
             size="lg"
           >
-            Register
+            Submit
           </Button>
         </form>
         <div className="bg-[url(/assets/images/contact-form-bg.jpg)] bg-center bg-cover w-1/3 rounded-tr-lg rounded-br-lg"></div>

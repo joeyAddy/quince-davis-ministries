@@ -6,29 +6,11 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Quote } from "lucide-react";
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
+import axios from "axios";
 
 const Donate = () => {
-  // State for form inputs
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    donation: "",
-  });
-
-  // Handle input changes
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
-
-  // Handle form submission
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-  };
   return (
     <div>
       <PageHeader title="Donate" />
@@ -110,55 +92,22 @@ const Donate = () => {
             Together, we can make a difference that resonates far beyond
           </p>
 
-          <form
-            onSubmit={handleSubmit}
-            className="p-4 lg:p-10 border space-y-4 lg:space-y-8 flex-1"
+          <PayPalScriptProvider
+            options={{
+              clientId: process.env.NEXT_PUBLIC_PAYPAL_CLIENT_ID!,
+              currency: "USD",
+              intent: "capture",
+            }}
           >
-            <Input
-              type="text"
-              name="donation"
-              placeholder="Your donation"
-              required
-              className="h-12"
-              value={formData.donation}
-              onChange={handleChange}
+            <PayPalButtons
+              style={{
+                color: "gold",
+                shape: "rect",
+                label: "donate",
+                height: 50,
+              }}
             />
-            <Input
-              type="text"
-              name="name"
-              placeholder="Name"
-              required
-              className="h-12"
-              value={formData.name}
-              onChange={handleChange}
-            />
-            <Input
-              type="email"
-              name="email"
-              placeholder="Email"
-              required
-              className="h-12"
-              value={formData.email}
-              onChange={handleChange}
-            />
-            <Input
-              type="tel"
-              name="phone"
-              required
-              placeholder="Phone"
-              className="h-12"
-              value={formData.phone}
-              onChange={handleChange}
-            />
-
-            <Button
-              type="submit"
-              className="bg-green-500 hover:bg-green-500/80 capitalize font-bold"
-              size="lg"
-            >
-              Register
-            </Button>
-          </form>
+          </PayPalScriptProvider>
         </div>
       </div>
     </div>
