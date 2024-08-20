@@ -19,7 +19,7 @@ const MobileNavbar = ({
   return (
     <div
       className={cn(
-        "h-dvh w-full bg-gradient-to-t from-green-700 via-green-900 to-black space-y-6 flex-col gap-6 absolute top-0 right-0 left-0 px-10 pt-10",
+        "h-dvh w-full z-50 bg-gradient-to-t from-green-700 via-green-900 to-black space-y-6 flex-col gap-6 absolute top-0 right-0 left-0 px-10 pt-10",
         openMobileNavbar ? "flex" : "hidden"
       )}
     >

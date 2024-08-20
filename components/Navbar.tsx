@@ -78,7 +78,10 @@ const Navbar = ({
           <Button
             size="icon"
             variant="ghost"
-            className="lg:hidden text-white focus:bg-transparent focus:text-white hover:bg-gray-500/80 hover:text-white"
+            className={cn(
+              "lg:hidden text-white focus:bg-transparent focus:text-white hover:bg-gray-500/80 hover:text-white",
+              !isHome && "text-black hover:text-black"
+            )}
             onClick={handleOpenMobileNavbar}
           >
             <Menu />

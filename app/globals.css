@@ -8,6 +8,11 @@
     background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
       url(/assets/images/main-bg.jpg);
   }
+
+  .bg-section-contact {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+      url(/assets/images/contact-form-bg.jpg);
+  }
   .main-btn-bg {
     @apply bg-green-500 hover:!bg-green-500/80;
   }

@@ -105,19 +105,19 @@ const EventDetails = () => {
                 Event Details
               </div>
               <div className="rounded-bl-lg rounded-br-lg border-t-0 border-dotted border-4 py-5 divide-y">
-                <div className="flex items-center justify-between mx-10 py-4">
+                <div className="flex items-center justify-between mx-4 lg:mx-10 py-4">
                   <p className="font-bold">Organizer:</p>
                   <span>Quince Davis Minstries</span>
                 </div>
-                <div className="flex items-center justify-between mx-10 py-4">
+                <div className="flex items-center justify-between mx-4 lg:mx-10 py-4">
                   <p className="font-bold">Start:</p>
                   <span>January</span>
                 </div>
-                <div className="flex items-center justify-between mx-10 py-4">
+                <div className="flex items-center justify-between mx-4 lg:mx-10 py-4">
                   <p className="font-bold">End:</p>
                   <span>February</span>
                 </div>
-                <div className="flex items-center justify-between mx-10 py-4">
+                <div className="flex items-center justify-between mx-4 lg:mx-10 py-4">
                   <p className="font-bold">Time:</p>
                   <span>3:00pm</span>
                 </div>
@@ -127,44 +127,45 @@ const EventDetails = () => {
               <div className="w-full bg-green-500 text-white rounded-tr-lg rounded-tl-lg py-4 text-xl text-center font-bold">
                 Event Registration
               </div>
-              <div className="rounded-bl-lg rounded-br-lg border-t-0 border-dotted border-4 p-10 space-y-8">
-                <form
-                  onSubmit={handleSubmit}
-                  className="rounded-bl-lg rounded-br-lg border-t-0 border-dotted border-4 p-10 space-y-8"
+              <form
+                onSubmit={handleSubmit}
+                className="rounded-bl-lg rounded-br-lg border-t-0 border-dotted border-4 p-4 lg:p-10 space-y-4 lg:space-y-8"
+              >
+                <Input
+                  type="text"
+                  name="name"
+                  placeholder="Name"
+                  required
+                  className="h-12"
+                  value={formData.name}
+                  onChange={handleChange}
+                />
+                <Input
+                  type="email"
+                  name="email"
+                  placeholder="Email"
+                  required
+                  className="h-12"
+                  value={formData.email}
+                  onChange={handleChange}
+                />
+                <Input
+                  type="tel"
+                  name="phone"
+                  required
+                  placeholder="Phone"
+                  className="h-12"
+                  value={formData.phone}
+                  onChange={handleChange}
+                />
+                <Button
+                  type="submit"
+                  className="bg-green-500 hover:bg-green-500/80 capitalize font-bold"
+                  size="lg"
                 >
-                  <Input
-                    type="text"
-                    name="name"
-                    placeholder="Name"
-                    className="h-12"
-                    value={formData.name}
-                    onChange={handleChange}
-                  />
-                  <Input
-                    type="email"
-                    name="email"
-                    placeholder="Email"
-                    className="h-12"
-                    value={formData.email}
-                    onChange={handleChange}
-                  />
-                  <Input
-                    type="tel"
-                    name="phone"
-                    placeholder="Phone"
-                    className="h-12"
-                    value={formData.phone}
-                    onChange={handleChange}
-                  />
-                  <Button
-                    type="submit"
-                    className="bg-green-500 hover:bg-green-500/80 capitalize font-bold"
-                    size="lg"
-                  >
-                    Register
-                  </Button>
-                </form>
-              </div>
+                  Register
+                </Button>
+              </form>
             </div>
           </div>
         </div>
