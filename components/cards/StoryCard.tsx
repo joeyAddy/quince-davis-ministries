@@ -25,13 +25,12 @@ const StoryCard = ({ image, title, text, icon }: StoryCardProps) => {
         y: 0,
         opacity: 1,
         ease: "power1.inOut",
-        delay: 2,
-        duration: 1,
+        delay: 1,
+        duration: 2,
         scrollTrigger: {
           trigger: ".story-card",
           start: "bottom 180%",
           end: "top 20%",
-          scrub: true,
         },
       }
     );

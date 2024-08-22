@@ -13,7 +13,7 @@ const Events = () => {
             key={event.title}
             title={event.title}
             text={event.text}
-            image={event.image}
+            image={event.images[0]}
             date={event.date}
             id={event.id}
           />
