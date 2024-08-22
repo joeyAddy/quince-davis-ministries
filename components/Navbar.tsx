@@ -27,7 +27,7 @@ const Navbar = ({
     <nav className="divide-y divide-gray-600/50">
       {isHome && (
         <header
-          className="flex max-lg:flex-col justify-between
+          className="hidden lg:flex max-lg:flex-col justify-between
     items-center lg:px-48"
         >
           <div className="flex justify-center max-lg:border-b border-gray-500/50  max-lg:self-center max-lg:w-full max-lg:py-5">
@@ -56,7 +56,7 @@ const Navbar = ({
       )}
       <div
         className={cn(
-          "px-6 md:px-12 lg:px-48 flex items-center justify-between py-2",
+          "px-6 md:px-12 lg:px-48 max-lg:bg-white flex items-center justify-between py-2",
           !isHome && "bg-white"
         )}
       >
@@ -81,7 +81,7 @@ const Navbar = ({
             size="icon"
             variant="ghost"
             className={cn(
-              "lg:hidden text-white focus:bg-transparent focus:text-white hover:bg-gray-500/80 hover:text-white",
+              "lg:hidden lg:text-white focus:bg-transparent lg:focus:text-white lg:hover:bg-gray-500/80 lg:hover:text-white",
               !isHome && "text-black hover:text-black"
             )}
             onClick={handleOpenMobileNavbar}

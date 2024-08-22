@@ -100,7 +100,7 @@ export const events = [
   },
   {
     id: 5,
-    images: ["/assets/images/worzippers-blueprint.jpg"],
+    images: ["/assets/images/worshippers-blueprint.jpg"],
     title: "THE WORSHIPPER'S BLUEPRINT",
     text: "Jesus didn't confine his presence to the synagogue; his kindness extended everywhere. Street worship serves as a platform where we can honor him openly and spread his message far and wideThis annual mentorship and workshop for worshippers and musicians aims to enhance not only their skills but also their ethics, character, and composure. The just concluded one was a massive success. Click here to see pictures from the meeting: (Take them to the Gallery section where these pictures are.)",
     date: "Every Thursday, 8pm - 10pm",

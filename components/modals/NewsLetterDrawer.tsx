@@ -26,8 +26,11 @@ const NewsLetterDrawer = ({
   const handleRegisterToNewsLetter = () => {
     setOpen(!open);
   };
+
+  const handleOpenChange = () => setOpen(false);
+
   return (
-    <Drawer open={open} onOpenChange={() => setOpen(false)}>
+    <Drawer open={open} onOpenChange={handleOpenChange}>
       <DrawerContent>
         <DrawerHeader className="lg:mx-auto lg:w-1/2">
           <DrawerTitle className="text-center">
@@ -50,8 +53,12 @@ const NewsLetterDrawer = ({
           </Button>{" "}
         </div>
         <DrawerFooter>
-          <DrawerClose>
-            <Button size="sm" variant="destructive">
+          <DrawerClose asChild className="w-fit mx-auto">
+            <Button
+              onClick={() => setOpen(false)}
+              size="sm"
+              variant="destructive"
+            >
               Cancel
             </Button>
           </DrawerClose>

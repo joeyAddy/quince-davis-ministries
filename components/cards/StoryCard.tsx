@@ -1,3 +1,7 @@
+"use client";
+
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 import Image from "next/image";
 import React from "react";
 
@@ -9,8 +13,31 @@ interface StoryCardProps {
 }
 
 const StoryCard = ({ image, title, text, icon }: StoryCardProps) => {
+  useGSAP(() => {
+    gsap.fromTo(
+      ".story-card",
+      {
+        y: 150,
+        opacity: 0,
+        ease: "power1.inOut",
+      },
+      {
+        y: 0,
+        opacity: 1,
+        ease: "power1.inOut",
+        delay: 2,
+        duration: 1,
+        scrollTrigger: {
+          trigger: ".story-card",
+          start: "bottom 180%",
+          end: "top 20%",
+          scrub: true,
+        },
+      }
+    );
+  }, []);
   return (
-    <div className="rounded-lg shadow-lg p-6 flex flex-col gap-y-4">
+    <div className="rounded-lg shadow-lg p-6 flex flex-col gap-y-4 story-card">
       <div className="relative h-2/3">
         <Image
           src={image}
