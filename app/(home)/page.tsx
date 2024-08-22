@@ -1,4 +1,3 @@
-import NewsLetterModal from "@/components/modals/Newletter";
 import About from "@/components/sections/About";
 import ChrismasMoments from "@/components/sections/ChrismasMoments";
 import Donate from "@/components/sections/Donate";

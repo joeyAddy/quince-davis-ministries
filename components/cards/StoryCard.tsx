@@ -17,7 +17,7 @@ const StoryCard = ({ image, title, text, icon }: StoryCardProps) => {
     gsap.fromTo(
       ".story-card",
       {
-        y: 150,
+        y: 350,
         opacity: 0,
         ease: "power1.inOut",
       },
