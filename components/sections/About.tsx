@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef } from "react";
+import React from "react";
 import SectionTitle from "../SectionTitle";
 import StoryCard from "../cards/StoryCard";
 import { IoHeartOutline } from "react-icons/io5";
@@ -8,17 +8,11 @@ import { FaBible } from "react-icons/fa";
 import { Crown } from "lucide-react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/all";
-
-gsap.registerPlugin(ScrollTrigger);
 
 const About = () => {
-  const contentRef = useRef<HTMLDivElement>(null);
   useGSAP(() => {
-    if (!contentRef.current) return;
-
     gsap.fromTo(
-      ".title",
+      ".title-about",
       {
         opacity: 0,
         y: 150,
@@ -28,18 +22,16 @@ const About = () => {
         opacity: 1,
         ease: "power1.inOut",
         duration: 1,
+        delay: 1,
       }
     );
   }, []);
   return (
-    <div className="py-20 px-6 md:px-12 lg:px-48">
-      <div className="title">
+    <div className="py-10 lg:py-20 px-6 md:px-12 lg:px-48">
+      <div className="title-about">
         <SectionTitle title="Who we are" subTitle="Our Story" />
       </div>
-      <div
-        ref={contentRef}
-        className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 max-lg:w-full mx-auto mt-8"
-      >
+      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 max-lg:w-full mx-auto mt-8">
         <StoryCard
           title="All our heart"
           text="We give love with a big heart filled with the love of God shared abroad in our heart"

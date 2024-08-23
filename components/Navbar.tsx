@@ -56,7 +56,7 @@ const Navbar = ({
       )}
       <div
         className={cn(
-          "px-6 md:px-12 lg:px-48 max-lg:bg-white flex items-center justify-between py-2",
+          "px-6 md:px-12 lg:px-48 max-lg:bg-white flex items-center justify-between md:py-2",
           !isHome && "bg-white"
         )}
       >
@@ -96,16 +96,16 @@ const Navbar = ({
               isHome ? "text-white" : "text-black"
             )}
           >
-            <li className="hover:text-green-500">
+            <li className="hover:text-green-500 whitespace-nowrap">
               <Link href="/">Home</Link>
             </li>
-            <li className="hover:text-green-500">
+            <li className="hover:text-green-500 whitespace-nowrap">
               <Link href="/events">Events</Link>
             </li>
-            <li className="hover:text-green-500">
+            <li className="hover:text-green-500 whitespace-nowrap">
               <Link href="/contact-us">Contact us</Link>
             </li>
-            <li className="hover:text-green-500">
+            <li className="hover:text-green-500 whitespace-nowrap">
               <Link href="/about-us">About us</Link>
             </li>
           </ul>

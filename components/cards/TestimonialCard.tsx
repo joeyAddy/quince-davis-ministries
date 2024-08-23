@@ -22,7 +22,7 @@ const TestimonialCard = ({
           alt="story image"
           height={1000}
           width={1000}
-          className="max-h-full h-[450px] lg:min-w-96 w-full lg:w-96 bg-center object-cover max-lg:rounded-tr-lg max-lg:rounded-tl-lg lg:rounded-tl-lg lg:rounded-bl-lg"
+          className="max-h-full h-[800px] object-top lg:h-[450px] lg:min-w-96 w-full lg:w-96 md:object-[top 500px] object-cover max-lg:rounded-tr-lg max-lg:rounded-tl-lg lg:rounded-tl-lg lg:rounded-bl-lg"
         />
       </div>
       <div className="space-y-4 lg:py-20 lg:pr-12 max-lg:p-6">

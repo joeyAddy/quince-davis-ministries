@@ -142,3 +142,9 @@ export const ministers = [
     text: "Worship Leader",
   },
 ];
+
+export const heroImages = [
+  "/assets/images/main-bg.jpg",
+  "/assets/images/praying-hands.jpg",
+  "/assets/images/worshipping-hands.jpg",
+];

@@ -9,10 +9,12 @@ import Link from "next/link";
 
 const Events = () => {
   return (
-    <div className="py-20 px-6 md:px-12 lg:px-48">
+    <div className="py-10 lg:py-20 px-6 md:px-12 lg:px-48">
       <SectionTitle
         title="Events"
         subTitle="Special programmes and upcomming events"
+        wrap={true}
+        centered={true}
       />
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 max-lg:w-full mx-auto mt-8">
         {events.slice(0, 3).map((event) => (
