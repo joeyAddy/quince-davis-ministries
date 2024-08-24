@@ -115,7 +115,7 @@ const Hero = () => {
           openMobileNavbarDropdown={openMobileNavbarDropdown}
         />
         <div className="pt-16 md:py-20 max-md:gap-y-4 gap-y-6 flex flex-col items-center max-md:px-4 flex-1 justify-center">
-          <h3 className="text-white font-thin text-3xl lg:text-5xl uppercase text-center main-text leading-tight">
+          <h3 className="text-white font-extralight text-3xl lg:text-5xl uppercase text-center main-text leading-tight">
             Welcome to
           </h3>
           <h1 className="text-white text-5xl lg:text-8xl font-extrabold text-center para uppercase leading-tight">
