@@ -1,14 +1,66 @@
-import React from "react";
+"use client";
+
+import React, { useRef } from "react";
 import { Button } from "../ui/button";
-import { TbChristmasTree } from "react-icons/tb";
 import SectionTitle from "../SectionTitle";
 import Image from "next/image";
 import { Crown } from "lucide-react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/all";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const ChrismasMoments = () => {
+  const contentRef = useRef<HTMLDivElement>(null);
+
+  useGSAP(() => {
+    if (contentRef.current) {
+      const content = gsap.utils.toArray(contentRef.current.children);
+      gsap.fromTo(
+        content as gsap.TweenTarget,
+        {
+          y: 50,
+          opacity: 0,
+        },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 0.5,
+          delay: 0.7,
+          ease: "power1.inOut",
+          stagger: 0.5,
+          scrollTrigger: {
+            trigger: content as gsap.DOMTarget,
+            start: "top bottom",
+            end: "bottom -200",
+          },
+        }
+      );
+    }
+
+    gsap.fromTo(
+      ".moment-image",
+      {
+        y: 50,
+        opacity: 0,
+      },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 0.5,
+        ease: "power1.inOut",
+        scrollTrigger: {
+          trigger: ".moment-image",
+          start: "top bottom",
+          end: "bottom -200",
+        },
+      }
+    );
+  }, []);
   return (
     <div className="py-10 lg:py-20 px-6 md:px-12 lg:px-48 flex gap-10 max-lg:flex-col">
-      <div className="lg:flex-[0.4] lg:max-w-[40%]">
+      <div className="lg:flex-[0.4] lg:max-w-[40%] moment-image">
         <Image
           src="/assets/images/chrismas-tree.jpg"
           alt="story image"
@@ -17,7 +69,7 @@ const ChrismasMoments = () => {
           className="h-[600px] object-cover w-full"
         />
       </div>
-      <div className="space-y-6 flex-[0.6]">
+      <div className="space-y-6 flex-[0.6]" ref={contentRef}>
         <SectionTitle
           title="Christmas"
           subTitle="Christmas Moments with Quincy Davies and The Gospellier"

@@ -1,13 +1,49 @@
+"use client";
+
 import { HeartHandshakeIcon } from "lucide-react";
-import React from "react";
+import React, { useRef } from "react";
 import { Button } from "../ui/button";
 import Link from "next/link";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/all";
+gsap.registerPlugin(ScrollTrigger);
 
 const Donate = () => {
+  const contentRef = useRef<HTMLDivElement>(null);
+
+  useGSAP(() => {
+    if (contentRef.current) {
+      const content = gsap.utils.toArray(contentRef.current.children);
+      gsap.fromTo(
+        content as gsap.TweenTarget,
+        {
+          y: 50,
+          opacity: 0,
+        },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 0.5,
+          delay: 0.7,
+          ease: "power1.inOut",
+          stagger: 0.5,
+          scrollTrigger: {
+            trigger: content as gsap.DOMTarget,
+            start: "top bottom",
+            end: "bottom -200",
+          },
+        }
+      );
+    }
+  }, []);
   return (
     <div className="relative max-lg:h-[600px] lg:h-[500px] overflow-hidden">
       <div className="parallax-donate bg-fixed bg-center bg-cover h-full w-full"></div>
-      <div className="absolute inset-0 flex flex-col gap-5 items-center justify-center text-white">
+      <div
+        className="absolute inset-0 flex flex-col gap-5 items-center justify-center text-white"
+        ref={contentRef}
+      >
         <span className="rounded-full bg-green-500 p-5 border-[20px] border-green-900/50 animate-pulse">
           <HeartHandshakeIcon className="size-12 text-white animate-none" />
         </span>

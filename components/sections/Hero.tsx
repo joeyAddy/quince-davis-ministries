@@ -49,7 +49,7 @@ const Hero = () => {
       {
         opacity: 1,
         y: 0,
-        delay: 2,
+        delay: 1.5,
         stagger: 0.1,
         ease: "power1.inOut",
       }
@@ -64,36 +64,8 @@ const Hero = () => {
       {
         opacity: 1,
         scale: 1,
-        delay: 1.5,
+        delay: 1,
         ease: "power1.inOut",
-      }
-    );
-
-    gsap.fromTo(
-      ".hero-btn",
-      {
-        y: 40,
-        opacity: 0,
-      },
-      {
-        y: 0,
-        opacity: 1,
-        ease: "bounce.inOut",
-        delay: 2.5,
-      }
-    );
-
-    gsap.fromTo(
-      ".hero-icon",
-      {
-        x: 40,
-        opacity: 0,
-      },
-      {
-        x: 0,
-        opacity: 1,
-        ease: "power1.inOut",
-        delay: 0.5,
       }
     );
   }, []);
