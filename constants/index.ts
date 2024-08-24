@@ -10,7 +10,7 @@ export const testimonials = [
     title: "Apostle Simon & Prophetess Faith Khan",
     text: "For a couple of years, we have known Pastor Davis and Prophetess Quincy, and we admire the special callings of God upon their lives. They are a couple with a clear vision, passion, an excellent spirit, charisma, and great zeal for the work of God.",
     ministry: "End Time Harvester International Ministries, Belgium",
-    image: "/assets/images/testimonials/kan.jpg",
+    image: "/assets/images/testimonials/Khan.png",
   },
   {
     title: "Prophets Donnefer and Angela",
@@ -42,7 +42,7 @@ export const testimonials = [
     title: "Pastor Jesse M. Ayomah",
     text: "Pastor Dan and Quincy's Ministry has blessed our church, uplifting us with spirit-filled performances and workshops. Their dedication has strengthened our music team, fostering confidence, unity, and spiritual growth. The workshops empowered members to take leadership roles, enhancing their contributions and strengthening the church overall.",
     ministry: "All Nation Church , Düsseldorf Germany",
-    image: "/assets/images/testimonials/Jersey.webp",
+    image: "/assets/images/testimonials/jesse.png",
   },
   {
     title: "Daniel Sachs",
