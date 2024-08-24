@@ -4,7 +4,7 @@ export const testimonials = [
     text: "Pastor Dan and his wife prophetess Quincy are very talented in what they teach. Driven and passionate. They see gold in people. But above all, they do it from God's Spirit and love; beautiful people.",
     ministry:
       "The House of the Living Water@ city of Dronten in Holland (The church on the Boat)",
-    image: "/assets/images/testimonials/jen.jpg",
+    image: "/assets/images/testimonials/Jen.jpg",
   },
   {
     title: "Apostle Simon & Prophetess Faith Khan",

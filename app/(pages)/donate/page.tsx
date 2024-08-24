@@ -44,32 +44,6 @@ const Donate = () => {
               orphans, disabled children, and others—who struggle daily to meet
               their basic needs.
             </p>
-            <p className="font-bold"> Our vision is clear:</p>
-            <ol className="list-disc pl-5 [&>li]:mb-2">
-              <li>
-                ⁠We aim to ensure that the most impoverished communities have
-                daily access to three nutritious meals.
-              </li>
-              <li>
-                ⁠We strive to offer life-saving health support, particularly for
-                vulnerable families such as widows and children.
-              </li>
-              <li>
-                ⁠We are dedicated to sponsoring 5-10 students annually, enabling
-                them to access full-time, quality education.
-              </li>
-            </ol>
-
-            <p>
-              Your support can make an immense difference in these initiatives.
-              By contributing to Quincy Davies Ministries (QDM) Foundation, you
-              join us in directly impacting lives and communities across Africa.
-              Together, we can provide sustenance, healthcare, and educational
-              opportunities that are crucial for the well-being and future of
-              these deserving individuals. Your donation, no matter the size,
-              will help us continue this vital work and bring hope and
-              transformation where it is needed most. today.
-            </p>
           </div>
         </div>
         <div className="lg:col-span-2 space-y-4">
@@ -87,6 +61,31 @@ const Donate = () => {
             how you can partner with us in this meaningful cause. Thank you for
             considering supporting Quincy Davies Ministries (QDM) Foundation.
             Together, we can make a difference that resonates far beyond
+          </p>
+          <p className="font-bold"> Our vision is clear:</p>
+          <ol className="list-disc pl-5 [&>li]:mb-2">
+            <li>
+              ⁠We aim to ensure that the most impoverished communities have
+              daily access to three nutritious meals.
+            </li>
+            <li>
+              ⁠We strive to offer life-saving health support, particularly for
+              vulnerable families such as widows and children.
+            </li>
+            <li>
+              ⁠We are dedicated to sponsoring 5-10 students annually, enabling
+              them to access full-time, quality education.
+            </li>
+          </ol>
+          <p>
+            Your support can make an immense difference in these initiatives. By
+            contributing to Quincy Davies Ministries (QDM) Foundation, you join
+            us in directly impacting lives and communities across Africa.
+            Together, we can provide sustenance, healthcare, and educational
+            opportunities that are crucial for the well-being and future of
+            these deserving individuals. Your donation, no matter the size, will
+            help us continue this vital work and bring hope and transformation
+            where it is needed most. today.
           </p>
 
           <PayPalScriptProvider
