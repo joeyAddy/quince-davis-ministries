@@ -51,7 +51,7 @@ export const testimonials = [
     image: "/assets/images/testimonials/marriage-school.jpg",
   },
   {
-    title: "Cheryl Porter",
+    title: "Cheryl Porter Vocal Coach (USA)",
     text: "Dan and Quincy are doing fantastic work as Ministers of the gospel. They have been a tremendous blessing ever since I first met Quincy",
     ministry: "Cheryl Portal Method",
     image: "/assets/images/testimonials/Cherry.jpg",
@@ -59,7 +59,7 @@ export const testimonials = [
   {
     title: "Evangelist Daniel Schott",
     text: "Amazing voice! Worship from the depths of her heart. What a gift to this world!",
-    ministry: "Global Evagelism Network",
+    ministry: "Global Evangelist Network (German)",
     image: "/assets/images/testimonials/Scott.jpg",
   },
 ];

@@ -20,7 +20,7 @@ const TestimonialsSliders = () => {
   const [count, setCount] = React.useState(0);
 
   const plugin = React.useRef(
-    Autoplay({ delay: 5000, stopOnInteraction: true })
+    Autoplay({ delay: 10000, stopOnInteraction: true })
   );
 
   React.useEffect(() => {
