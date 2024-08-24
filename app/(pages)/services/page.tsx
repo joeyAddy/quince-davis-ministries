@@ -20,42 +20,42 @@ const Services = () => {
               alt="service image"
               height={400}
               width={400}
-              className="object-cover rounded-3xl hover:scale-110 transition ease-in-out delay-100 duration-300"
+              className="object-cover rounded-3xl hover:scale-110 transition ease-in-out delay-100 duration-300 min-h-56"
             />
             <Image
-              src="/assets/images/him teaching/IMG_20230421_193411.jpg"
+              src="/assets/images/him teaching/IMG-20240420-WA0032.jpg"
               alt="service image"
               height={400}
               width={400}
-              className="object-cover rounded-3xl hover:scale-110 transition ease-in-out delay-100 duration-300"
+              className="object-cover rounded-3xl hover:scale-110 transition ease-in-out delay-100 duration-300 min-h-56"
             />
             <Image
-              src="/assets/images/him teaching/IMG_20230421_193411.jpg"
+              src="/assets/images/him teaching/IMG_20230902_160831.jpg"
               alt="service image"
               height={400}
               width={400}
-              className="object-cover rounded-3xl hover:scale-110 transition ease-in-out delay-100 duration-300"
+              className="object-cover rounded-3xl hover:scale-110 transition ease-in-out delay-100 duration-300 min-h-56"
             />
             <Image
-              src="/assets/images/him teaching/IMG_20230421_193411.jpg"
+              src="/assets/images/him teaching/IMG_20230220_175945.jpg"
               alt="service image"
               height={400}
               width={400}
-              className="object-cover rounded-3xl hover:scale-110 transition ease-in-out delay-100 duration-300"
+              className="object-cover rounded-3xl hover:scale-110 transition ease-in-out delay-100 duration-300 min-h-56"
             />
             <Image
-              src="/assets/images/him teaching/IMG_20230421_193411.jpg"
+              src="/assets/images/him teaching/IMG_20231007_164207.jpg"
               alt="service image"
               height={400}
               width={400}
-              className="object-cover rounded-3xl hover:scale-110 transition ease-in-out delay-100 duration-300"
+              className="object-cover rounded-3xl hover:scale-110 transition ease-in-out delay-100 duration-300 min-h-56"
             />
             <Image
-              src="/assets/images/him teaching/IMG_20230421_193411.jpg"
+              src="/assets/images/him teaching/IMG-20240420-WA0033.jpg"
               alt="service image"
               height={400}
               width={400}
-              className="object-cover rounded-3xl hover:scale-110 transition ease-in-out delay-100 duration-300"
+              className="object-cover rounded-3xl hover:scale-110 transition ease-in-out delay-100 duration-300 min-h-56"
             />
           </div>
           <div className="space-y-5 col-span-2">
