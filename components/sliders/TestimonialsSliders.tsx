@@ -50,7 +50,7 @@ const TestimonialsSliders = () => {
       <CarouselContent>
         {testimonials.map((testimony, index) => (
           <CarouselItem key={index} className="h-fit">
-            <div className="p-4 lg:px-20 lg:pb-12">
+            <div className="px-1 md:p-4 lg:px-20 lg:pb-12">
               <TestimonialCard
                 title={testimony.title}
                 ministry={testimony.ministry}

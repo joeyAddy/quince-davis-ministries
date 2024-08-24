@@ -14,7 +14,9 @@ const Events = () => {
             title={event.title}
             text={event.text}
             image={event.images[0]}
-            date={event.date}
+            date={`${event?.start ?? ""}${event?.end ? ` - ${event.end}` : ""}${
+              event?.frequency ? ` ** ${event.frequency}` : ""
+            }${event?.time ? ` - (${event.time})` : ""}`}
             id={event.id}
           />
         ))}

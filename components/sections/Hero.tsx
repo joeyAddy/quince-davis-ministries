@@ -91,7 +91,7 @@ const Hero = () => {
             Welcome to
           </h3>
           <h1 className="text-white text-5xl lg:text-8xl font-extrabold text-center para uppercase leading-tight">
-            Quincy Davis Ministry
+            Quincy Davies Ministry
           </h1>
         </div>
       </div>

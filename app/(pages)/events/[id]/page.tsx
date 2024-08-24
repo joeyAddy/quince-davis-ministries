@@ -78,7 +78,7 @@ const EventDetails = () => {
             alt="story image"
             height={1000}
             width={500}
-            className="rounded-tr-lg rounded-tl-lg max-h-[70vh] w-full object-cover object-center"
+            className="rounded-tr-3xl rounded-tl-3xl max-h-[70vh] w-full object-cover object-top"
           />
         </div>
         <div className="grid lg:grid-cols-3 gap-10">
@@ -97,7 +97,7 @@ const EventDetails = () => {
                       alt="story image"
                       height={1000}
                       width={500}
-                      className="rounded-lg object-cover object-center"
+                      className="rounded-lg object-cover object-top"
                     />
                   ))}
               </div>
@@ -117,7 +117,7 @@ const EventDetails = () => {
                       alt="story image"
                       height={1000}
                       width={500}
-                      className="rounded-lg h-56 object-cover object-center"
+                      className="rounded-lg h-56 object-cover object-top"
                     />
                   ))}
                 </div>
@@ -134,17 +134,25 @@ const EventDetails = () => {
                   <p className="font-bold">Organizer:</p>
                   <span>Quince Davis Minstries</span>
                 </div>
+                {event?.start && (
+                  <div className="flex items-center justify-between mx-4 lg:mx-10 py-4">
+                    <p className="font-bold">Start:</p>
+                    <span>{event.start}</span>
+                  </div>
+                )}
+                {event?.start && (
+                  <div className="flex items-center justify-between mx-4 lg:mx-10 py-4">
+                    <p className="font-bold">End:</p>
+                    <span>{event.end}</span>
+                  </div>
+                )}
                 <div className="flex items-center justify-between mx-4 lg:mx-10 py-4">
-                  <p className="font-bold">Start:</p>
-                  <span>January</span>
-                </div>
-                <div className="flex items-center justify-between mx-4 lg:mx-10 py-4">
-                  <p className="font-bold">End:</p>
-                  <span>February</span>
+                  <p className="font-bold">Frequency:</p>
+                  <span>{event?.frequency}</span>
                 </div>
                 <div className="flex items-center justify-between mx-4 lg:mx-10 py-4">
                   <p className="font-bold">Time:</p>
-                  <span>3:00pm</span>
+                  <span>{event?.time}</span>
                 </div>
               </div>
             </div>

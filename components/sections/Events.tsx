@@ -69,7 +69,7 @@ const Events = () => {
             title={event.title}
             text={event.text}
             image={event.images[0]}
-            date={event.date}
+            date={`${event.frequency} - (${event?.time})`}
             id={event.id}
           />
         ))}

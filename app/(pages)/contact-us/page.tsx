@@ -70,7 +70,7 @@ const ContactUs = () => {
       <div className="grid lg:grid-cols-3 gap-10 mx-6 md:mx-12 lg:mx-48 py-10">
         <div className="rounded-lg flex flex-col items-center justify-center text-white bg-section space-y-4 p-10">
           <FaLocationDot className="size-10 text-white" />
-          <h5 className="text-2xl font-bold">Out Location</h5>
+          <h5 className="text-2xl font-bold">Our Location</h5>
           <p className="text-center">
             Quincy Davies Ministries e.V @Unperfekhaus Essen
             Friedrich-Ebert-Straße 18-20, 45127 Essen

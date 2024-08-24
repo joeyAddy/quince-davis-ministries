@@ -51,8 +51,8 @@ const TestimonialCard = ({
               behavior: "smooth",
             });
           }
-        }, 4000); // Adjust the interval timing as needed
-      }, 1000); // Initial delay before alternating scrolling
+        }, 8000); // Adjust the interval timing as needed
+      }, 4000); // Initial delay before alternating scrolling
     };
 
     const stopScrolling = () => {
@@ -98,9 +98,9 @@ const TestimonialCard = ({
         />
       </div>
       <div className="space-y-4 lg:py-10 lg:pr-12 max-lg:p-6 rounded-bl-3xl rounded-br-3xl lg:rounded-3xl lg:absolute bottom-20 -right-10 lg:w-4/5 bg-white lg:shadow-2xl p-10">
-        <h4 className="font-bold text-xl">{ministry}</h4>
+        <h4 className="font-bold max-md:text-lg text-xl">{ministry}</h4>
         <p
-          className="-mt-2 max-h-20 lg:max-h-20 overflow-y-scroll"
+          className="-mt-2 h-28 lg:max-h-20 overflow-y-scroll text-sm scroll-py-2"
           ref={textRef}
         >
           {text}

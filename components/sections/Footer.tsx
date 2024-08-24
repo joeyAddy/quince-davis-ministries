@@ -127,7 +127,7 @@ const Footer = () => {
                   </li>
                   <li>
                     <Link
-                      href="/about-us"
+                      href="/contact-us"
                       className="flex items-center space-x-3 color-hover-transition"
                     >
                       <GrStarOutline />
