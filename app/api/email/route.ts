@@ -2,12 +2,7 @@ import { sendEmail } from "@/actions/mail";
 
 export async function POST(req: Request) {
   try {
-    const receipient = {
-      name: "quincy Davis Ministries",
-      address: "chatwithjohnjoseph@gmail.com",
-    };
-
-    const { sender, message, subject } = await req.json();
+    const { sender, message, subject, receipient } = await req.json();
 
     const result = await sendEmail({ sender, receipient, message, subject });
 

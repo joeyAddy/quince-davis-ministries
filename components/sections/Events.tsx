@@ -16,7 +16,7 @@ const Events = () => {
         wrap={true}
         centered={true}
       />
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 max-lg:w-full mx-auto mt-8">
+      <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3 max-lg:w-full mx-auto mt-8">
         {events.slice(0, 3).map((event) => (
           <EventCard
             key={event.title}

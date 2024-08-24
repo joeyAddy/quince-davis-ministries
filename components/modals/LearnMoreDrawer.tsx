@@ -9,23 +9,46 @@ import {
   DrawerFooter,
   DrawerHeader,
   DrawerTitle,
-  DrawerTrigger,
 } from "@/components/ui/drawer";
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectLabel,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { Button } from "../ui/button";
 import { Input } from "../ui/input";
 import axios from "axios";
 import toast from "react-hot-toast";
 import { FaSpinner } from "react-icons/fa";
+import { Textarea } from "../ui/textarea";
+import { services } from "@/constants";
 
-const NewsLetterDrawer = ({
+const LearnMoreDrawer = ({
   open,
   setOpen,
 }: {
   open: boolean;
   setOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }) => {
-  const [email, setEmail] = useState("");
+  // State for form inputs
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+    subject: "",
+  });
 
+  // Handle input changes
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
   const [isLoading, setIsLoading] = useState(false);
 
   const handleOpenChange = () => setOpen(false);
@@ -38,62 +61,23 @@ const NewsLetterDrawer = ({
 
     const data = {
       sender: {
-        name: "quincy Davis Ministries",
-        address: "chatwithjohnjoseph@gmail.com",
+        name: formData.name,
+        address: formData.email,
       },
       receipient: [
         {
-          name: email,
-          address: email,
+          name: "quincy Davis Ministries",
+          address: "chatwithjohnjoseph@gmail.com",
         },
       ],
-      message: `
-      <div style="font-family: Arial, sans-serif; background-color: #f4f4f4; padding: 20px;">
-        <div style="max-width: 600px; margin: auto; background-color: #ffffff; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-          <div style="background-color: #28a745; padding: 20px; text-align: center;">
-            <img src="https://res.cloudinary.com/dw9oa2vpq/image/upload/v1724494518/QDM/QDM_MINISTRY_LOGO_GOLD_u21sxd.png" alt="QDM Logo" style="max-width: 150px; margin-bottom: 10px;" />
-            <h1 style="color: #ffffff; font-size: 24px; margin: 0;">Thank You for Subscribing!</h1>
-          </div>
-          <div style="padding: 30px; text-align: center;">
-            <p style="font-size: 16px; color: #333333;">Hello,</p>
-            <p style="font-size: 16px; color: #333333;">
-              We're thrilled to have you on board. You've successfully subscribed to our newsletter, and you'll be the first to know about our latest updates, special offers, and exciting news.
-            </p>
-            <p style="font-size: 16px; color: #333333;">Stay tuned!</p>
-            <p style="font-size: 16px; color: #333333;">Best regards,<br />The Quincy Davies Minstries Team</p>
-          </div>
-          <div style="background-color: #28a745; padding: 10px; text-align: center;">
-            <p style="font-size: 14px; color: #ffffff;">&copy; 2024 Quincy Davies Minstries. All rights reserved.</p>
-          </div>
-        </div>
-      </div>
-    `,
-      subject: "Thank You for Subscribing!",
+      message: formData.message,
+      subject: formData.subject,
     };
 
     try {
       const response = await axios.post("/api/email", { ...data });
       console.log("EMAIL SENDING RESPONSE", response);
       toast.success("Email sent successfully! We will get back to you soon.");
-
-      const inHouseEmailData = {
-        sender: {
-          name: email,
-          address: email,
-        },
-        receipient: [
-          {
-            name: "quincy Davis Ministries",
-            address: "chatwithjohnjoseph@gmail.com",
-          },
-        ],
-        message: ` ${email} Just subscribed to news letter`,
-        subject: `Quincy Davis Ministries - New subscriber`,
-      };
-      await axios.post("/api/email", {
-        ...inHouseEmailData,
-      });
-
       setOpen(false);
     } catch (error) {
       console.log("====================================");
@@ -110,22 +94,60 @@ const NewsLetterDrawer = ({
       <DrawerContent>
         <DrawerHeader className="lg:mx-auto lg:w-1/2">
           <DrawerTitle className="text-center">
-            Subscribe to our news letter
+            Which service are you interested in?
           </DrawerTitle>
 
           <DrawerDescription className="text-center">
             {" "}
-            We&apos;ll keep you up to date with the latest developments in the
-            ministry
+            Tell us what you wnat to know and we will let you know everything
+            you need to know
           </DrawerDescription>
         </DrawerHeader>
         <div className="w-full max-md:px-10 md:w-2/3 lg:w-1/2 mx-auto space-y-4 text-center">
           <Input
+            id="name"
+            name={formData.name}
+            placeholder="Enter your name"
+            className="w-full"
+            onChange={handleChange}
+          />
+          <Input
             id="email"
+            name={formData.email}
             placeholder="Enter your email"
             className="w-full"
+            onChange={handleChange}
+          />
+
+          <Select
+            onValueChange={(value) =>
+              setFormData({ ...formData, subject: value })
+            }
+          >
+            <SelectTrigger className="w-full">
+              <SelectValue placeholder="Select a service" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectGroup>
+                <SelectLabel>Services</SelectLabel>
+                {services.map((service) => (
+                  <SelectItem key={service.title} value={service.title}>
+                    {service.title}
+                  </SelectItem>
+                ))}
+              </SelectGroup>
+            </SelectContent>
+          </Select>
+
+          <Textarea
+            placeholder="Type your message here."
+            value={formData.message}
+            className="w-full"
             onChange={(e) => {
-              setEmail(e.target.value);
+              setFormData({
+                ...formData,
+                message: e.target.value,
+              });
             }}
           />
           <Button
@@ -155,4 +177,4 @@ const NewsLetterDrawer = ({
   );
 };
 
-export default NewsLetterDrawer;
+export default LearnMoreDrawer;

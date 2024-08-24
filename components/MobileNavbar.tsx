@@ -1,49 +1,67 @@
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { Button } from "./ui/button";
 import { CgClose } from "react-icons/cg";
 import { cn } from "@/lib/utils";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
 const MobileNavbar = ({
-  openMobileNavbar,
-  setOpenMobileNavbar,
+  openMobileNavbarDropdown,
+  setOpenMobileNavbarDropdown,
 }: {
-  openMobileNavbar: boolean;
-  setOpenMobileNavbar: React.Dispatch<React.SetStateAction<boolean>>;
+  openMobileNavbarDropdown: boolean;
+  setOpenMobileNavbarDropdown: React.Dispatch<React.SetStateAction<boolean>>;
 }) => {
   const handleCloseMobileNavbar = () => {
-    setOpenMobileNavbar(false);
+    setOpenMobileNavbarDropdown(false);
   };
 
+  const dropdownRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target as Node)
+      ) {
+        setOpenMobileNavbarDropdown(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+  useGSAP(() => {
+    if (!openMobileNavbarDropdown) return;
+    gsap.fromTo(
+      ".mobile-navbar",
+      {
+        opacity: 0,
+        y: -50,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        ease: "power2.inOut",
+        duration: 0.05,
+      }
+    );
+  }, [openMobileNavbarDropdown]);
   return (
     <div
+      ref={dropdownRef}
       className={cn(
-        "h-dvh w-full z-50 bg-gradient-to-t from-green-700 via-green-900 to-black space-y-6 flex-col gap-6 absolute top-0 right-0 left-0 px-10 pt-10",
-        openMobileNavbar ? "flex" : "hidden"
+        "mobile-navbar shadow-2xl h-fit max-w-full z-50 bg-white flex-col gap-6 !absolute top-[80px] mx-3 md:mx-12  right-0 left-0 px-10 pt-10 pb-8 rounded-bl-3xl rounded-br-3xl",
+        openMobileNavbarDropdown ? "flex" : "hidden"
       )}
     >
-      <div className="flex items-center justify-between">
-        <Image
-          src="/assets/images/QDM MINISTRY LOGO GOLD.png"
-          alt="logo"
-          width={100}
-          height={100}
-          className="object-scale-down max-lg:size-20 -ml-5"
-        />
-        <Button
-          size="icon"
-          variant="ghost"
-          className="text-white focus:text-white hover:bg-gray-500/80 hover:text-white focus:bg-transparent"
-          onClick={handleCloseMobileNavbar}
-        >
-          <CgClose className="size-7" />
-        </Button>
-      </div>
-
       <ul
         className="
-              lg:hidden flex flex-col gap-10 uppercase text-sm font-semibold text-white"
+              lg:hidden flex flex-col gap-4 capitalize text-sm font-semibold [&>li]:border-b [&>li]:pb-3 !text-black"
       >
         <li className="hover:text-green-500">
           <Link onClick={handleCloseMobileNavbar} href="/">
@@ -53,6 +71,11 @@ const MobileNavbar = ({
         <li className="hover:text-green-500">
           <Link onClick={handleCloseMobileNavbar} href="/events">
             Events
+          </Link>
+        </li>
+        <li className="hover:text-green-500">
+          <Link onClick={handleCloseMobileNavbar} href="/services">
+            Services
           </Link>
         </li>
         <li className="hover:text-green-500">
@@ -66,14 +89,6 @@ const MobileNavbar = ({
           </Link>
         </li>
       </ul>
-      <Button
-        size="sm"
-        className="main-btn-bg px-5 uppercase text-xs lg:text-sm font-bold max-xl:!h-8"
-        asChild
-        onClick={handleCloseMobileNavbar}
-      >
-        <Link href="/donate">Donate now</Link>
-      </Button>
     </div>
   );
 };

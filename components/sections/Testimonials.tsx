@@ -13,7 +13,7 @@ const Testimonials = () => {
           centered={true}
         />
       </div>
-      <div className="max-lg:w-full lg:w-5/6 mx-auto mt-8 testimonials">
+      <div className="max-lg:w-full lg:w-5/6 mx-auto mt-8 testimonials h-fit">
         <TestimonialsSliders />
       </div>
     </div>

@@ -1,19 +1,16 @@
 "use client";
 
 import PageHeader from "@/components/PageHeader";
-import SectionTitle from "@/components/SectionTitle";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import { Quote } from "lucide-react";
 import Image from "next/image";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
-import axios from "axios";
+import SectionTitle from "@/components/SectionTitle";
 
 const Donate = () => {
   return (
     <div>
-      <PageHeader title="Donate" />
+      <PageHeader title="Support us" />
 
       <div className="my-20 grid lg:grid-cols-3 gap-10 mx-6 md:mx-12 lg:mx-48">
         <div className="border p-6 lg:col-span-1 space-y-4">
@@ -77,7 +74,7 @@ const Donate = () => {
         </div>
         <div className="lg:col-span-2 space-y-4">
           <SectionTitle
-            title="Donate here"
+            title="Give to the cause of love"
             subTitle="Save Humanity, Save Life"
             className="!items-start w-fit"
             wrap={true}

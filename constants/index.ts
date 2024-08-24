@@ -14,20 +14,20 @@ export const testimonials = [
   },
   {
     title: "Prophets Donnefer and Angela",
-    text: "Pastor Dan and prophetess Quince are a great blessing to the ministry. They are training and coaching the praise team with great passion and determination. We have seen the growth in the praise and worship team not only in technique but also spiritually. We thank God that the pastor and prophetess have the heart and mindset to help us build the kingdom together. We highly recommend them to any ministry.",
+    text: "Pastor Dan and Prophetess Quince are passionately training the praise team, leading to both technical and spiritual growth. Their dedication to building the kingdom together is evident, and they are highly recommended for any ministry.",
     ministry: "Kingdom Establishers, Almere Holland",
     image: "/assets/images/testimonials/donnefer.jpg",
   },
   {
     title: "Reverend Edmund Sackey Brown",
-    text: "Quincy Davis Ministry has been of a tremendous blessing and help to my wife and I and our entire ministry for several years. They have always provided us with the assistance we require whenever we call on them, with excellence and without hesitation. Minister Quincy’s stage presence is captivating. Her natural ability and passion to engage the audience and make them feel connected to her song ministration, both In worship or during a gospel concert is superb, powerful, dynamic, and captivating! Minister Dan is such a humble man, yet a gifted, talented, dedicated musician who executes his duties with great passion and precision. He is sold out to God and what he does as a musician. He is a musician with a high sense of spirituality and a great desire for the word of God, which is quite rare to find in our current day Post modern musicians and gospel artists. I duly endorse their ministry without any reservation!",
+    text: "Quincy Davis Ministry excels in blessing and supporting us. Minister Quincy captivates with dynamic stage presence and powerful song ministration. Minister Dan is a humble, talented musician with deep spirituality. I wholeheartedly endorse their ministry.",
     ministry:
       "Head Pastor - House of Solution Christ Church International, Muelhim an der Ruhr Germany",
     image: "/assets/images/testimonials/Edmond.jpg",
   },
   {
     title: "Apostle Kelly and Prophetess Sherma Oriakhi",
-    text: "We attest to the good works of Quincy Davies Ministries. God used Pastor Dan and Prophetess Quincy to equip and empower our Praise and Worship team. We gladly recommend them to individuals who want to learn to play instruments or empower their singing ministries and churches that want to empower their Praise and Worship team for next-level musical stewardship.",
+    text: "Quincy Davies Ministries, led by Pastor Dan and Prophetess Quincy, greatly empowered our Praise and Worship team. We highly recommend them to individuals seeking musical training and churches aiming to elevate their Praise and Worship teams for enhanced musical stewardship.",
     ministry:
       "The FULL STATURE OF CHRIST CHURCH, Worldwide, International (The Netherlands)",
     image: "/assets/images/testimonials/Kelly.jpg",
@@ -40,7 +40,7 @@ export const testimonials = [
   },
   {
     title: "Pastor Jesse M. Ayomah",
-    text: "Pastor Dan and Quincy‘s Ministry has significantly blessed my Church. Their powerful and spirit-filled performances always manage to uplift and encourage the people of God. Their dedication and passion for worship are helping to build the body of Christ. They have also served in the area of offering workshops, which greatly benefited our church by fostering a stronger sense of Confidence and unity among the music team. Our music team has gained more knowledge, skills, and spiritual growth, which enhances their musical gifts. Additionally, the workshops have empowered our music members to take on leadership roles, contribute more effectively to church activities, and strengthen the church. Finally, because of the demand for being at the cutting edge in today's times, I recommend that you be more excellent in your ministry.",
+    text: "Pastor Dan and Quincy's Ministry has blessed our church, uplifting us with spirit-filled performances and workshops. Their dedication has strengthened our music team, fostering confidence, unity, and spiritual growth. The workshops empowered members to take leadership roles, enhancing their contributions and strengthening the church overall.",
     ministry: "All Nation Church , Düsseldorf Germany",
     image: "/assets/images/testimonials/Jersey.webp",
   },
@@ -122,6 +122,11 @@ export const services = [
     image: "/assets/images/him teaching/IMG_20230220_175945.jpg",
     title: "Sound System and Instruments",
     text: "We have instruments for crusades, large-scale and small-scale events. Reinforce your events as we support you with musicians/band/sound & musical instruments.",
+  },
+  {
+    image: "/assets/images/him teaching/IMG-20240420-WA0033.jpg",
+    title: "Christmas Moments with Quincy Davies and The Gospellier",
+    text: "Celebrate the holiday season with our special Christmas Moments event. Reserve Quincy Bell & Davies Gospellier for your end-of-year festivities, including company parties, church celebrations, and Easter events.",
   },
   {
     image: "/assets/images/him teaching/IMG-20240420-WA0033.jpg",

@@ -13,18 +13,18 @@ interface EventCardProps {
 
 const EventCard = ({ image, title, text, date, id }: EventCardProps) => {
   return (
-    <div className="rounded-lg shadow-lg flex flex-col gap-y-4 pb-6 min-h-[500px]">
+    <div className="rounded-3xl shadow-lg flex flex-col gap-y-4 pb-6 min-h-[500px] hover:scale-105 transition-all ease-in-out duration-300 delay-100">
       <div className="relative h-1/2">
         <Image
           src={image}
           alt="story image"
           height={1000}
           width={500}
-          className="rounded-tr-lg rounded-tl-lg max-h-full h-[300px]"
+          className="rounded-tr-3xl rounded-tl-3xl max-h-full h-[300px] object-cover object-center"
         />
       </div>
       <div className="flex flex-col gap-4 h-1/2 pt-2">
-        <Badge className="bg-green-500 text-white w-fit rounded-lg hover:bg-green-500 py-2 ml-6">
+        <Badge className="bg-green-500 text-white w-fit max-w-full rounded-lg hover:bg-green-500 py-2 mx-6">
           {date}
         </Badge>
         <Link

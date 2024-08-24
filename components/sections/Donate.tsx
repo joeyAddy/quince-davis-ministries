@@ -20,11 +20,11 @@ const Donate = () => {
         </p>
         <Button
           variant="outline"
-          className="bg-transparent text-white hover:bg-gray-500 hover:text-white font-bold uppercase border-yellow-500 mt-3"
+          className="bg-transparent text-white hover:bg-gray-500 hover:text-white font-bold capitalize border-yellow-500 mt-3 rounded-3xl"
           size="lg"
           asChild
         >
-          <Link href="/donate">Donate now</Link>
+          <Link href="/donate">Support Us</Link>
         </Button>
       </div>
     </div>

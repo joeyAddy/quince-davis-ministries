@@ -6,13 +6,13 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import axios from "axios";
 import React, { useState } from "react";
+import toast from "react-hot-toast";
 import { FaSpinner } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
 
 const ContactUs = () => {
   const [isLoading, setIsLoading] = useState(false);
 
-  const [message, setMessage] = useState("");
   // State for form inputs
   const [formData, setFormData] = useState({
     name: "",
@@ -40,6 +40,12 @@ const ContactUs = () => {
         name: formData.name,
         address: formData.email,
       },
+      receipient: [
+        {
+          name: "quincy Davis Ministries",
+          address: "chatwithjohnjoseph@gmail.com",
+        },
+      ],
       message: formData.message,
       subject: formData.subject,
     };
@@ -47,12 +53,12 @@ const ContactUs = () => {
     try {
       const response = await axios.post("/api/email", { ...data });
       console.log("EMAIL SENDING RESPONSE", response);
-      setMessage("Email sent successfully! We will get back to you soon.");
+      toast.success("Email sent successfully! We will get back to you soon.");
     } catch (error) {
       console.log("====================================");
       console.log(error);
       console.log("====================================");
-      setMessage("Something went wrong. Please try again");
+      toast.error("Something went wrong. Please try again");
     } finally {
       setIsLoading(false);
     }
@@ -91,7 +97,6 @@ const ContactUs = () => {
           onSubmit={handleSubmit}
           className="p-4 lg:p-10 space-y-4 lg:space-y-8 flex-1"
         >
-          {message !== "" && <p>{message}</p>}
           <Input
             type="text"
             name="name"

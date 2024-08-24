@@ -12,13 +12,10 @@ export default function Home() {
   return (
     <main className="max-w-full">
       <Hero />
-      <About />
+      <Events />
       <Donate />
       <Testimonials />
       <ChrismasMoments />
-      <Events />
-      <Services />
-      <OurTeam />
       <Footer />
     </main>
   );

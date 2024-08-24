@@ -9,13 +9,13 @@ import { Button } from "@/components/ui/button";
 import { useParams } from "next/navigation";
 import axios from "axios";
 import { FaSpinner } from "react-icons/fa";
+import { Badge } from "@/components/ui/badge";
+import toast from "react-hot-toast";
 
 const EventDetails = () => {
   const { id } = useParams();
 
   const [isLoading, setIsLoading] = useState(false);
-
-  const [message, setMessage] = useState("");
 
   const event = events.find((event) => event.id === parseInt(id as string));
 
@@ -44,6 +44,12 @@ const EventDetails = () => {
         name: formData.name,
         address: formData.email,
       },
+      receipient: [
+        {
+          name: "quincy Davis Ministries",
+          address: "chatwithjohnjoseph@gmail.com",
+        },
+      ],
       message: `I need more information about ${event?.title}`,
       subject: `Quincy Davis Ministries - ${event?.title}`,
     };
@@ -51,12 +57,12 @@ const EventDetails = () => {
     try {
       const response = await axios.post("/api/email", { ...data });
       console.log("EMAIL SENDING RESPONSE", response);
-      setMessage("Email sent successfully! We will get back to you soon.");
+      toast.success("Email sent successfully! We will get back to you soon.");
     } catch (error) {
       console.log("====================================");
       console.log(error);
       console.log("====================================");
-      setMessage("Something went wrong. Please try again");
+      toast.error("Something went wrong. Please try again");
     } finally {
       setIsLoading(false);
     }
@@ -146,6 +152,7 @@ const EventDetails = () => {
               <div className="w-full bg-green-500 text-white rounded-tr-lg rounded-tl-lg py-4 text-xl text-center font-bold">
                 Event Registration
               </div>
+
               <form
                 onSubmit={handleSubmit}
                 className="rounded-bl-lg rounded-br-lg border-t-0 border-dotted border-4 p-4 lg:p-10 space-y-4 lg:space-y-8"

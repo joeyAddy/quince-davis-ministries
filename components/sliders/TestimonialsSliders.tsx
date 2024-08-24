@@ -20,7 +20,7 @@ const TestimonialsSliders = () => {
   const [count, setCount] = React.useState(0);
 
   const plugin = React.useRef(
-    Autoplay({ delay: 4000, stopOnInteraction: true })
+    Autoplay({ delay: 5000, stopOnInteraction: true })
   );
 
   React.useEffect(() => {
@@ -49,8 +49,8 @@ const TestimonialsSliders = () => {
     >
       <CarouselContent>
         {testimonials.map((testimony, index) => (
-          <CarouselItem key={index}>
-            <div className="p-4">
+          <CarouselItem key={index} className="h-fit">
+            <div className="p-4 lg:px-20 lg:pb-12">
               <TestimonialCard
                 title={testimony.title}
                 ministry={testimony.ministry}
@@ -58,25 +58,26 @@ const TestimonialsSliders = () => {
                 image={testimony.image}
               />
             </div>
+            <div className="text-center text-sm text-muted-foreground flex justify-center space-x-2 items-center mt-5">
+              {Array.from({ length: count }).map((_, index) => (
+                <span
+                  className={cn(
+                    "transition-all duration-300 delay-150 size-3 md:size-4 bg-white border border-gray-200 rounded-full cursor-pointer",
+                    index + 1 === current &&
+                      "bg-green-500 border-none size-4 md:size-5"
+                  )}
+                  onClick={() => {
+                    api?.scrollTo(index);
+                  }}
+                  key={index}
+                />
+              ))}
+            </div>
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious />
-      <CarouselNext />
-      <div className="py-2 text-center text-sm text-muted-foreground flex justify-center space-x-2 items-center max-md:-mt-5">
-        {Array.from({ length: count }).map((_, index) => (
-          <span
-            className={cn(
-              "transition-all duration-300 delay-150 size-4 bg-white border border-gray-200 rounded-full cursor-pointer",
-              index + 1 === current && "bg-green-500 border-none size-5"
-            )}
-            onClick={() => {
-              api?.scrollTo(index);
-            }}
-            key={index}
-          />
-        ))}
-      </div>
+      <CarouselPrevious className="size-10 lg:size-20 max-md:hidden" />
+      <CarouselNext className="size-10 lg:size-20 max-md:hidden" />
     </Carousel>
   );
 };

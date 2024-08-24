@@ -14,7 +14,7 @@ const transport = nodemailer.createTransport({
 
 type sendEmailObject = {
   sender: Mail.Address;
-  receipient: Mail.Address;
+  receipient: Mail.Address[];
   subject: string;
   message?: string;
 };
@@ -29,5 +29,5 @@ export async function sendEmail(options: sendEmailObject) {
   };
 
   await transport.sendMail(mailOptions);
-  console.log(`Email sent to ${options.receipient.address}`);
+  console.log(`Email sent to ${options.receipient[0].address}`);
 }

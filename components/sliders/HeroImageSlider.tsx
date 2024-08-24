@@ -57,7 +57,7 @@ const HeroImageSlider = () => {
               alt="background"
               height={1000}
               width={1920}
-              className="h-[70vh] md:h-[75vh] lg:h-[80vh] object-cover object-top"
+              className="h-dvh object-cover object-top"
             />
           </CarouselItem>
         ))}
