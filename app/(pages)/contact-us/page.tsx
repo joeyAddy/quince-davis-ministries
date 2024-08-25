@@ -79,9 +79,7 @@ const ContactUs = () => {
         <div className="rounded-lg flex flex-col items-center justify-center text-white bg-section space-y-4 p-10">
           <FaLocationDot className="size-10 text-white" />
           <h5 className="text-2xl font-bold">Phone number</h5>
-          <p className="text-center">
-            (+55) 654 - 545 - 5418 <br /> (+55) 654 - 545 - 1235
-          </p>
+          <p className="text-center">+4915906607717</p>
         </div>
         <div className="rounded-lg flex flex-col items-center justify-center text-white bg-section space-y-4 p-10">
           <FaLocationDot className="size-10 text-white" />

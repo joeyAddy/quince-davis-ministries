@@ -38,7 +38,7 @@ const Donate = () => {
     }
   }, []);
   return (
-    <div className="relative max-lg:h-[600px] lg:h-[500px] overflow-hidden">
+    <div className="relative max-lg:h-[600px] lg:h-[500px] overflow-hidden w-full">
       <div className="parallax-donate bg-fixed bg-center bg-cover h-full w-full"></div>
       <div
         className="absolute inset-0 flex flex-col gap-5 items-center justify-center text-white"

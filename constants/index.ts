@@ -165,6 +165,6 @@ export const ministers = [
 
 export const heroImages = [
   "/assets/images/main-bg.jpg",
-  "/assets/images/praying-hands.jpg",
-  "/assets/images/worshipping-hands.jpg",
+  "/assets/images/him teaching/IMG_20230902_160831.jpg",
+  "/assets/images/him teaching/IMG_20231007_164207.jpg",
 ];
