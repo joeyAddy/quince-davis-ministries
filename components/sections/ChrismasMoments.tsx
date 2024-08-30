@@ -4,7 +4,7 @@ import React, { useRef } from "react";
 import { Button } from "../ui/button";
 import SectionTitle from "../SectionTitle";
 import Image from "next/image";
-import { Crown } from "lucide-react";
+import { Crown, Heart } from "lucide-react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/all";
@@ -88,12 +88,10 @@ const ChrismasMoments = () => {
         <div className="md:flex gap-10 max-md:space-y-6">
           <div className="space-y-6">
             <div className="flex items-center justify-center size-12 bg-green-500 rounded-full">
-              <Crown className="size-6 text-white" />
+              <Heart className="size-6 text-white" />
             </div>
-            <h3 className="font-bold text-xl">Celebrate the King of Kings</h3>
-            <p>
-              The very birth of our Lord is the greatest gift we were given.
-            </p>
+            <h3 className="font-bold text-xl">Sing for Joy</h3>
+            <p>For God so loved the word that he gave.</p>
           </div>
           <div className="space-y-6">
             <div className="flex items-center justify-center size-12 bg-green-500 rounded-full">

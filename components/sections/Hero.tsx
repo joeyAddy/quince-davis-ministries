@@ -22,7 +22,7 @@ const Hero = () => {
   useEffect(() => {
     setTimeout(() => {
       setOpenModal(true);
-    }, 3000);
+    }, 8000);
   }, []);
 
   useGSAP(() => {
