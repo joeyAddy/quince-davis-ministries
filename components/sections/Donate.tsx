@@ -7,10 +7,13 @@ import Link from "next/link";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
+import { useTranslations } from "next-intl";
 gsap.registerPlugin(ScrollTrigger);
 
 const Donate = () => {
   const contentRef = useRef<HTMLDivElement>(null);
+
+  const translations = useTranslations();
 
   useGSAP(() => {
     if (contentRef.current) {
@@ -48,11 +51,12 @@ const Donate = () => {
           <HeartHandshakeIcon className="size-12 text-white animate-none" />
         </span>
         <h3 className="max-lg:text-3xl text-5xl font-bold w-2/3 text-center">
-          <span> &quot;</span>Pray! And listen to God! You can do this alone,
-          but find somebody to do it with you<span>&quot;</span>
+          <span> &quot;</span>
+          {translations("support.title")}
+          <span>&quot;</span>
         </h3>
         <p className="dancing-script-regular text-2xl">
-          Help someone to find someone
+          {translations("support.text")}
         </p>
         <Button
           variant="outline"
@@ -60,7 +64,7 @@ const Donate = () => {
           size="lg"
           asChild
         >
-          <Link href="/donate">Support Us</Link>
+          <Link href="/donate"> {translations("support.buttonText")}</Link>
         </Button>
       </div>
     </div>

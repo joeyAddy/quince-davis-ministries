@@ -1,11 +1,10 @@
-import Image from "next/image";
-import Link from "next/link";
 import React, { useEffect, useRef } from "react";
-import { Button } from "./ui/button";
-import { CgClose } from "react-icons/cg";
 import { cn } from "@/lib/utils";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import LocaleSwitcher from "./LocationSwitcher";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/routing";
 
 const MobileNavbar = ({
   openMobileNavbarDropdown,
@@ -14,6 +13,8 @@ const MobileNavbar = ({
   openMobileNavbarDropdown: boolean;
   setOpenMobileNavbarDropdown: React.Dispatch<React.SetStateAction<boolean>>;
 }) => {
+  const translations = useTranslations();
+
   const handleCloseMobileNavbar = () => {
     setOpenMobileNavbarDropdown(false);
   };
@@ -65,28 +66,31 @@ const MobileNavbar = ({
       >
         <li className="hover:text-green-500">
           <Link onClick={handleCloseMobileNavbar} href="/">
-            Home
+            {translations("navigation.home")}
           </Link>
         </li>
         <li className="hover:text-green-500">
           <Link onClick={handleCloseMobileNavbar} href="/events">
-            Events
+            {translations("navigation.events")}
           </Link>
         </li>
         <li className="hover:text-green-500">
           <Link onClick={handleCloseMobileNavbar} href="/services">
-            Services
+            {translations("navigation.services")}
           </Link>
         </li>
         <li className="hover:text-green-500">
           <Link onClick={handleCloseMobileNavbar} href="/contact-us">
-            Contact us
+            {translations("navigation.contactUs")}
           </Link>
         </li>
         <li className="hover:text-green-500">
           <Link onClick={handleCloseMobileNavbar} href="/about-us">
-            About us
+            {translations("navigation.aboutUs")}
           </Link>
+        </li>
+        <li className="hover:text-green-500 whitespace-nowrap">
+          <LocaleSwitcher />
         </li>
       </ul>
     </div>

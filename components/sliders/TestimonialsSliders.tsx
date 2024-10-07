@@ -10,14 +10,19 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import TestimonialCard from "../cards/TestimonialCard";
-import { testimonials } from "@/constants";
 import Autoplay from "embla-carousel-autoplay";
 import { cn } from "@/lib/utils";
+import { useTranslations } from "next-intl";
+import { Testimonial } from "@/constants";
 
 const TestimonialsSliders = () => {
   const [api, setApi] = React.useState<CarouselApi>();
   const [current, setCurrent] = React.useState(0);
   const [count, setCount] = React.useState(0);
+
+  const translations = useTranslations("");
+
+  const testimonials = translations.raw("testimonials");
 
   const plugin = React.useRef(
     Autoplay({ delay: 10000, stopOnInteraction: true })
@@ -48,7 +53,7 @@ const TestimonialsSliders = () => {
       className="w-full testimonials"
     >
       <CarouselContent>
-        {testimonials.map((testimony, index) => (
+        {testimonials.map((testimony: Testimonial, index: number) => (
           <CarouselItem key={index} className="h-fit">
             <div className="px-1 md:p-4 lg:px-20 lg:pb-12">
               <TestimonialCard

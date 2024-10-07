@@ -1,9 +1,10 @@
 "use client";
 
-import Link from "next/link";
 import React, { useState } from "react";
 import Navbar from "./Navbar";
 import MobileNavbar from "./MobileNavbar";
+import { Link } from "@/i18n/routing";
+import { useTranslations } from "next-intl";
 
 const PageHeader = ({
   title,
@@ -12,6 +13,8 @@ const PageHeader = ({
   title: string;
   previousPage?: string;
 }) => {
+  const translations = useTranslations();
+
   const [openMobileNavbarDropdown, setOpenMobileNavbarDropdown] =
     useState(false);
   return (
@@ -27,8 +30,8 @@ const PageHeader = ({
         />
       </div>
       <div className="space-y-4">
-        <p className="text-green-500">
-          <Link href="/">Home</Link> -{" "}
+        <p className="text-green-500 text-center">
+          <Link href="/">{translations("navigation.home")}</Link> -{" "}
           {previousPage ? previousPage + " - " : ""}
           <span className="text-white">{title}</span>
         </p>

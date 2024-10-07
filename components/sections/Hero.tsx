@@ -2,15 +2,13 @@
 
 import React, { useEffect, useState } from "react";
 import Navbar from "../Navbar";
-import { FaHands } from "react-icons/fa";
-import { Button } from "../ui/button";
 import MobileNavbar from "../MobileNavbar";
 import NewsLetterDrawer from "../modals/NewsLetterDrawer";
-import Link from "next/link";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import HeroImageSlider from "../sliders/HeroImageSlider";
+import { useTranslations } from "next-intl";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -18,6 +16,8 @@ const Hero = () => {
   const [openMobileNavbarDropdown, setOpenMobileNavbarDropdown] =
     useState(false);
   const [openModal, setOpenModal] = useState(false);
+
+  const t = useTranslations("heroSection");
 
   useEffect(() => {
     setTimeout(() => {
@@ -88,7 +88,7 @@ const Hero = () => {
         />
         <div className="pt-16 md:py-20 max-md:gap-y-4 gap-y-6 flex flex-col items-center max-md:px-4 flex-1 justify-center">
           <h3 className="text-white font-extralight text-3xl lg:text-5xl uppercase text-center main-text leading-tight">
-            Welcome to
+            {t("welcome")}
           </h3>
           <h1 className="text-white text-5xl lg:text-8xl font-extrabold text-center para uppercase leading-tight">
             Quincy Davies Ministry

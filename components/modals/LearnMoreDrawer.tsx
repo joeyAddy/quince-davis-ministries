@@ -25,7 +25,7 @@ import axios from "axios";
 import toast from "react-hot-toast";
 import { FaSpinner } from "react-icons/fa";
 import { Textarea } from "../ui/textarea";
-import { services } from "@/constants";
+import { useTranslations } from "next-intl";
 
 const LearnMoreDrawer = ({
   open,
@@ -34,6 +34,9 @@ const LearnMoreDrawer = ({
   open: boolean;
   setOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }) => {
+  const translations = useTranslations();
+
+  const services = translations.raw("services");
   // State for form inputs
   const [formData, setFormData] = useState({
     name: "",
@@ -94,27 +97,26 @@ const LearnMoreDrawer = ({
       <DrawerContent>
         <DrawerHeader className="lg:mx-auto lg:w-1/2">
           <DrawerTitle className="text-center">
-            Which service are you interested in?
+            {translations("drawer.learnMore.title")}
           </DrawerTitle>
 
           <DrawerDescription className="text-center">
             {" "}
-            Tell us what you wnat to know and we will let you know everything
-            you need to know
+            {translations("drawer.learnMore.description")}
           </DrawerDescription>
         </DrawerHeader>
         <div className="w-full max-md:px-10 md:w-2/3 lg:w-1/2 mx-auto space-y-4 text-center">
           <Input
             id="name"
             name={formData.name}
-            placeholder="Enter your name"
+            placeholder={translations("drawer.learnMore.name")}
             className="w-full"
             onChange={handleChange}
           />
           <Input
             id="email"
             name={formData.email}
-            placeholder="Enter your email"
+            placeholder={translations("drawer.learnMore.email")}
             className="w-full"
             onChange={handleChange}
           />
@@ -125,11 +127,13 @@ const LearnMoreDrawer = ({
             }
           >
             <SelectTrigger className="w-full">
-              <SelectValue placeholder="Select a service" />
+              <SelectValue
+                placeholder={translations("drawer.learnMore.service")}
+              />
             </SelectTrigger>
             <SelectContent>
               <SelectGroup>
-                <SelectLabel>Services</SelectLabel>
+                <SelectLabel>{translations("navigation.services")}</SelectLabel>
                 {services.map((service) => (
                   <SelectItem key={service.title} value={service.title}>
                     {service.title}
@@ -140,7 +144,7 @@ const LearnMoreDrawer = ({
           </Select>
 
           <Textarea
-            placeholder="Type your message here."
+            placeholder={translations("drawer.learnMore.message")}
             value={formData.message}
             className="w-full"
             onChange={(e) => {
@@ -157,7 +161,7 @@ const LearnMoreDrawer = ({
             {isLoading ? (
               <FaSpinner className="text-center animate-spin" />
             ) : (
-              "Subscribe"
+              translations("drawer.learnMore.subscribeButtonText")
             )}
           </Button>
         </div>
@@ -168,7 +172,7 @@ const LearnMoreDrawer = ({
               size="sm"
               variant="destructive"
             >
-              Cancel
+              {translations("drawer.learnMore.cancelButtonText")}
             </Button>
           </DrawerClose>
         </DrawerFooter>

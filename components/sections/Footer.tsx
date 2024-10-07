@@ -8,6 +8,7 @@ import { Button } from "../ui/button";
 import axios from "axios";
 import toast from "react-hot-toast";
 import { FaSpinner } from "react-icons/fa";
+import { useTranslations } from "next-intl";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -15,6 +16,8 @@ const Footer = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   const [email, setEmail] = useState("");
+
+  const translations = useTranslations();
 
   // Handle form submission
   const handleSubmit = async (e: React.FormEvent<HTMLButtonElement>) => {
@@ -99,7 +102,9 @@ const Footer = () => {
               <div className="space-y-4">
                 <div className="flex items-center space-x-2">
                   <div className="h-1 bg-green-500 w-12" />
-                  <h4 className="font-bold text-3xl">About</h4>
+                  <h4 className="font-bold text-3xl">
+                    {translations("navigation.about")}
+                  </h4>
                 </div>
                 <p className="max-lg:w-full w-64">
                   Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi
@@ -112,7 +117,7 @@ const Footer = () => {
                 <div className="flex items-center space-x-2">
                   <div className="h-1 bg-green-500 w-12" />
                   <h4 className="font-bold text-3xl whitespace-nowrap">
-                    Quick links
+                    {translations("navigation.quickLinks")}
                   </h4>
                 </div>
                 <ul className="space-y-4">
@@ -122,7 +127,7 @@ const Footer = () => {
                       className="flex items-center space-x-3 color-hover-transition"
                     >
                       <GrStarOutline />
-                      <span>About us</span>
+                      <span>{translations("navigation.aboutUs")}</span>
                     </Link>
                   </li>
                   <li>
@@ -131,7 +136,7 @@ const Footer = () => {
                       className="flex items-center space-x-3 color-hover-transition"
                     >
                       <GrStarOutline />
-                      <span>Contact us</span>
+                      <span>{translations("navigation.contactUs")}</span>
                     </Link>
                   </li>
                 </ul>
@@ -141,18 +146,17 @@ const Footer = () => {
               <div className="flex items-center space-x-2">
                 <div className="h-1 bg-green-500 w-12" />
                 <h4 className="font-bold text-3xl whitespace-nowrap">
-                  Newsletter
+                  {translations("navigation.newsLetter.title")}
                 </h4>
               </div>
               <p className="max-lg:w-full w-64">
-                Sign up for our weekly newsletter to stay updated on all news
-                and events
+                {translations("navigation.newsLetter.text")}
               </p>
               <div className="flex">
                 <Input
                   className="rounded-none rounded-tl-lg rounded-bl-lg h-12 text-black"
                   type="email"
-                  placeholder="Email"
+                  placeholder={translations("navigation.footerInput.email")}
                   onChange={(e) => {
                     setEmail(e.target.value);
                   }}
@@ -164,14 +168,14 @@ const Footer = () => {
                   {isLoading ? (
                     <FaSpinner className="text-center animate-spin" />
                   ) : (
-                    "Sign up"
+                    translations("navigation.footerInput.buttonText")
                   )}
                 </Button>
               </div>
             </div>
           </div>
           <div className="bg-black/80 w-full text-center py-5">
-            <p>Copyrights © {currentYear} Name ♥</p>
+            <p>Copyrights © {currentYear} Quincy Davies Ministries ♥</p>
           </div>
         </div>
       </div>

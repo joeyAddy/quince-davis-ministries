@@ -2,9 +2,11 @@ import { Menu } from "lucide-react";
 import Image from "next/image";
 import React from "react";
 import { Button } from "./ui/button";
-import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { CgClose } from "react-icons/cg";
+import LocaleSwitcher from "./LocationSwitcher";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/routing";
 
 const Navbar = ({
   setOpenMobileNavbarDropdown,
@@ -13,6 +15,7 @@ const Navbar = ({
   openMobileNavbarDropdown: boolean;
   setOpenMobileNavbarDropdown: React.Dispatch<React.SetStateAction<boolean>>;
 }) => {
+  const translations = useTranslations();
   const handleOpenMobileNavbarDropdown = () => {
     setOpenMobileNavbarDropdown(!openMobileNavbarDropdown);
   };
@@ -45,21 +48,26 @@ const Navbar = ({
         </Button>
       </div>
       <div className="flex gap-16 items-center justify-center flex-1">
-        <ul className="max-lg:hidden flex gap-16 capitalize text-sm font-semibold">
+        <ul className="max-lg:hidden flex gap-16 capitalize text-sm font-semibold items-center">
           <li className="hover:text-green-500 whitespace-nowrap">
-            <Link href="/">Home</Link>
+            <Link href="/">{translations("navigation.home")}</Link>
           </li>
           <li className="hover:text-green-500 whitespace-nowrap">
-            <Link href="/events">Events</Link>
+            <Link href="/events">{translations("navigation.events")}</Link>
           </li>
           <li className="hover:text-green-500 whitespace-nowrap">
-            <Link href="/services">Services</Link>
+            <Link href="/services">{translations("navigation.services")}</Link>
           </li>
           <li className="hover:text-green-500 whitespace-nowrap">
-            <Link href="/contact-us">Contact us</Link>
+            <Link href="/contact-us">
+              {translations("navigation.contactUs")}
+            </Link>
           </li>
           <li className="hover:text-green-500 whitespace-nowrap">
-            <Link href="/about-us">About us</Link>
+            <Link href="/about-us">{translations("navigation.aboutUs")}</Link>
+          </li>
+          <li className="hover:text-green-500 whitespace-nowrap">
+            <LocaleSwitcher />
           </li>
         </ul>
       </div>
@@ -67,7 +75,7 @@ const Navbar = ({
         className="main-btn-bg px-5 capitalize text-xs lg:text-sm font-bold max-xl:!h-8 rounded-3xl"
         asChild
       >
-        <Link href="/donate">Support us</Link>
+        <Link href="/donate">{translations("support.buttonText")}</Link>
       </Button>
     </nav>
   );

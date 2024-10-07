@@ -1,7 +1,9 @@
+"use client";
 import Image from "next/image";
-import Link from "next/link";
 import React from "react";
 import { Badge } from "../ui/badge";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/routing";
 
 interface EventCardProps {
   image: string;
@@ -12,6 +14,7 @@ interface EventCardProps {
 }
 
 const EventCard = ({ image, title, text, date, id }: EventCardProps) => {
+  const translation = useTranslations("");
   return (
     <div className="rounded-3xl shadow-lg flex flex-col gap-y-4 pb-6 min-h-[500px] hover:scale-105 transition-all ease-in-out duration-300 delay-100">
       <div className="relative h-1/2">
@@ -29,16 +32,16 @@ const EventCard = ({ image, title, text, date, id }: EventCardProps) => {
         </Badge>
         <Link
           className="hover:text-green-500 font-bold text-xl px-6 border-l-4 border-dotted border-green-500"
-          href={`/events/${id}`}
+          href={{ pathname: "/events/[id]", params: { id: id.toString() } }}
         >
           {title}
         </Link>
         <p className="w-full line-clamp-3 px-6">{text}</p>
         <Link
-          href={`/events/${id}`}
+          href={{ pathname: "/events/[id]", params: { id: id.toString() } }}
           className="text-green-500 font-semibold underline underline-offset-4 w-fit pl-6 mt-auto"
         >
-          Event details
+          {translation("eventDetails")}
         </Link>
       </div>
     </div>

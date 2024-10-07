@@ -178,3 +178,28 @@ export const heroImages = [
   "/assets/images/him teaching/IMG_20230902_160831.jpg",
   "/assets/images/him teaching/IMG_20231007_164207.jpg",
 ];
+
+export interface Event {
+  id: number;
+  images: string[];
+  galleryImages?: string[]; // Optional field, only present in some events
+  title: string;
+  text: string;
+  start: string | null;
+  end: string | null;
+  frequency: string;
+  time: string | null;
+}
+
+export interface Service {
+  image?: string;
+  title: string;
+  text: string;
+}
+
+export interface Testimonial {
+  title: string;
+  text: string;
+  ministry: string;
+  image: string;
+}

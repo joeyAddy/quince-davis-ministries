@@ -6,10 +6,13 @@ import TestimonialsSliders from "../sliders/TestimonialsSliders";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
+import { useTranslations } from "next-intl";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Testimonials = () => {
+  const title = useTranslations("homePageTitles");
+
   useGSAP(() => {
     gsap.fromTo(
       ".testimonials-title",
@@ -54,8 +57,8 @@ const Testimonials = () => {
     <div className="py-10 lg:py-20 px-6 md:px-12 lg:px-48">
       <div className="testimonials-title">
         <SectionTitle
-          title="Testimonials"
-          subTitle="What people think about us"
+          title={title("testimonials.title")}
+          subTitle={title("testimonials.text")}
           wrap={true}
           centered={true}
         />

@@ -16,6 +16,7 @@ import { Input } from "../ui/input";
 import axios from "axios";
 import toast from "react-hot-toast";
 import { FaSpinner } from "react-icons/fa";
+import { useTranslations } from "next-intl";
 
 const NewsLetterDrawer = ({
   open,
@@ -24,6 +25,8 @@ const NewsLetterDrawer = ({
   open: boolean;
   setOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }) => {
+  const translations = useTranslations();
+
   const [email, setEmail] = useState("");
 
   const [isLoading, setIsLoading] = useState(false);
@@ -110,19 +113,18 @@ const NewsLetterDrawer = ({
       <DrawerContent>
         <DrawerHeader className="lg:mx-auto lg:w-1/2">
           <DrawerTitle className="text-center">
-            Subscribe to our news letter
+            {translations("drawer.newsLetter.title")}
           </DrawerTitle>
 
           <DrawerDescription className="text-center">
             {" "}
-            We&apos;ll keep you up to date with the latest developments in the
-            ministry
+            {translations("drawer.newsLetter.description")}
           </DrawerDescription>
         </DrawerHeader>
         <div className="w-full max-md:px-10 md:w-2/3 lg:w-1/2 mx-auto space-y-4 text-center">
           <Input
             id="email"
-            placeholder="Enter your email"
+            placeholder={translations("drawer.newsLetter.placeholder")}
             className="w-full"
             onChange={(e) => {
               setEmail(e.target.value);
@@ -135,7 +137,7 @@ const NewsLetterDrawer = ({
             {isLoading ? (
               <FaSpinner className="text-center animate-spin" />
             ) : (
-              "Subscribe"
+              translations("drawer.newsLetter.subscribeButtonText")
             )}
           </Button>
         </div>
@@ -146,7 +148,7 @@ const NewsLetterDrawer = ({
               size="sm"
               variant="destructive"
             >
-              Cancel
+              {translations("drawer.newsLetter.cancelButtonText")}
             </Button>
           </DrawerClose>
         </DrawerFooter>

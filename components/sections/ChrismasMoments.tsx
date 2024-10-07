@@ -8,11 +8,13 @@ import { Crown, Heart } from "lucide-react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/all";
+import { useTranslations } from "next-intl";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const ChrismasMoments = () => {
   const contentRef = useRef<HTMLDivElement>(null);
+  const translations = useTranslations("homePageTitles");
 
   useGSAP(() => {
     if (contentRef.current) {
@@ -71,43 +73,40 @@ const ChrismasMoments = () => {
       </div>
       <div className="space-y-6 flex-[0.6]" ref={contentRef}>
         <SectionTitle
-          title="Christmas"
-          subTitle="Christmas Moments with Quincy Davies and The Gospellier"
+          title={translations("christmas.title")}
+          subTitle={translations("christmas.text")}
           wrap={true}
           className="items-start"
         />
-        <p>
-          The Christmas Moment is a special occasion that takes place during the
-          holiday season. Reserve our Christmas Moment with Quincy Bell & Davies
-          Gospellier for your end-of-year events, including company parties,
-          Christmas church celebrations, and Easter festival seasons.
-        </p>
+        <p>{translations("christmas.description")}</p>
         <p className="dancing-script-regular">
-          We will create a special Christmas Moment for you with our services.
+          {translations("christmas.comment")}
         </p>
         <div className="md:flex gap-10 max-md:space-y-6">
           <div className="space-y-6">
             <div className="flex items-center justify-center size-12 bg-green-500 rounded-full">
               <Heart className="size-6 text-white" />
             </div>
-            <h3 className="font-bold text-xl">Sing for Joy</h3>
-            <p>For God so loved the word that he gave.</p>
+            <h3 className="font-bold text-xl">
+              {translations("christmas.card.card1.title")}
+            </h3>
+            <p>{translations("christmas.card.card1.text")}</p>
           </div>
           <div className="space-y-6">
             <div className="flex items-center justify-center size-12 bg-green-500 rounded-full">
               <Crown className="size-6 text-white" />
             </div>
-            <h3 className="font-bold text-xl">Celebrate the King of Kings</h3>
-            <p>
-              The very birth of our Lord is the greatest gift we were given.
-            </p>
+            <h3 className="font-bold text-xl">
+              {translations("christmas.card.card2.title")}
+            </h3>
+            <p>{translations("christmas.card.card2.text")}</p>
           </div>
         </div>
         <Button
           className="bg-green-500 text-white hover:bg-green-500/70 font-bold capitalize rounded-3xl"
           size="lg"
         >
-          Learn more
+          {translations("christmas.link")}
         </Button>
       </div>
     </div>

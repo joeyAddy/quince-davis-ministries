@@ -1,0 +1,237 @@
+{
+  "testimonials": [
+    {
+      "title": "Pastor Jenne & Evelien Hummel",
+      "text": "Pastor Dan und seine Frau, Prophetin Quincy, sind sehr talentiert in dem, was sie lehren. Getrieben und leidenschaftlich. Sie sehen das Gold in den Menschen. Aber vor allem tun sie es aus Gottes Geist und Liebe; wundervolle Menschen.",
+      "ministry": "Das Haus des lebendigen Wassers @ Stadt Dronten in Holland (Die Kirche auf dem Boot)",
+      "image": "/assets/images/testimonials/Jen.jpg"
+    },
+    {
+      "title": "Apostel Simon & Prophetin Faith Khan",
+      "text": "Seit einigen Jahren kennen wir Pastor Davis und Prophetin Quincy, und wir bewundern die besonderen Berufungen Gottes in ihrem Leben. Sie sind ein Paar mit einer klaren Vision, Leidenschaft, einem exzellenten Geist, Charisma und großem Eifer für das Werk Gottes.",
+      "ministry": "End Time Harvester International Ministries, Belgien",
+      "image": "/assets/images/testimonials/Khan.png"
+    },
+    {
+      "title": "Propheten Donnefer und Angela",
+      "text": "Pastor Dan und Prophetin Quincy schulen leidenschaftlich das Lobpreisteam, was sowohl zu technischem als auch zu geistlichem Wachstum führt. Ihre Hingabe am Aufbau des Königreichs ist offensichtlich, und sie werden für jede Art von Dienst sehr empfohlen.",
+      "ministry": "Kingdom Establishers, Almere, Holland",
+      "image": "/assets/images/testimonials/donnefer.jpg"
+    },
+    {
+      "title": "Reverend Edmund Sackey Brown",
+      "text": "Quincy Davis Ministry zeichnet sich durch ihren Segen und ihre Unterstützung aus. Ministerin Quincy fesselt mit einer dynamischen Bühnenpräsenz und kraftvollen Liedministationen. Minister Dan ist ein bescheidener, talentierter Musiker mit tiefer Spiritualität. Ich empfehle ihren Dienst von Herzen.",
+      "ministry": "Hauptpastor - House of Solution Christ Church International, Mülheim an der Ruhr, Deutschland",
+      "image": "/assets/images/testimonials/Edmond.jpg"
+    },
+    {
+      "title": "Apostel Kelly und Prophetin Sherma Oriakhi",
+      "text": "Quincy Davis Ministries, geleitet von Pastor Dan und Prophetin Quincy, hat unser Lobpreis- und Anbetungsteam enorm gestärkt. Wir empfehlen sie sehr für Einzelpersonen, die musikalische Ausbildung suchen, und für Kirchen, die ihr Lobpreis- und Anbetungsteam für eine verbesserte musikalische Führung entwickeln wollen.",
+      "ministry": "The FULL STATURE OF CHRIST CHURCH, weltweit, international (Die Niederlande)",
+      "image": "/assets/images/testimonials/Kelly.jpg"
+    },
+    {
+      "title": "Pastor Marvin Wojtkowiak",
+      "text": "Der Dienst von Quincy Davis Ministries war eine große Bereicherung für mich, besonders im Bereich der Anbetung. Ich konnte sowohl Straßen-Evangelisation als auch einige Anbetungsabende mit ihnen erleben und bin begeistert von ihrem professionellen Know-how als Musiker und der geistlichen Tiefe, mit der sie dienen und so zum Segen werden. Ich freue mich schon auf die nächsten Veranstaltungen mit Pastor Dan und Quincy!",
+      "ministry": "Gospel Zentrum Essen, Deutschland",
+      "image": "/assets/images/testimonials/Marvin.jpg"
+    },
+    {
+      "title": "Pastor Jesse M. Ayomah",
+      "text": "Der Dienst von Pastor Dan und Quincy hat unsere Kirche gesegnet, uns mit geisterfüllten Aufführungen und Workshops ermutigt. Ihre Hingabe hat unser Musikteam gestärkt und Vertrauen, Einheit und geistliches Wachstum gefördert. Die Workshops haben Mitglieder ermächtigt, Führungsrollen zu übernehmen, was ihre Beiträge gestärkt und die Kirche insgesamt gefestigt hat.",
+      "ministry": "All Nation Church, Düsseldorf, Deutschland",
+      "image": "/assets/images/testimonials/jesse.png"
+    },
+    {
+      "title": "Daniel Sachs",
+      "text": "Es war ein Privileg, Dan und Quincy Davis kennenzulernen. Gott hat sie eindeutig dazu berufen, Gott selbstlos und aufopferungsvoll in den Bereichen zu dienen, die den größten Bedarf haben und die Jesus am Herzen liegen: Gott anzubeten, die Ehe, den Armen zu helfen und Jünger zu machen. Ich habe gesehen, wie sie mit großer Demut, Freundlichkeit, Liebe und Weisheit gedient haben, die nur Gott geben kann. Danke, dass ihr ein großartiges Beispiel für alle um euch herum seid!",
+      "ministry": "The Marriage School, Inc.",
+      "image": "/assets/images/testimonials/marriage-school.jpg"
+    },
+    {
+      "title": "Cheryl Porter Gesangscoach (USA)",
+      "text": "Dan und Quincy leisten fantastische Arbeit als Diener des Evangeliums. Sie waren eine enorme Bereicherung, seit ich Quincy zum ersten Mal traf.",
+      "ministry": "Cheryl Porter Methode",
+      "image": "/assets/images/testimonials/Cherry.jpg"
+    },
+    {
+      "title": "Evangelist Daniel Schott",
+      "text": "Erstaunliche Stimme! Anbetung aus den Tiefen ihres Herzens. Was für ein Geschenk für diese Welt!",
+      "ministry": "Global Evangelist Network (Deutschland)",
+      "image": "/assets/images/testimonials/Scott.jpg"
+    }
+  ],
+  "events": [
+    {
+      "id": 1,
+      "images": ["/assets/images/events/university-of-marriage.jpg"],
+      "title": "UNIVERSITÄT DER EHE",
+      "text": "Die Universität der Ehe ist eine gemeinnützige Eheschule, die Teil von Quincy Davies Ministries ist. Sie bietet Programme wie The Third Option an, um Ehen und Familien zu stärken, mit einem Fokus auf praktische Fähigkeiten und inneres Wachstum. Die Freiwilligen folgen einer Dienstphilosophie basierend auf Epheser 4:12, sind geistlich begabt, demütig und engagiert für die persönliche Entwicklung. Es gibt vier Semester: Frühling, Sommer, Herbst, Winter.",
+      "start": "6. September 2024",
+      "end": null,
+      "frequency": "Freitag",
+      "time": "19:00 - 20:30"
+    },
+    {
+      "id": 2,
+      "images": ["/assets/images/love-letters.jpg"],
+      "title": "LIEBESBRIEFE",
+      "text": "Liebesbriefe ist Teil der Universität der Ehe und bietet schnelle Lösungen für eheliche Herausforderungen. Dieses Programm läuft von August bis Dezember.",
+      "start": "August",
+      "end": "September",
+      "frequency": "Wöchentlich - Donnerstag",
+      "time": "20:00 - 22:00"
+    },
+    {
+      "id": 3,
+      "images": ["/assets/images/assiduous woman/AWD.jpg"],
+      "title": "TAGEBUCH DER FLEISSIGEN FRAU",
+      "text": "Unsere Live-Übertragungen beinhalten engagierte Sitzungen zur Stärkung von Frauen, damit sie ihre Rolle als bedeutende Beiträger zur Gesellschaft im Einklang mit ihrem göttlichen Zweck annehmen. Wir wollen Frauen inspirieren und befähigen, gemeinsam Geschichte zu schreiben.",
+      "start": "Februar",
+      "end": "Juni",
+      "frequency": "Wöchentlich - Donnerstag",
+      "time": "20:00 - 22:00"
+    },
+    {
+      "id": 4,
+      "images": ["/assets/images/street-worship.jpg"],
+      "title": "STRASSENANBETUNG, EVANGELISATION UND ANBETUNGSNACHT",
+      "text": "Jesus beschränkte seine Gegenwart nicht auf die Synagoge; seine Freundlichkeit erreichte überall hin. Straßenanbetung bietet eine Plattform, auf der wir ihn offen ehren und seine Botschaft weit und breit verbreiten können.",
+      "start": null,
+      "end": null,
+      "frequency": "Letzter Samstag im Monat",
+      "time": "15:00"
+    },
+    {
+      "id": 5,
+      "images": ["/assets/images/worshippers-blueprint.jpg"],
+      "title": "DIE BLAUPAUSE DES ANBETERS",
+      "text": "Leiten von Anbetung und Musikerziehung in der Welt der Gospelmusik und in Kirchengemeinden kann herausfordernd sein, aber es ist eine Fähigkeit, die gelehrt und gelernt werden kann. Das Worshipper Blueprint-Programm ist darauf ausgelegt, nicht nur Exzellenz in Gesang und Musikerziehung zu entwickeln, sondern auch ministerielle Ethik, Charakter und Integrität zu vermitteln.",
+      "start": null,
+      "end": null,
+      "frequency": "Jährlich durchgeführt",
+      "time": null
+    }
+  ],
+  "eventDetails": "Veranstaltungsdetails",
+  "seeMore": "Mehr anzeigen",
+  "services": [
+    {
+      "title": "Coaching- und Trainingssitzungen",
+      "text": "Profitieren Sie von Quincys reicher Erfahrung im Bereich Gesang, nachdem sie mit Cheryl Porter zusammengearbeitet hat. Davies hat auch einen Musikabschluss und bietet umfangreiche Fachkenntnisse. Ihr Talent ist bei uns in guten Händen."
+    },
+    {
+      "title": "Exklusive Zusammenarbeit und Outsourcing-Möglichkeiten",
+      "text": "Verbessern Sie Ihre Musik mit unseren etablierten Musikschulungsprogrammen, ergänzt durch die fachkundige Aufnahme- und Produktionsdienste unseres Studios."
+    },
+    {
+      "title": "Soundsystem und Instrumente",
+      "text": "Wir haben Instrumente für Groß- und Kleinveranstaltungen. Verstärken Sie Ihre Events, während wir Sie mit Musikern/Bands/Soundsystemen & Musikinstrumenten unterstützen."
+    },
+    {
+      "title": "Weihnachtsmomente mit Quincy Davies und The Gospellier",
+      "text": "Feiern Sie die Weihnachtszeit mit unserem speziellen Weihnachtsmomente-Event. Buchen Sie Quincy Bell & Davies Gospellier für Ihre Jahresendfeierlichkeiten, einschließlich Firmenfeiern, Weihnachtsfeiern und vieles mehr."
+    }
+  ],
+  "heroSection": {
+    "welcome": "Willkommen in"
+  },
+  "homePageTitles": {
+    "events": {
+      "title": "Veranstaltungen",
+      "text": "Besondere Programme und bevorstehende Veranstaltungen"
+    },
+    "testimonials": {
+      "title": "Referenzen",
+      "text": "Was die Leute über uns denken"
+    },
+    "christmas": {
+      "title": "Weihnachten",
+      "text": "Weihnachtsmomente mit Quincy Davies und The Gospellier",
+      "description": "Der Weihnachtsmoment ist eine besondere Gelegenheit, die während der Feiertage stattfindet. Reservieren Sie unseren Weihnachtsmoment mit Quincy Bell & Davies Gospellier für Ihre Jahresendveranstaltungen, einschließlich Firmenfeiern, Weihnachtskirchfeiern und Osterfesten.",
+
+      "comment": "Wir werden einen besonderen Weihnachtsmoment für Sie mit unseren Dienstleistungen kreieren.",
+      "card": {
+        "card1": {
+          "title": "Sing für Freude",
+          "text": "Denn Gott hat die Welt so sehr geliebt, dass er gab."
+        },
+        "card2": {
+          "title": "Feiere den König der Könige",
+          "text": "Die Geburt unseres Herrn ist das größte Geschenk, das uns gegeben wurde."
+        }
+      },
+      "link": "mehr erfahren"
+    }
+  },
+  "support": {
+    "title": "Bete! Und höre auf Gott! Du kannst das allein tun, aber finde jemanden, der es mit dir tut",
+    "text": "Hilf jemandem, jemanden zu finden",
+    "buttonText": "Unterstütze uns"
+  },
+  "navigation": {
+    "home": "Startseite",
+    "events": "Veranstaltungen",
+    "services": "Dienstleistungen",
+    "contactUs": "Kontaktieren Sie uns",
+    "aboutUs": "Über uns",
+    "about": "Über",
+    "footerInput": {
+      "email": "E-Mail",
+      "buttonText": "Anmelden"
+    },
+    "newsLetter": {
+      "title": "Newsletter",
+      "text": "Melden Sie sich für unseren wöchentlichen Newsletter an, um über alle Neuigkeiten und Veranstaltungen auf dem Laufenden zu bleiben"
+    },
+    "quickLinks": "Schnellzugriffe"
+  },
+  "drawer": {
+    "newsLetter": {
+      "title": "Abonnieren Sie unseren Newsletter",
+      "description": "Wir halten Sie über die neuesten Entwicklungen im Dienst auf dem Laufenden",
+      "placeholder": "Geben Sie Ihre E-Mail ein",
+      "subscribeButtonText": "Abonnieren",
+      "cancelButtonText": "Abbrechen"
+    },
+    "learnMore": {
+      "title": "Für welchen Service interessieren Sie sich?",
+      "description": "Sagen Sie uns, was Sie wissen möchten, und wir teilen Ihnen alles mit, was Sie wissen müssen.",
+      "name": "Geben Sie Ihren Namen ein",
+      "email": "Geben Sie Ihre E-Mail ein",
+      "message": "Geben Sie Ihre Nachricht hier ein.",
+      "service": "Wählen Sie einen Dienst aus",
+      "subscribeButtonText": "Abonnieren",
+      "cancelButtonText": "Abbrechen"
+    }
+  },
+  "servicesPage": {
+    "mainTitle": "Die Dienstleistungen, die wir anbieten",
+    "description": "",
+    "buttonText": "Erfahre mehr"
+  },
+  "contactUsPage": {
+    "location": "Unser Standort",
+    "phoneNumber": "Telefonnummer",
+    "email": "E-Mail-Adresse",
+    "form": {
+      "name": "Name",
+      "email": "E-Mail",
+      "subject": "Betreff",
+      "message": "Tippen Sie Ihre Nachricht hier ein.",
+      "buttonText": "Absenden"
+    }
+  },
+  "aboutUsPage": {
+    "title": "Über uns",
+    "subTitle": "Wir machen kleine Schritte, um die Frohe Botschaft zu verbreiten",
+    "description": "Die Kraft der Musik in der spirituellen Hingabe war im Laufe der Geschichte von großer Bedeutung. Anders als alles andere auf der Erde, übersteigt Musik die menschliche Schöpfung—sie stammt aus einer höheren Sphäre, entworfen mit einem einzigen Zweck: Anbetung. Sie bleibt unberührt von irdischer Manipulation, einzigartig gestaltet durch himmlische Inspiration. Bei Quincy Davies Ministries sind wir bestrebt, geistliche Intimität durch Anbetung zu fördern. Mit über zwei Jahrzehnten Erfahrung in Gospel- und Kirchenmusik dienen Dan Davies Oduro—ein zertifizierter Bachelor of Arts in Musik—und seine Frau Quincy Bell Davies als gesalbte Werkzeuge. Sie haben leidenschaftlich Gemeinden in die Gegenwart Gottes durch Musik geführt und bei zahlreichen Gottesdiensten, Veranstaltungen, Kreuzzügen und Konferenzen gedient. Unsere Mission ist klar: gebrochene Herzen zu heilen, den Verlorenen Hoffnung zu geben und letztlich Seelen durch unsere geist-erfüllte Musik und persönlichen Zeugnisse zu retten. Als Jünger Jesu Christi evangelisieren wir durch Gospel-Anbetungsleitung, Dirigieren, Training, Coaching und Lehren. Wir sind verpflichtet, dauerhafte Lösungen für eine effektive Anbetungsmusik innerhalb des Leibes Christi heute anzubieten.",
+    "scripture": "Der Name des Herrn ist ein starker Turm; der Gerechte läuft hinein und ist sicher.",
+    "teamTitle": "Unser Team",
+    "teamSubTitle": "Die Hände, die uns tragen"
+  },
+  "LocaleSwitcher": {
+    "label": "Sprache ändern",
+    "locale": "{locale, select, ge {🇩🇪 German} en {🇺🇸 Englisch} other {Unbekannt}}"
+  }
+}
