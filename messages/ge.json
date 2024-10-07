@@ -176,6 +176,7 @@
     "contactUs": "Kontaktieren Sie uns",
     "aboutUs": "Über uns",
     "about": "Über",
+    "supportUs": "Unterstütze uns",
     "footerInput": {
       "email": "E-Mail",
       "buttonText": "Anmelden"
@@ -229,6 +230,21 @@
     "scripture": "Der Name des Herrn ist ein starker Turm; der Gerechte läuft hinein und ist sicher.",
     "teamTitle": "Unser Team",
     "teamSubTitle": "Die Hände, die uns tragen"
+  },
+  "supportUsPage": {
+    "campaign": "Unsere Kampagne",
+    "campaignTitle": "Arme der Hoffnung",
+    "campaignDescription": "In unserem unerschütterlichen Bestreben, das Evangelium zu verbreiten, wurde 2019 die Quincy Davies Ministries (QDM) Foundation mit einem tiefen Engagement gegründet, unserer Gemeinschaft, insbesondere den Bedürftigen in Afrika, unserer geliebten Heimat, etwas zurückzugeben. Wir sind zutiefst leidenschaftlich daran interessiert, Familien - Witwen, Waisen, behinderten Kindern und anderen - die tägliche Unterstützung zu bieten, die sie benötigen, um ihre Grundbedürfnisse zu erfüllen.",
+    "quote": "Und er (Jesus) nahm die Kinder in seine Arme, legte seine Hände auf sie und segnete sie.",
+    "title": "Spenden Sie für die Sache der Liebe",
+    "subTitle": "Rette die Menschheit, rette das Leben",
+    "description": "Schließen Sie sich uns an, Hoffnung zu verbreiten und Leben zu verändern. Ihre Großzügigkeit wird uns helfen, mehr Familien in Not zu erreichen und einen bleibenden Einfluss zu hinterlassen. Gemeinsam wollen wir die Mission der Liebe und des Mitgefühls erfüllen, die Jesus vorgelebt hat. Besuchen Sie unsere Website, um zu spenden oder mehr darüber zu erfahren, wie Sie uns in dieser bedeutenden Sache unterstützen können. Vielen Dank, dass Sie eine Unterstützung der Quincy Davies Ministries (QDM) Foundation in Betracht ziehen. Gemeinsam können wir einen Unterschied machen, der weit über heute hinaus nachhallt.",
+    "visions": {
+      "first": "⁠Wir streben danach, sicherzustellen, dass die ärmsten Gemeinschaften täglich Zugang zu drei nahrhaften Mahlzeiten haben.",
+      "second": "⁠Wir bemühen uns, lebensrettende gesundheitliche Unterstützung zu bieten, insbesondere für verwundbare Familien wie Witwen und Kinder.",
+      "third": "⁠Wir sind bestrebt, jährlich 5-10 Studenten zu fördern und ihnen den Zugang zu einer hochwertigen Vollzeitausbildung zu ermöglichen."
+    },
+    "endDescription": "Ihre Unterstützung kann einen immensen Unterschied in diesen Initiativen bewirken. Indem Sie zur Quincy Davies Ministries (QDM) Foundation beitragen, schließen Sie sich uns an, um das Leben und die Gemeinschaften in Afrika direkt zu beeinflussen. Gemeinsam können wir Nahrung, Gesundheitsversorgung und Bildungschancen bieten, die entscheidend für das Wohlergehen und die Zukunft dieser bedürftigen Menschen sind. Ihre Spende, egal in welcher Höhe, wird uns helfen, diese wichtige Arbeit fortzusetzen und Hoffnung und Veränderung dorthin zu bringen, wo sie am dringendsten benötigt wird."
   },
   "LocaleSwitcher": {
     "label": "Sprache ändern",

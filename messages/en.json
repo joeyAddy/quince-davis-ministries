@@ -194,6 +194,7 @@
     "contactUs": "Contact us",
     "aboutUs": "About us",
     "about": "About",
+    "supportUs": "Support Us",
     "newsLetter": {
       "title": "NewsLetter",
       "text": "Sign up for our weekly newsletter to stay updated on all news and events"
@@ -244,9 +245,23 @@
     "title": "About us",
     "subTitle": "We are Taking Small Steps to Spread the Goodnews",
     "description": "The power of music in spiritual devotion has been profound throughout history. Unlike anything else on Earth, music transcends human creation—it originates from a higher realm, designed with a singular purpose: worship. It remains untouched by earthly manipulation, uniquely crafted from heavenly inspiration. At Quincy Davies Ministries, we are dedicated to fostering spiritual intimacy through worship. With over two decades of experience in gospel and church music, Dan Davies Oduro—a certified Bachelor of Arts in Music—and his wife, Quincy Bell Davies, serve as anointed vessels. They have passionately led congregations into the presence of God through music, ministering at numerous services, events, crusades, and conferences. Our mission is clear: to heal broken hearts, offer hope to the lost, and ultimately, save souls through our spirit-filled music and personal testimonies. As disciples of Jesus Christ, we evangelize through gospel worship leadership, directing, training, coaching, and teaching. We are committed to providing enduring solutions for effective worship music within the body of Christ today.",
-    "scripture": "The name of the Lord is a strong tower; the righteous runs in and is saved.",
     "teamTitle": "Our team",
     "teamSubTitle": "The hands that hold us up"
+  },
+  "supportUsPage": {
+    "campaign": "Our Campaign",
+    "campaignTitle": "Arms of Hope",
+    "campaignDescription": "In our steadfast pursuit of spreading the gospel, Quincy Davies Ministries (QDM) Foundation was established in 2019 with a heartfelt commitment to giving back to our community, especially the underprivileged in Africa, our beloved homeland. We are deeply passionate about providing vital assistance to families—widows, orphans, disabled children, and others—who struggle daily to meet their basic needs.",
+    "quote": " And He (Jesus) took the children in His arms, placed His hands on them, and blessed them",
+    "title": "Give to the cause of love",
+    "subTitle": "Save Humanity, Save Life",
+    "description": "Join us in spreading hope and changing lives. Your generosity will help us reach more families in need and make a lasting impact. Together, let&apos;s fulfill the mission of love and compassion that Jesus exemplified. Visit our website to donate or learn more about how you can partner with us in this meaningful cause. Thank you for considering supporting Quincy Davies Ministries (QDM) Foundation. Together, we can make a difference that resonates far beyond",
+    "visions": {
+      "first": "⁠We aim to ensure that the most impoverished communities have daily access to three nutritious meals.",
+      "second": "⁠We strive to offer life-saving health support, particularly for vulnerable families such as widows and children.",
+      "third": "⁠We are dedicated to sponsoring 5-10 students annually, enabling them to access full-time, quality education."
+    },
+    "endDescription": "Your support can make an immense difference in these initiatives. By contributing to Quincy Davies Ministries (QDM) Foundation, you join us in directly impacting lives and communities across Africa. Together, we can provide sustenance, healthcare, and educational opportunities that are crucial for the well-being and future of these deserving individuals. Your donation, no matter the size, will help us continue this vital work and bring hope and transformation where it is needed most. today."
   },
   "LocaleSwitcher": {
     "label": "Change language",
