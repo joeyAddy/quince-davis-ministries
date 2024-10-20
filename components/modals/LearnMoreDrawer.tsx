@@ -26,6 +26,7 @@ import toast from "react-hot-toast";
 import { FaSpinner } from "react-icons/fa";
 import { Textarea } from "../ui/textarea";
 import { useTranslations } from "next-intl";
+import { Service } from "@/constants";
 
 const LearnMoreDrawer = ({
   open,
@@ -36,7 +37,7 @@ const LearnMoreDrawer = ({
 }) => {
   const translations = useTranslations();
 
-  const services = translations.raw("services");
+  const services: Service[] = translations.raw("services");
   // State for form inputs
   const [formData, setFormData] = useState({
     name: "",

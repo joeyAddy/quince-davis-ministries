@@ -1,22 +1,16 @@
 import Footer from "@/components/sections/Footer";
-import { locales } from "@/i18n/config";
-import { unstable_setRequestLocale } from "next-intl/server";
+import { getLocale, unstable_setRequestLocale } from "next-intl/server";
 import React from "react";
 
-interface LayoutProps {
+interface PagesLayoutProps {
   children: React.ReactNode;
-  locale: string;
 }
 
-export async function generateStaticParams() {
-  // Generate pages for each supported locale
-  return locales.map((locale) => ({
-    locale,
-  }));
-}
+const PagesLayout = async ({ children }: PagesLayoutProps) => {
+  const locale = await getLocale(); // Get the locale from the router
 
-const Layout = ({ children, locale }: LayoutProps) => {
-  unstable_setRequestLocale(locale);
+  // Set the locale using next-intl's unstable_setRequestLocale function
+  unstable_setRequestLocale(locale!);
 
   return (
     <div>
@@ -26,4 +20,4 @@ const Layout = ({ children, locale }: LayoutProps) => {
   );
 };
 
-export default Layout;
+export default PagesLayout;
