@@ -8,7 +8,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import HeroImageSlider from "../sliders/HeroImageSlider";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -16,6 +16,8 @@ const Hero = () => {
   const [openMobileNavbarDropdown, setOpenMobileNavbarDropdown] =
     useState(false);
   const [openModal, setOpenModal] = useState(false);
+
+  const locale = useLocale();
 
   const t = useTranslations("heroSection");
 
@@ -81,6 +83,7 @@ const Hero = () => {
         <Navbar
           setOpenMobileNavbarDropdown={setOpenMobileNavbarDropdown}
           openMobileNavbarDropdown={openMobileNavbarDropdown}
+          locale={locale}
         />
         <MobileNavbar
           setOpenMobileNavbarDropdown={setOpenMobileNavbarDropdown}
@@ -91,7 +94,7 @@ const Hero = () => {
             {t("welcome")}
           </h3>
           <h1 className="text-white text-5xl lg:text-8xl font-extrabold text-center para uppercase leading-tight">
-            Quincy Davies Ministry
+            Quincy Davies Ministries
           </h1>
         </div>
       </div>

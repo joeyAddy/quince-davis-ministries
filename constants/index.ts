@@ -8,7 +8,7 @@ export const testimonials = [
   },
   {
     title: "Apostle Simon & Prophetess Faith Khan",
-    text: "For a couple of years, we have known Pastor Davis and Prophetess Quincy, and we admire the special callings of God upon their lives. They are a couple with a clear vision, passion, an excellent spirit, charisma, and great zeal for the work of God.",
+    text: "For a couple of years, we have known Pastor Davies and Prophetess Quincy, and we admire the special callings of God upon their lives. They are a couple with a clear vision, passion, an excellent spirit, charisma, and great zeal for the work of God.",
     ministry: "End Time Harvester International Ministries, Belgium",
     image: "/assets/images/testimonials/Khan.png",
   },
@@ -20,7 +20,7 @@ export const testimonials = [
   },
   {
     title: "Reverend Edmund Sackey Brown",
-    text: "Quincy Davis Ministry excels in blessing and supporting us. Minister Quincy captivates with dynamic stage presence and powerful song ministration. Minister Dan is a humble, talented musician with deep spirituality. I wholeheartedly endorse their ministry.",
+    text: "Quincy Davies Ministry excels in blessing and supporting us. Minister Quincy captivates with dynamic stage presence and powerful song ministration. Minister Dan is a humble, talented musician with deep spirituality. I wholeheartedly endorse their ministry.",
     ministry:
       "Head Pastor - House of Solution Christ Church International, Muelhim an der Ruhr Germany",
     image: "/assets/images/testimonials/Edmond.jpg",
@@ -46,7 +46,7 @@ export const testimonials = [
   },
   {
     title: "Daniel Sachs",
-    text: "It has been a privilege to get to know Dan and Quincy Davis. God clearly called them to serve God selflessly and sacrificially in the areas of greatest needs and the things closest to the heart of Jesus: worshipping God, marriage, helping the poor, and making disciples. I've witnessed them serve with great humility, in the kindness, love and wisdom that only God can give. Thank you for being a great example to everyone around you!",
+    text: "It has been a privilege to get to know Dan and Quincy Davies. God clearly called them to serve God selflessly and sacrificially in the areas of greatest needs and the things closest to the heart of Jesus: worshipping God, marriage, helping the poor, and making disciples. I've witnessed them serve with great humility, in the kindness, love and wisdom that only God can give. Thank you for being a great example to everyone around you!",
     ministry: "The Marriage School, Inc.",
     image: "/assets/images/testimonials/marriage-school.jpg",
   },
@@ -163,13 +163,23 @@ export const services = [
 export const ministers = [
   {
     image: "/assets/images/man.jpeg",
-    title: "Pastor John Doe",
-    text: "Senior Pastor",
+    title: "Pastor Dan Davies",
+    text: "Founder",
   },
   {
     image: "/assets/images/woman.jpeg",
-    title: "Reverend Sarah Smith",
-    text: "Worship Leader",
+    title: "Prophetes Quincy Bell",
+    text: "Co-Founder",
+  },
+  {
+    image: "/assets/images/darko.jpeg",
+    title: "Darko Milo",
+    text: "Chairman",
+  },
+  {
+    image: "/assets/images/alex.jpeg",
+    title: "Alex Boateng",
+    text: "Administrator",
   },
 ];
 

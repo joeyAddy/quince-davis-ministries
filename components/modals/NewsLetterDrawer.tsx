@@ -17,6 +17,16 @@ import axios from "axios";
 import toast from "react-hot-toast";
 import { FaSpinner } from "react-icons/fa";
 import { useTranslations } from "next-intl";
+import {
+  Dialog,
+  DialogClose,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "../ui/dialog";
 
 const NewsLetterDrawer = ({
   open,
@@ -41,7 +51,7 @@ const NewsLetterDrawer = ({
 
     const data = {
       sender: {
-        name: "quincy Davis Ministries",
+        name: "quincy Davies Ministries",
         address: "chatwithjohnjoseph@gmail.com",
       },
       receipient: [
@@ -86,12 +96,12 @@ const NewsLetterDrawer = ({
         },
         receipient: [
           {
-            name: "quincy Davis Ministries",
+            name: "Quincy Davies Ministries",
             address: "chatwithjohnjoseph@gmail.com",
           },
         ],
         message: ` ${email} Just subscribed to news letter`,
-        subject: `Quincy Davis Ministries - New subscriber`,
+        subject: `Quincy Davies Ministries - New subscriber`,
       };
       await axios.post("/api/email", {
         ...inHouseEmailData,
@@ -109,51 +119,51 @@ const NewsLetterDrawer = ({
   };
 
   return (
-    <Drawer open={open} onOpenChange={handleOpenChange}>
-      <DrawerContent>
-        <DrawerHeader className="lg:mx-auto lg:w-1/2">
-          <DrawerTitle className="text-center">
-            {translations("drawer.newsLetter.title")}
-          </DrawerTitle>
-
-          <DrawerDescription className="text-center">
-            {" "}
-            {translations("drawer.newsLetter.description")}
-          </DrawerDescription>
-        </DrawerHeader>
-        <div className="w-full max-md:px-10 md:w-2/3 lg:w-1/2 mx-auto space-y-4 text-center">
-          <Input
-            id="email"
-            placeholder={translations("drawer.newsLetter.placeholder")}
-            className="w-full"
-            onChange={(e) => {
-              setEmail(e.target.value);
-            }}
-          />
-          <Button
-            onClick={handleSubmit}
-            className="w-full bg-green-500 hover:bg-green-500/80"
-          >
-            {isLoading ? (
-              <FaSpinner className="text-center animate-spin" />
-            ) : (
-              translations("drawer.newsLetter.subscribeButtonText")
-            )}
-          </Button>
-        </div>
-        <DrawerFooter>
-          <DrawerClose asChild className="w-fit mx-auto">
+    <>
+      <Dialog open={open} onOpenChange={handleOpenChange}>
+        <DialogTrigger asChild>
+          <Button variant="outline">Share</Button>
+        </DialogTrigger>
+        <DialogContent className="sm:max-w-md">
+          <DialogHeader>
+            <DialogTitle>
+              {" "}
+              {translations("drawer.newsLetter.title")}
+            </DialogTitle>
+            <DialogDescription>
+              {translations("drawer.newsLetter.description")}
+            </DialogDescription>
+          </DialogHeader>
+          <div className="w-full max-md:px-10 mx-auto space-y-4 text-center">
+            <Input
+              id="email"
+              placeholder={translations("drawer.newsLetter.placeholder")}
+              className="w-full"
+              onChange={(e) => {
+                setEmail(e.target.value);
+              }}
+            />
             <Button
-              onClick={() => setOpen(false)}
-              size="sm"
-              variant="destructive"
+              onClick={handleSubmit}
+              className="w-full bg-green-500 hover:bg-green-500/80"
             >
-              {translations("drawer.newsLetter.cancelButtonText")}
+              {isLoading ? (
+                <FaSpinner className="text-center animate-spin" />
+              ) : (
+                translations("drawer.newsLetter.subscribeButtonText")
+              )}
             </Button>
-          </DrawerClose>
-        </DrawerFooter>
-      </DrawerContent>
-    </Drawer>
+          </div>
+          <DialogFooter className="sm:justify-start">
+            <DialogClose asChild>
+              <Button className="mx-auto" type="button" variant="destructive">
+                {translations("drawer.newsLetter.cancelButtonText")}
+              </Button>
+            </DialogClose>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
+    </>
   );
 };
 

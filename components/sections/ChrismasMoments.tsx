@@ -64,7 +64,7 @@ const ChrismasMoments = () => {
     <div className="py-10 lg:py-20 px-6 md:px-12 lg:px-48 flex gap-10 max-lg:flex-col">
       <div className="lg:flex-[0.4] lg:max-w-[40%] moment-image">
         <Image
-          src="/assets/images/chrismas-tree.jpg"
+          src="/assets/images/christmas-moments.jpg"
           alt="story image"
           height={1500}
           width={1000}

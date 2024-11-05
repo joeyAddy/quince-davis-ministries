@@ -34,12 +34,12 @@ const EventRegistration = ({ event }: { event: Event }) => {
       },
       receipient: [
         {
-          name: "quincy Davis Ministries",
+          name: "Quincy Davies Ministries",
           address: "chatwithjohnjoseph@gmail.com",
         },
       ],
       message: `I need more information about ${event?.title}`,
-      subject: `Quincy Davis Ministries - ${event?.title}`,
+      subject: `Quincy Davies Ministries - ${event?.title}`,
     };
 
     try {

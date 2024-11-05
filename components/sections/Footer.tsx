@@ -27,7 +27,7 @@ const Footer = () => {
 
     const data = {
       sender: {
-        name: "quincy Davis Ministries",
+        name: "quincy Davies Ministries",
         address: "chatwithjohnjoseph@gmail.com",
       },
       receipient: [
@@ -72,12 +72,12 @@ const Footer = () => {
         },
         receipient: [
           {
-            name: "quincy Davis Ministries",
+            name: "Quincy Davies Ministries",
             address: "chatwithjohnjoseph@gmail.com",
           },
         ],
         message: ` ${email} Just subscribed to news letter`,
-        subject: `Quincy Davis Ministries - New subscriber`,
+        subject: `Quincy Davies Ministries - New subscriber`,
       };
       await axios.post("/api/email", {
         ...inHouseEmailData,
@@ -106,11 +106,8 @@ const Footer = () => {
                     {translations("navigation.about")}
                   </h4>
                 </div>
-                <p className="max-lg:w-full w-64">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi
-                  expedita nulla et, minima accusantium, eaque, inventore
-                  maiores ullam dolor error unde voluptatum necessitatibus
-                  doloremque deserunt quam rem magni velit quibusdam.
+                <p className="max-lg:w-full w-96">
+                  {translations("navigation.aboutText")}
                 </p>
               </div>
               <div className="space-y-4">

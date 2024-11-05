@@ -96,7 +96,7 @@ const EventDetails = async ({
               <div className="rounded-bl-lg rounded-br-lg border-t-0 border-dotted border-4 py-5 divide-y">
                 <div className="flex items-center justify-between mx-4 lg:mx-10 py-4">
                   <p className="font-bold">Organizer:</p>
-                  <span>Quince Davis Minstries</span>
+                  <span>Quince Davies Minstries</span>
                 </div>
                 {event?.start && (
                   <div className="flex items-center justify-between mx-4 lg:mx-10 py-4">

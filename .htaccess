@@ -1,0 +1,27 @@
+RewriteEngine On
+RewriteBase /
+
+# If the request is for the index.html, serve it directly
+
+RewriteRule ^index\.html$ - [L]
+
+# Exclude existing files and directories from being rewritten
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Rewrite dynamic routes for translations and events
+
+# For /en/anything or /ge/anything
+
+RewriteRule ^(en|ge)/(.+)$ /index.html [L,QSA]
+
+# For /en/events/1 or /ge/events/1
+
+RewriteRule ^(en|ge)/events/([0-9]+)$ /index.html [L,QSA]
+
+# Catch-all rule for other dynamic routes
+
+RewriteRule ^(.+)$ /index.html [L,QSA]
+
+RewriteRule ^(.+)/$ /$1 [R=301,L]

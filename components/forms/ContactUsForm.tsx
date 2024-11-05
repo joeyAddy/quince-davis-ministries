@@ -42,7 +42,7 @@ const ContactUsForm = () => {
       },
       receipient: [
         {
-          name: "quincy Davis Ministries",
+          name: "Quincy Davies Ministries",
           address: "chatwithjohnjoseph@gmail.com",
         },
       ],

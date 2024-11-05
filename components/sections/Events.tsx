@@ -8,7 +8,7 @@ import Link from "next/link";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { Event } from "@/constants";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -16,6 +16,7 @@ gsap.registerPlugin(ScrollTrigger);
 const Events = () => {
   const translations = useTranslations("");
   const title = useTranslations("homePageTitles");
+  const locale = useLocale();
 
   useGSAP(() => {
     gsap.fromTo(
@@ -83,7 +84,7 @@ const Events = () => {
       </div>
       <div className="w-full text-right mt-8 flex space-x-1 items-center justify-end">
         <Link
-          href="/events"
+          href={`/${locale}/events`}
           className="text-yellow-500 font-semibold underline underline-offset-4"
         >
           {translations("seeMore")}

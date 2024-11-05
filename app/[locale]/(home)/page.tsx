@@ -1,3 +1,5 @@
+// pages/[locale]/(home)/page.tsx
+
 import ChrismasMoments from "@/components/sections/ChrismasMoments";
 import Donate from "@/components/sections/Donate";
 import Events from "@/components/sections/Events";
@@ -7,11 +9,19 @@ import Testimonials from "@/components/sections/Testimonials";
 import { locales } from "@/i18n/config";
 import { unstable_setRequestLocale } from "next-intl/server";
 
+// Define the pages you want to generate statically for each locale
+const pages = ["", "events", "services", "contact-us", "about-us"];
+
 export async function generateStaticParams() {
-  // Generate pages for each supported locale
-  return locales.map((locale) => ({
-    locale,
-  }));
+  // Generate params for each locale and each page
+  const params = locales.flatMap((locale) =>
+    pages.map((page) => ({
+      locale,
+      page,
+    }))
+  );
+
+  return params;
 }
 
 export default function Home({

@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Navbar from "./Navbar";
 import MobileNavbar from "./MobileNavbar";
 import { Link } from "@/i18n/routing";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 
 const PageHeader = ({
   title,
@@ -15,12 +15,16 @@ const PageHeader = ({
 }) => {
   const translations = useTranslations();
 
+  const locale = useLocale();
+
   const [openMobileNavbarDropdown, setOpenMobileNavbarDropdown] =
     useState(false);
+
   return (
     <div className="bg-section bg-cover bg-center h-fit pb-10 w-full flex items-center text-white flex-col space-y-8">
       <div className="w-full">
         <Navbar
+          locale={locale}
           setOpenMobileNavbarDropdown={setOpenMobileNavbarDropdown}
           openMobileNavbarDropdown={openMobileNavbarDropdown}
         />
