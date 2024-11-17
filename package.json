@@ -6,7 +6,8 @@
     "dev": "next dev & npx next-video sync -w",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint --fix"
+    "lint": "next lint --fix",
+    "format": "prettier --write ."
   },
   "dependencies": {
     "@gsap/react": "^2.1.1",
