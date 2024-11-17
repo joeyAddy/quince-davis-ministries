@@ -219,4 +219,5 @@ export interface Testimonial {
   image: string;
 }
 
-export const emailUrl: string = 'http://localhost:8000/api/email/send';
+export const emailUrl: string =
+  'https://qdm-mail.up.railway.app/api/email/send';
