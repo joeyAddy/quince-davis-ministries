@@ -68,7 +68,7 @@ const ChrismasMoments = () => {
           alt="story image"
           height={1500}
           width={1000}
-          className="h-[600px] object-cover w-full"
+          className="h-[600px] md:object-cover w-full"
         />
       </div>
       <div className="space-y-6 flex-[0.6]" ref={contentRef}>

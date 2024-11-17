@@ -64,3 +64,9 @@
     @apply hover:text-green-500 transition-colors delay-75 duration-300;
   }
 }
+
+.next-video-container {
+  padding: 2px;
+  background-color: black;
+  border-radius: 20px;
+}

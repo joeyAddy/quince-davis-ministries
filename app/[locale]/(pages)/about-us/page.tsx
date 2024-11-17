@@ -31,14 +31,14 @@ const AboutUs = async ({
               alt="About image"
               height={1000}
               width={500}
-              className="max-h-40"
+              className="max-h-40 max-lg:w-full"
             />
             <Image
               src="/assets/images/heaven.jpg"
               alt="About image"
               height={1000}
               width={500}
-              className="max-h-40"
+              className="max-h-40 max-lg:w-full"
             />
           </div>
         </div>

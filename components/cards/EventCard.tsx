@@ -32,13 +32,13 @@ const EventCard = ({ image, title, text, date, id }: EventCardProps) => {
         </Badge>
         <Link
           className="hover:text-green-500 font-bold text-xl px-6 border-l-4 border-dotted border-green-500"
-          href={{ pathname: "/events/[id]", params: { id: id.toString() } }}
+          href={{ pathname: "/programmes/[id]", params: { id: id.toString() } }}
         >
           {title}
         </Link>
         <p className="w-full line-clamp-3 px-6">{text}</p>
         <Link
-          href={{ pathname: "/events/[id]", params: { id: id.toString() } }}
+          href={{ pathname: "/programmes/[id]", params: { id: id.toString() } }}
           className="text-green-500 font-semibold underline underline-offset-4 w-fit pl-6 mt-auto"
         >
           {translation("eventDetails")}

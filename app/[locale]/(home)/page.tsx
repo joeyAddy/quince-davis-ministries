@@ -6,6 +6,7 @@ import Events from "@/components/sections/Events";
 import Footer from "@/components/sections/Footer";
 import Hero from "@/components/sections/Hero";
 import Testimonials from "@/components/sections/Testimonials";
+import VideosSlider from "@/components/sections/VideosSlider";
 import { locales } from "@/i18n/config";
 import { unstable_setRequestLocale } from "next-intl/server";
 
@@ -37,6 +38,7 @@ export default function Home({
       <Events />
       <Donate />
       <Testimonials />
+      <VideosSlider />
       <ChrismasMoments />
       <Footer />
     </main>

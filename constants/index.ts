@@ -162,7 +162,7 @@ export const services = [
 
 export const ministers = [
   {
-    image: "/assets/images/man.jpeg",
+    image: "/assets/images/founder.jpeg",
     title: "Pastor Dan Davies",
     text: "Founder",
   },
@@ -180,6 +180,11 @@ export const ministers = [
     image: "/assets/images/alex.jpeg",
     title: "Alex Boateng",
     text: "Administrator",
+  },
+  {
+    image: "/assets/images/jolly.jpeg",
+    title: "Jolly Igbinosa",
+    text: "Media/Organizer",
   },
 ];
 

@@ -153,11 +153,12 @@
     }
   ],
   "heroSection": {
-    "welcome": "Welcome to"
+    "welcome": "Welcome to",
+    "summary": "A Worship, Outreach, Helping, Itinery and Travel Ministry"
   },
   "homePageTitles": {
     "events": {
-      "title": "events",
+      "title": "Programmes",
       "text": "Special programmes and upcomming events"
     },
     "testimonials": {
@@ -166,7 +167,7 @@
     },
     "christmas": {
       "title": "christmas",
-      "text": "Christmas Moments with Quincy Davies and The Gospellier",
+      "text": "Christmas Moments with Quincy Bell and the Davies Gospellier",
       "description": " The Christmas Moment is a special occasion that takes place during the holiday season. Reserve our Christmas Moment with Quincy Bell & Davies Gospellier for your end-of-year events, including company parties,Christmas church celebrations, and Easter festival seasons.",
       "comment": "We will create a special Christmas Moment for you with our services.",
       "card": {
@@ -189,7 +190,7 @@
   },
   "navigation": {
     "home": "Home",
-    "events": "Events",
+    "events": "Programmes",
     "services": "Services",
     "contactUs": "Contact us",
     "aboutUs": "About us",

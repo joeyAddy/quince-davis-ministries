@@ -69,7 +69,7 @@ const EventDetails = async ({
             </div>
             {event?.galleryImages && (
               <div className="space-y-4">
-                <h4 className="font-bold text-3xl">Event Gallery</h4>
+                <h4 className="font-bold text-3xl">Programmes Gallery</h4>
                 <p>
                   Here are images from God&apos;s wonders from previous events.
                 </p>
@@ -91,7 +91,7 @@ const EventDetails = async ({
           <div className="lg:col-span-1 space-y-10">
             <div className="">
               <div className="w-full bg-green-500 text-white rounded-tr-lg rounded-tl-lg py-4 text-xl text-center font-bold">
-                Event Details
+                Programme Details
               </div>
               <div className="rounded-bl-lg rounded-br-lg border-t-0 border-dotted border-4 py-5 divide-y">
                 <div className="flex items-center justify-between mx-4 lg:mx-10 py-4">

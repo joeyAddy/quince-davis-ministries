@@ -47,7 +47,7 @@ const HeroImageSlider = () => {
       }}
       // @ts-ignore
       plugins={[plugin.current]}
-      className="size-full testimonials"
+      className="!size-full testimonials"
     >
       <CarouselContent>
         {heroImages.map((image, index) => (
@@ -57,7 +57,7 @@ const HeroImageSlider = () => {
               alt="background"
               height={1000}
               width={1920}
-              className="h-dvh object-cover object-top"
+              className="max-xl:h-[97dvh] h-[97dvh] object-cover object-top"
             />
           </CarouselItem>
         ))}

@@ -6,11 +6,12 @@ interface MinisterCardProps {
   image: string;
   title: string;
   text: string;
+  style?: string;
 }
 
-const MinisterCard = ({ image, title, text }: MinisterCardProps) => {
+const MinisterCard = ({ image, title, text, style }: MinisterCardProps) => {
   return (
-    <div className="shadow-lg flex flex-col">
+    <div className={`shadow-lg flex flex-col ${style}`}>
       <div className="relative h-[500px]">
         <Image
           src={image}

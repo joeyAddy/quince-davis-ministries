@@ -70,6 +70,20 @@ const Hero = () => {
         ease: "power1.inOut",
       }
     );
+
+    gsap.fromTo(
+      ".summary-text",
+      {
+        opacity: 0,
+        scale: 1.5,
+      },
+      {
+        opacity: 1,
+        scale: 1,
+        delay: 1.7,
+        ease: "power1.inOut",
+      }
+    );
   }, []);
   return (
     <section className="w-full h-dvh bg-black relative">
@@ -79,7 +93,7 @@ const Hero = () => {
         <HeroImageSlider />
       </div>
 
-      <div className="w-full h-full absolute top-0 right-0 bottom-0 left-0 bg-black/80 flex flex-col">
+      <div className="w-full h-[102%] absolute top-0 right-0 bottom-0 left-0 bg-black/80 flex flex-col">
         <Navbar
           setOpenMobileNavbarDropdown={setOpenMobileNavbarDropdown}
           openMobileNavbarDropdown={openMobileNavbarDropdown}
@@ -89,13 +103,16 @@ const Hero = () => {
           setOpenMobileNavbarDropdown={setOpenMobileNavbarDropdown}
           openMobileNavbarDropdown={openMobileNavbarDropdown}
         />
-        <div className="pt-16 md:py-20 max-md:gap-y-4 gap-y-6 flex flex-col items-center max-md:px-4 flex-1 justify-center">
+        <div className="pt-16 h-1/2 md:py-20 max-md:gap-y-4 gap-y-6 flex flex-col items-center max-md:px-4 flex-1 justify-center">
           <h3 className="text-white font-extralight text-3xl lg:text-5xl uppercase text-center main-text leading-tight">
             {t("welcome")}
           </h3>
           <h1 className="text-white text-5xl lg:text-8xl font-extrabold text-center para uppercase leading-tight">
             Quincy Davies Ministries
           </h1>
+          <p className="text-white max-d:text-base text-xl text-center summary-text">
+            {t("summary")}
+          </p>
         </div>
       </div>
     </section>

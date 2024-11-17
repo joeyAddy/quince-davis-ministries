@@ -60,7 +60,7 @@ const Navbar = ({
             <Link href="/">{translations("navigation.home")}</Link>
           </li>
           <li className="hover:text-green-500 whitespace-nowrap">
-            <Link href="/events">{translations("navigation.events")}</Link>
+            <Link href="/programmes">{translations("navigation.events")}</Link>
           </li>
           <li className="hover:text-green-500 whitespace-nowrap">
             <Link href="/services">{translations("navigation.services")}</Link>

@@ -1,3 +1,4 @@
+import { withNextVideo } from "next-video/process";
 import createNextIntlPlugin from "next-intl/plugin";
 
 const withNextIntl = createNextIntlPlugin("./i18n/request.ts");
@@ -9,4 +10,4 @@ const nextConfig = {
   trailingSlash: true,
 };
 
-export default withNextIntl(nextConfig);
+export default withNextVideo(withNextIntl(nextConfig));

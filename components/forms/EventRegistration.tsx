@@ -56,7 +56,7 @@ const EventRegistration = ({ event }: { event: Event }) => {
   return (
     <div className="">
       <div className="w-full bg-green-500 text-white rounded-tr-lg rounded-tl-lg py-4 text-xl text-center font-bold">
-        Event Registration
+        Programme Registration
       </div>
       <form
         onSubmit={handleSubmit}

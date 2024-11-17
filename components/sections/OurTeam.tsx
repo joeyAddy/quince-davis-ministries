@@ -14,14 +14,25 @@ const OurTeam = async () => {
         wrap={true}
         centered={true}
       />
-      <div className="grid gap-6 md:grid-cols-2 max-lg:w-full mx-auto mt-8">
-        {ministers.map((minister) => (
-          <MinisterCard
+      <div className="grid gap-6 md:grid-cols-2 max-lg:w-full justify-center mx-auto mt-8">
+        {ministers.map((minister, index) => (
+          <div
             key={minister.title}
-            title={minister.title}
-            image={minister.image}
-            text={minister.text}
-          />
+            className={
+              index === ministers.length - 1
+                ? "md:col-span-2 md:grid gap-6 md:grid-cols-12 max-lg:w-full"
+                : ""
+            }
+          >
+            <MinisterCard
+              title={minister.title}
+              image={minister.image}
+              text={minister.text}
+              style={
+                index === ministers.length - 1 ? "col-span-6 col-start-4" : ""
+              }
+            />
+          </div>
         ))}
       </div>
     </div>

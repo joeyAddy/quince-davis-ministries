@@ -52,7 +52,7 @@ const NewsLetterDrawer = ({
     const data = {
       sender: {
         name: "quincy Davies Ministries",
-        address: "chatwithjohnjoseph@gmail.com",
+        address: "newsletter@quincydaviesministries.com",
       },
       receipient: [
         {
@@ -91,18 +91,19 @@ const NewsLetterDrawer = ({
 
       const inHouseEmailData = {
         sender: {
-          name: email,
-          address: email,
+          name: "Quincy Davies Ministries",
+          address: "newsletter@quincydaviesministries.com",
         },
         receipient: [
           {
             name: "Quincy Davies Ministries",
-            address: "chatwithjohnjoseph@gmail.com",
+            address: "newsletter@quincydaviesministries.com",
           },
         ],
         message: ` ${email} Just subscribed to news letter`,
         subject: `Quincy Davies Ministries - New subscriber`,
       };
+
       await axios.post("/api/email", {
         ...inHouseEmailData,
       });

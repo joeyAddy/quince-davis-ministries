@@ -134,11 +134,12 @@
     }
   ],
   "heroSection": {
-    "welcome": "Willkommen in"
+    "welcome": "Willkommen in",
+    "summary": "Ein Dienst für Anbetung, Evangelisation, Hilfe, Reiseplanung und -organisation"
   },
   "homePageTitles": {
     "events": {
-      "title": "Veranstaltungen",
+      "title": "Programme",
       "text": "Besondere Programme und bevorstehende Veranstaltungen"
     },
     "testimonials": {
@@ -147,7 +148,7 @@
     },
     "christmas": {
       "title": "Weihnachten",
-      "text": "Weihnachtsmomente mit Quincy Davies und The Gospellier",
+      "text": "Weihnachtsmomente mit Quincy Bell und The Davies Gospellier",
       "description": "Der Weihnachtsmoment ist eine besondere Gelegenheit, die während der Feiertage stattfindet. Reservieren Sie unseren Weihnachtsmoment mit Quincy Bell & Davies Gospellier für Ihre Jahresendveranstaltungen, einschließlich Firmenfeiern, Weihnachtskirchfeiern und Osterfesten.",
 
       "comment": "Wir werden einen besonderen Weihnachtsmoment für Sie mit unseren Dienstleistungen kreieren.",
@@ -171,12 +172,12 @@
   },
   "navigation": {
     "home": "Startseite",
-    "events": "Veranstaltungen",
+    "events": "Programme",
     "services": "Dienstleistungen",
     "contactUs": "Kontaktieren Sie uns",
     "aboutUs": "Über uns",
     "about": "Über",
-    "aboutText": "Über",
+    "aboutText": "Quincy Davies Ministries widmet sich der Förderung spiritueller Verbundenheit durch Lobpreismusik. Unter der Leitung von Dan Davies Oduro und Quincy Bell Davies bringen wir über zwei Jahrzehnte Erfahrung in Gospel- und Kirchenmusik mit, um Gläubige im Glauben zu inspirieren und anzuleiten. Unsere Mission ist es, durch geisterfüllten Lobpreis Hoffnung, Heilung und Erlösung zu bringen und die Gemeinschaft zu stärken und den Leib Christi mit nachhaltigen Lösungen für wirkungsvollen Lobpreis zu unterstützen.",
     "supportUs": "Unterstütze uns",
     "footerInput": {
       "email": "E-Mail",

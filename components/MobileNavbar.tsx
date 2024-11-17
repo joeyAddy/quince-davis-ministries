@@ -70,7 +70,7 @@ const MobileNavbar = ({
           </Link>
         </li>
         <li className="hover:text-green-500">
-          <Link onClick={handleCloseMobileNavbar} href="/events">
+          <Link onClick={handleCloseMobileNavbar} href="/programmes">
             {translations("navigation.events")}
           </Link>
         </li>

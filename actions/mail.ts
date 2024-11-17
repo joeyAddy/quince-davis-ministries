@@ -5,10 +5,20 @@ import SMTPConnection from "nodemailer/lib/smtp-connection";
 import Mail from "nodemailer/lib/mailer";
 
 const transport = nodemailer.createTransport({
-  host: process.env.MAIL_HOST,
+  host: "smtp.hostinger.com",
+  secure: true,
+  secureConnection: false,
+  encryption: "SSL",
+  tls: {
+    ciphers: "SSLv3",
+  },
+  requireTLS: true,
+  port: 465,
+  debug: true,
+  connectionTimeout: 10000,
   auth: {
     user: process.env.MAIL_USER,
-    pass: process.env.MAIL_PASSWORD,
+    pass: "#Quincy2024",
   },
 } as SMTPConnection.Options);
 
