@@ -222,7 +222,7 @@
       "email": "Enter your email",
       "message": "Type your message here.",
       "service": "Select a service",
-      "subscribeButtonText": "Subscribe",
+      "subscribeButtonText": "Send",
       "cancelButtonText": "Cancel"
     }
   },

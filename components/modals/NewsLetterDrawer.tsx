@@ -1,12 +1,12 @@
-"use client";
+'use client';
 
-import React, { useState } from "react";
-import { Button } from "../ui/button";
-import { Input } from "../ui/input";
-import axios from "axios";
-import toast from "react-hot-toast";
-import { FaSpinner } from "react-icons/fa";
-import { useTranslations } from "next-intl";
+import React, { useState } from 'react';
+import { Button } from '../ui/button';
+import { Input } from '../ui/input';
+import axios from 'axios';
+import toast from 'react-hot-toast';
+import { FaSpinner } from 'react-icons/fa';
+import { useTranslations } from 'next-intl';
 import {
   Dialog,
   DialogClose,
@@ -16,39 +16,8 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "../ui/dialog";
-
-import { httpsCallable } from "firebase/functions";
-import Mail from "nodemailer/lib/mailer";
-import { functions } from "@/firebase-config";
-
-// Define the request and response types
-interface EmailRequest {
-  sender: "info" | "newsletter";
-  to: Mail.Address[];
-  subject: string;
-  message: string;
-}
-
-interface EmailResponse {
-  success: boolean;
-  message: string;
-}
-
-const sendEmail = async (data: EmailRequest): Promise<void> => {
-  const sendEmailCallable = httpsCallable<EmailRequest, EmailResponse>(
-    functions,
-    "sendEmail",
-  );
-
-  try {
-    const result = await sendEmailCallable(data);
-    toast.success("Email sent successfully! We will get back to you soon.");
-    console.log(result.data.message);
-  } catch (error) {
-    console.error("Error sending email:", error);
-  }
-};
+} from '../ui/dialog';
+import { emailUrl } from '@/constants';
 
 const NewsLetterDrawer = ({
   open,
@@ -59,7 +28,7 @@ const NewsLetterDrawer = ({
 }) => {
   const translations = useTranslations();
 
-  const [email, setEmail] = useState("");
+  const [email, setEmail] = useState('');
 
   const [isLoading, setIsLoading] = useState(false);
 
@@ -72,10 +41,7 @@ const NewsLetterDrawer = ({
     setIsLoading(true);
 
     const data = {
-      sender: {
-        name: "quincy Davies Ministries",
-        address: "newsletter@quincydaviesministries.com",
-      },
+      sender: 'newsletter',
       receipient: [
         {
           name: email,
@@ -103,45 +69,37 @@ const NewsLetterDrawer = ({
         </div>
       </div>
     `,
-      subject: "Thank You for Subscribing!",
+      subject: 'Thank You for Subscribing!',
     };
 
     try {
-      await sendEmail({
-        sender: "info",
-        to: data.receipient,
-        subject: data.subject,
-        message: data.message,
+      const response = await axios.post(emailUrl, {
+        ...data,
       });
+      console.log('EMAIL SENDING RESPONSE', response);
+      toast.success('Email sent successfully! We will get back to you soon.');
 
       const inHouseEmailData = {
-        sender: {
-          name: "Quincy Davies Ministries",
-          address: "newsletter@quincydaviesministries.com",
-        },
+        sender: 'newsletter',
         receipient: [
           {
-            name: "Quincy Davies Ministries",
-            address: "newsletter@quincydaviesministries.com",
+            name: 'Quincy Davies Ministries',
+            address: 'newsletter@quincydaviesministries.com',
           },
         ],
         message: ` ${email} Just subscribed to news letter`,
         subject: `Quincy Davies Ministries - New subscriber`,
       };
-
-      await sendEmail({
-        sender: "newsletter",
-        to: inHouseEmailData.receipient,
-        subject: inHouseEmailData.subject,
-        message: inHouseEmailData.message,
+      await axios.post(emailUrl, {
+        ...inHouseEmailData,
       });
 
       setOpen(false);
     } catch (error) {
-      console.log("====================================");
+      console.log('====================================');
       console.log(error);
-      console.log("====================================");
-      toast.error("Something went wrong. Please try again");
+      console.log('====================================');
+      toast.error('Something went wrong. Please try again');
     } finally {
       setIsLoading(false);
     }
@@ -156,17 +114,17 @@ const NewsLetterDrawer = ({
         <DialogContent className="sm:max-w-md">
           <DialogHeader>
             <DialogTitle>
-              {" "}
-              {translations("drawer.newsLetter.title")}
+              {' '}
+              {translations('drawer.newsLetter.title')}
             </DialogTitle>
             <DialogDescription>
-              {translations("drawer.newsLetter.description")}
+              {translations('drawer.newsLetter.description')}
             </DialogDescription>
           </DialogHeader>
           <div className="w-full max-md:px-10 mx-auto space-y-4 text-center">
             <Input
               id="email"
-              placeholder={translations("drawer.newsLetter.placeholder")}
+              placeholder={translations('drawer.newsLetter.placeholder')}
               className="w-full"
               onChange={(e) => {
                 setEmail(e.target.value);
@@ -179,14 +137,14 @@ const NewsLetterDrawer = ({
               {isLoading ? (
                 <FaSpinner className="text-center animate-spin" />
               ) : (
-                translations("drawer.newsLetter.subscribeButtonText")
+                translations('drawer.newsLetter.subscribeButtonText')
               )}
             </Button>
           </div>
           <DialogFooter className="sm:justify-start">
             <DialogClose asChild>
               <Button className="mx-auto" type="button" variant="destructive">
-                {translations("drawer.newsLetter.cancelButtonText")}
+                {translations('drawer.newsLetter.cancelButtonText')}
               </Button>
             </DialogClose>
           </DialogFooter>

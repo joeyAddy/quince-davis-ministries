@@ -204,7 +204,7 @@
       "email": "Geben Sie Ihre E-Mail ein",
       "message": "Geben Sie Ihre Nachricht hier ein.",
       "service": "Wählen Sie einen Dienst aus",
-      "subscribeButtonText": "Abonnieren",
+      "subscribeButtonText": "Senden",
       "cancelButtonText": "Abbrechen"
     }
   },
