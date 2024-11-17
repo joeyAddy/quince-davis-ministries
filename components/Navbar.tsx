@@ -26,7 +26,7 @@ const Navbar = ({
     <nav
       className={cn(
         "px-6 lg:px-20 xl:px-32 mx-3 md:mx-12 max-w-full max-lg:bg-white flex items-center justify-between md:py-2 space-x-5 bg-white !text-black max-lg:py-2 mt-6 rounded-3xl",
-        openMobileNavbarDropdown && "!pb-5"
+        openMobileNavbarDropdown && "!pb-5",
       )}
     >
       <div className="flex flex-row-reverse items-center">
@@ -43,7 +43,7 @@ const Navbar = ({
           size="icon"
           variant="ghost"
           className={cn(
-            "lg:hidden focus:bg-transparent -ml-3 lg:hover:bg-gray-500/80 "
+            "lg:hidden focus:bg-transparent -ml-3 lg:hover:bg-gray-500/80 ",
           )}
           onClick={handleOpenMobileNavbarDropdown}
         >

@@ -49,7 +49,7 @@ const MobileNavbar = ({
         y: 0,
         ease: "power2.inOut",
         duration: 0.05,
-      }
+      },
     );
   }, [openMobileNavbarDropdown]);
   return (
@@ -57,7 +57,7 @@ const MobileNavbar = ({
       ref={dropdownRef}
       className={cn(
         "mobile-navbar shadow-2xl h-fit max-w-full z-50 bg-white flex-col gap-6 !absolute top-[80px] mx-3 md:mx-12  right-0 left-0 px-10 pt-10 pb-8 rounded-bl-3xl rounded-br-3xl",
-        openMobileNavbarDropdown ? "flex" : "hidden"
+        openMobileNavbarDropdown ? "flex" : "hidden",
       )}
     >
       <ul

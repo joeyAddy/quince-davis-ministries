@@ -1,16 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-import {
-  Drawer,
-  DrawerClose,
-  DrawerContent,
-  DrawerDescription,
-  DrawerFooter,
-  DrawerHeader,
-  DrawerTitle,
-  DrawerTrigger,
-} from "@/components/ui/drawer";
 import { Button } from "../ui/button";
 import { Input } from "../ui/input";
 import axios from "axios";
@@ -27,6 +17,38 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "../ui/dialog";
+
+import { httpsCallable } from "firebase/functions";
+import Mail from "nodemailer/lib/mailer";
+import { functions } from "@/firebase-config";
+
+// Define the request and response types
+interface EmailRequest {
+  sender: "info" | "newsletter";
+  to: Mail.Address[];
+  subject: string;
+  message: string;
+}
+
+interface EmailResponse {
+  success: boolean;
+  message: string;
+}
+
+const sendEmail = async (data: EmailRequest): Promise<void> => {
+  const sendEmailCallable = httpsCallable<EmailRequest, EmailResponse>(
+    functions,
+    "sendEmail",
+  );
+
+  try {
+    const result = await sendEmailCallable(data);
+    toast.success("Email sent successfully! We will get back to you soon.");
+    console.log(result.data.message);
+  } catch (error) {
+    console.error("Error sending email:", error);
+  }
+};
 
 const NewsLetterDrawer = ({
   open,
@@ -85,9 +107,12 @@ const NewsLetterDrawer = ({
     };
 
     try {
-      const response = await axios.post("/api/email", { ...data });
-      console.log("EMAIL SENDING RESPONSE", response);
-      toast.success("Email sent successfully! We will get back to you soon.");
+      await sendEmail({
+        sender: "info",
+        to: data.receipient,
+        subject: data.subject,
+        message: data.message,
+      });
 
       const inHouseEmailData = {
         sender: {
@@ -104,8 +129,11 @@ const NewsLetterDrawer = ({
         subject: `Quincy Davies Ministries - New subscriber`,
       };
 
-      await axios.post("/api/email", {
-        ...inHouseEmailData,
+      await sendEmail({
+        sender: "newsletter",
+        to: inHouseEmailData.receipient,
+        subject: inHouseEmailData.subject,
+        message: inHouseEmailData.message,
       });
 
       setOpen(false);

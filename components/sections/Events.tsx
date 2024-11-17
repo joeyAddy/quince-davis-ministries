@@ -35,7 +35,7 @@ const Events = () => {
           start: "top bottom",
           end: "bottom -200",
         },
-      }
+      },
     );
     gsap.fromTo(
       ".events-content",
@@ -54,7 +54,7 @@ const Events = () => {
           start: "top bottom",
           end: "bottom -200",
         },
-      }
+      },
     );
   }, []);
   return (

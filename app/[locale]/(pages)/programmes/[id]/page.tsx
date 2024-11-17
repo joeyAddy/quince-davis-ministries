@@ -12,7 +12,7 @@ export async function generateStaticParams() {
     events.map((event) => ({
       locale,
       id: event.id.toString(),
-    }))
+    })),
   );
   return params;
 }

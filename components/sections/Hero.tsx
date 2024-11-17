@@ -40,7 +40,7 @@ const Hero = () => {
         delay: 0.7,
         stagger: 0.1,
         ease: "power1.inOut",
-      }
+      },
     );
     gsap.fromTo(
       ".para",
@@ -54,7 +54,7 @@ const Hero = () => {
         delay: 1.5,
         stagger: 0.1,
         ease: "power1.inOut",
-      }
+      },
     );
 
     gsap.fromTo(
@@ -68,7 +68,7 @@ const Hero = () => {
         scale: 1,
         delay: 1,
         ease: "power1.inOut",
-      }
+      },
     );
 
     gsap.fromTo(
@@ -82,7 +82,7 @@ const Hero = () => {
         scale: 1,
         delay: 1.7,
         ease: "power1.inOut",
-      }
+      },
     );
   }, []);
   return (

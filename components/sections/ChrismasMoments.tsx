@@ -37,7 +37,7 @@ const ChrismasMoments = () => {
             start: "top bottom",
             end: "bottom -200",
           },
-        }
+        },
       );
     }
 
@@ -57,7 +57,7 @@ const ChrismasMoments = () => {
           start: "top bottom",
           end: "bottom -200",
         },
-      }
+      },
     );
   }, []);
   return (

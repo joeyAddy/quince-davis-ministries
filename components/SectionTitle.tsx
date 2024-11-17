@@ -17,7 +17,7 @@ const SectionTitle = ({
     <div
       className={cn(
         "w-full flex flex-col gap-y-2 items-center text-center section-title",
-        className
+        className,
       )}
     >
       <p className="uppercase text-green-500 font-semibold max-lg:text-sm">
@@ -26,7 +26,8 @@ const SectionTitle = ({
       <h2
         className={cn(
           "text-2xl lg:text-4xl font-bold whitespace-nowrap",
-          wrap && `!whitespace-normal ${centered ? "text-center" : "text-left"}`
+          wrap &&
+            `!whitespace-normal ${centered ? "text-center" : "text-left"}`,
         )}
       >
         {subTitle}

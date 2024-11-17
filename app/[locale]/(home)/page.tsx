@@ -19,7 +19,7 @@ export async function generateStaticParams() {
     pages.map((page) => ({
       locale,
       page,
-    }))
+    })),
   );
 
   return params;

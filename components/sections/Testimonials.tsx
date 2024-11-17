@@ -30,7 +30,7 @@ const Testimonials = () => {
           start: "top bottom",
           end: "bottom -200",
         },
-      }
+      },
     );
 
     gsap.fromTo(
@@ -50,7 +50,7 @@ const Testimonials = () => {
           start: "top bottom",
           end: "bottom -200",
         },
-      }
+      },
     );
   }, []);
   return (

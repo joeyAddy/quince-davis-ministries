@@ -25,7 +25,7 @@ const TestimonialsSliders = () => {
   const testimonials = translations.raw("testimonials");
 
   const plugin = React.useRef(
-    Autoplay({ delay: 10000, stopOnInteraction: true })
+    Autoplay({ delay: 10000, stopOnInteraction: true }),
   );
 
   React.useEffect(() => {
@@ -69,7 +69,7 @@ const TestimonialsSliders = () => {
                   className={cn(
                     "transition-all duration-300 delay-150 size-3 md:size-4 bg-white border border-gray-200 rounded-full cursor-pointer",
                     index + 1 === current &&
-                      "bg-green-500 border-none size-4 md:size-5"
+                      "bg-green-500 border-none size-4 md:size-5",
                   )}
                   onClick={() => {
                     api?.scrollTo(index);

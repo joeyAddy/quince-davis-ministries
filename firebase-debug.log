@@ -1,0 +1,21 @@
+[debug] [2024-11-17T17:35:10.362Z] ----------------------------------------------------------------------
+[debug] [2024-11-17T17:35:10.373Z] Command:       /Users/admin/.nvm/versions/node/v22.2.0/bin/node /Users/admin/.nvm/versions/node/v22.2.0/bin/firebase deploy --only functions
+[debug] [2024-11-17T17:35:10.374Z] CLI Version:   13.25.0
+[debug] [2024-11-17T17:35:10.374Z] Platform:      darwin
+[debug] [2024-11-17T17:35:10.375Z] Node Version:  v22.2.0
+[debug] [2024-11-17T17:35:10.375Z] Time:          Sun Nov 17 2024 18:35:10 GMT+0100 (West Africa Standard Time)
+[debug] [2024-11-17T17:35:10.377Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-11-17T17:35:10.713Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-11-17T17:35:10.714Z] > authorizing via signed-in user (chatwithjohnjoseph@gmail.com)
+[debug] [2024-11-17T17:35:10.715Z] [iam] checking project quicy-davies-ministries for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2024-11-17T17:35:10.717Z] Checked if tokens are valid: false, expires at: 1731865655453
+[debug] [2024-11-17T17:35:10.717Z] Checked if tokens are valid: false, expires at: 1731865655453
+[debug] [2024-11-17T17:35:10.717Z] > refreshing access token with scopes: []
+[debug] [2024-11-17T17:35:10.721Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2024-11-17T17:35:10.721Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-11-17T17:35:11.682Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2024-11-17T17:35:11.682Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-11-17T17:35:11.712Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/quicy-davies-ministries:testIamPermissions [none]
+[debug] [2024-11-17T17:35:11.713Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/quicy-davies-ministries:testIamPermissions x-goog-quota-user=projects/quicy-davies-ministries
+[debug] [2024-11-17T17:35:11.713Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/quicy-davies-ministries:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}

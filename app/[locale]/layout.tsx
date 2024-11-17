@@ -43,7 +43,7 @@ export default async function LocaleLayout({
       <body
         className={cn(
           "min-h-screen bg-background font-sans antialiased max-w-full",
-          fontSans.variable
+          fontSans.variable,
         )}
       >
         <NextIntlClientProvider messages={messages}>

@@ -36,7 +36,7 @@ const Donate = () => {
             start: "top bottom",
             end: "bottom -200",
           },
-        }
+        },
       );
     }
   }, []);

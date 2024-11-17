@@ -22,7 +22,7 @@ const HeroImageSlider = () => {
   const [count, setCount] = React.useState(0);
 
   const plugin = React.useRef(
-    Autoplay({ delay: 3000, stopOnInteraction: true })
+    Autoplay({ delay: 3000, stopOnInteraction: true }),
   );
 
   React.useEffect(() => {
@@ -81,7 +81,7 @@ const HeroImageSlider = () => {
           <span
             className={cn(
               "transition-all duration-300 delay-150 size-4 bg-white/60 border border-gray-200/70 rounded-full cursor-pointer",
-              index + 1 === current && "bg-green-500/60 border-none size-5"
+              index + 1 === current && "bg-green-500/60 border-none size-5",
             )}
             onClick={() => {
               api?.scrollTo(index);
