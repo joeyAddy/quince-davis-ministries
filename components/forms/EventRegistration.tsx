@@ -35,7 +35,7 @@ const EventRegistration = ({ event }: { event: Event }) => {
           address: 'info@quincydaviesministries.com',
         },
       ],
-      message: `I need more information about ${event?.title}`,
+      message: `Hello, I'm ${formData.name}. I need more information about ${event?.title}. Here is my email so you can contact me: ${formData.email}`,
       subject: `Quincy Davies Ministries - ${event?.title}`,
     };
 

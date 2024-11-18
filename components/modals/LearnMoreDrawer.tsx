@@ -81,7 +81,9 @@ const LearnMoreModal = ({
           address: 'info@quincydaviesministries.com',
         },
       ],
-      message: formData.message,
+      message:
+        `Hi, here is my email so you can contact me: ${formData.email}` +
+        formData.message,
       subject: formData.subject,
     };
 
