@@ -32,12 +32,23 @@ import {
 const LearnMoreModal = ({
   open,
   setOpen,
+  isChristmasMoment = false,
 }: {
   open: boolean;
   setOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  isChristmasMoment?: boolean;
 }) => {
   const translations = useTranslations();
   const services: Service[] = translations.raw('services');
+
+  let defaultOption: Service | undefined = undefined;
+
+  if (isChristmasMoment) {
+    const christmasMoment = services.find((service) =>
+      service.title.includes('christmas'),
+    );
+    defaultOption = christmasMoment;
+  }
 
   const [formData, setFormData] = useState({
     name: '',
@@ -90,12 +101,7 @@ const LearnMoreModal = ({
   };
 
   return (
-    <Dialog open={open} onOpenChange={handleOpenChange}>
-      <DialogTrigger asChild>
-        <Button variant="outline">
-          {translations('drawer.learnMore.title')}
-        </Button>
-      </DialogTrigger>
+    <Dialog defaultOpen={false} open={open} onOpenChange={handleOpenChange}>
       <DialogContent className="sm:max-w-md">
         <DialogHeader>
           <DialogTitle>{translations('drawer.learnMore.title')}</DialogTitle>
@@ -123,6 +129,7 @@ const LearnMoreModal = ({
           />
 
           <Select
+            defaultValue={defaultOption?.title}
             onValueChange={(value) =>
               setFormData({ ...formData, subject: value })
             }
@@ -135,6 +142,7 @@ const LearnMoreModal = ({
             <SelectContent>
               <SelectGroup>
                 <SelectLabel>{translations('navigation.services')}</SelectLabel>
+
                 {services.map((service) => (
                   <SelectItem key={service.title} value={service.title}>
                     {service.title}

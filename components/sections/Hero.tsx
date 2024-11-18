@@ -1,14 +1,14 @@
-"use client";
+'use client';
 
-import React, { useEffect, useState } from "react";
-import Navbar from "../Navbar";
-import MobileNavbar from "../MobileNavbar";
-import NewsLetterDrawer from "../modals/NewsLetterDrawer";
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/all";
-import HeroImageSlider from "../sliders/HeroImageSlider";
-import { useLocale, useTranslations } from "next-intl";
+import React, { useEffect, useState } from 'react';
+import Navbar from '../Navbar';
+import MobileNavbar from '../MobileNavbar';
+import NewsLetterDrawer from '../modals/NewsLetterDrawer';
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/all';
+import HeroImageSlider from '../sliders/HeroImageSlider';
+import { useLocale, useTranslations } from 'next-intl';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -19,7 +19,7 @@ const Hero = () => {
 
   const locale = useLocale();
 
-  const t = useTranslations("heroSection");
+  const t = useTranslations('heroSection');
 
   useEffect(() => {
     setTimeout(() => {
@@ -29,7 +29,7 @@ const Hero = () => {
 
   useGSAP(() => {
     gsap.fromTo(
-      ".split-text",
+      '.split-text',
       {
         opacity: 0,
         x: 50,
@@ -39,11 +39,11 @@ const Hero = () => {
         x: 0,
         delay: 0.7,
         stagger: 0.1,
-        ease: "power1.inOut",
+        ease: 'power1.inOut',
       },
     );
     gsap.fromTo(
-      ".para",
+      '.para',
       {
         opacity: 0,
         y: 50,
@@ -53,12 +53,12 @@ const Hero = () => {
         y: 0,
         delay: 1.5,
         stagger: 0.1,
-        ease: "power1.inOut",
+        ease: 'power1.inOut',
       },
     );
 
     gsap.fromTo(
-      ".main-text",
+      '.main-text',
       {
         opacity: 0,
         scale: 1.5,
@@ -67,12 +67,12 @@ const Hero = () => {
         opacity: 1,
         scale: 1,
         delay: 1,
-        ease: "power1.inOut",
+        ease: 'power1.inOut',
       },
     );
 
     gsap.fromTo(
-      ".summary-text",
+      '.summary-text',
       {
         opacity: 0,
         scale: 1.5,
@@ -81,7 +81,7 @@ const Hero = () => {
         opacity: 1,
         scale: 1,
         delay: 1.7,
-        ease: "power1.inOut",
+        ease: 'power1.inOut',
       },
     );
   }, []);
@@ -105,13 +105,13 @@ const Hero = () => {
         />
         <div className="pt-16 h-1/2 md:py-20 max-md:gap-y-4 gap-y-6 flex flex-col items-center max-md:px-4 flex-1 justify-center">
           <h3 className="text-white font-extralight text-3xl lg:text-5xl uppercase text-center main-text leading-tight">
-            {t("welcome")}
+            {t('welcome')}
           </h3>
-          <h1 className="text-white text-5xl lg:text-8xl font-extrabold text-center para uppercase leading-tight">
+          <h1 className="text-white text-5xl lg:text-7xl font-extrabold text-center para uppercase leading-tight">
             Quincy Davies Ministries
           </h1>
           <p className="text-white max-d:text-base text-xl text-center summary-text">
-            {t("summary")}
+            {t('summary')}
           </p>
         </div>
       </div>

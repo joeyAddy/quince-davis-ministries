@@ -1,18 +1,18 @@
-"use client";
-import React, { useState } from "react";
-import { Input } from "../ui/input";
-import { Button } from "../ui/button";
-import { FaSpinner } from "react-icons/fa";
-import axios from "axios";
-import toast from "react-hot-toast";
-import { Event } from "@/constants";
+'use client';
+import React, { useState } from 'react';
+import { Input } from '../ui/input';
+import { Button } from '../ui/button';
+import { FaSpinner } from 'react-icons/fa';
+import axios from 'axios';
+import toast from 'react-hot-toast';
+import { emailUrl, Event } from '@/constants';
 
 const EventRegistration = ({ event }: { event: Event }) => {
   const [isLoading, setIsLoading] = useState(false);
 
   const [formData, setFormData] = useState({
-    name: "",
-    email: "",
+    name: '',
+    email: '',
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -28,14 +28,11 @@ const EventRegistration = ({ event }: { event: Event }) => {
     setIsLoading(true);
 
     const data = {
-      sender: {
-        name: formData.name,
-        address: formData.email,
-      },
+      sender: 'info',
       receipient: [
         {
-          name: "Quincy Davies Ministries",
-          address: "chatwithjohnjoseph@gmail.com",
+          name: 'Quincy Davies Ministries',
+          address: 'info@quincydaviesministries.com',
         },
       ],
       message: `I need more information about ${event?.title}`,
@@ -43,12 +40,12 @@ const EventRegistration = ({ event }: { event: Event }) => {
     };
 
     try {
-      const response = await axios.post("/api/email", { ...data });
-      console.log("EMAIL SENDING RESPONSE", response);
-      toast.success("Email sent successfully! We will get back to you soon.");
+      const response = await axios.post(emailUrl, { ...data });
+      console.log('EMAIL SENDING RESPONSE', response);
+      toast.success('Email sent successfully! We will get back to you soon.');
     } catch (error) {
       console.log(error);
-      toast.error("Something went wrong. Please try again");
+      toast.error('Something went wrong. Please try again');
     } finally {
       setIsLoading(false);
     }
@@ -88,7 +85,7 @@ const EventRegistration = ({ event }: { event: Event }) => {
           {isLoading ? (
             <FaSpinner className="text-center animate-spin" />
           ) : (
-            "Learn more"
+            'Learn more'
           )}
         </Button>
       </form>
