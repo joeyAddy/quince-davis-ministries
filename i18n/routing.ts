@@ -1,18 +1,18 @@
-import { createLocalizedPathnamesNavigation } from "next-intl/navigation";
-import { defineRouting } from "next-intl/routing";
+import { createLocalizedPathnamesNavigation } from 'next-intl/navigation';
+import { defineRouting } from 'next-intl/routing';
 
 export const routing = defineRouting({
-  localePrefix: "always", // Ensures the locale is always prefixed in the URL
-  locales: ["en", "ge"], // Available locales
-  defaultLocale: "en", // Default locale
+  localePrefix: 'always', // Ensures the locale is always prefixed in the URL
+  locales: ['en', 'ge'], // Available locales
+  defaultLocale: 'en', // Default locale
   pathnames: {
-    "/": "/",
-    "/programmes": "/programmes",
-    "/programmes/[id]": "/programmes/[id]",
-    "/donate": "/donate",
-    "/services": "/services",
-    "/contact-us": "/contact-us",
-    "/about-us": "/about-us",
+    '/': '/',
+    '/programmes': '/programmes',
+    '/programmes/[id]': '/programmes/[id]',
+    '/support-us': '/support-us',
+    '/services': '/services',
+    '/contact-us': '/contact-us',
+    '/about-us': '/about-us',
   },
 });
 
