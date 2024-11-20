@@ -48,7 +48,7 @@ const ChristmasMomentSlider = () => {
           </CarouselItem>
         ))}
       </CarouselContent>
-      <div className="max-lg:hidden">
+      <div>
         <span
           onClick={() => api?.scrollNext()}
           className="absolute z-[50] top-1/2 right-10 rounded-full p-3 hover:scale-110 transition duration-300 bg-black/50 cursor-pointer"

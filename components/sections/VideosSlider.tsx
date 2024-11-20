@@ -1,63 +1,59 @@
 'use client';
 
+import * as React from 'react';
+import {
+  Carousel,
+  type CarouselApi,
+  CarouselContent,
+  CarouselItem,
+} from '@/components/ui/carousel';
+import Autoplay from 'embla-carousel-autoplay';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 import Video from 'next-video';
-import getStarted from '@/videos/get-started.mp4';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/all';
-import { useGSAP } from '@gsap/react';
+import video1 from '@/videos/video1.mp4';
+import video2 from '@/videos/video2.mp4';
 
-gsap.registerPlugin(ScrollTrigger);
+const VideoSlider = () => {
+  const [api, setApi] = React.useState<CarouselApi>();
 
-const VideosSlider = () => {
-  useGSAP(() => {
-    gsap.fromTo(
-      '.video-title',
-      {
-        y: 50,
-        opacity: 0,
-      },
-      {
-        y: 0,
-        opacity: 1,
-        duration: 0.5,
-        ease: 'power1.inOut',
-        scrollTrigger: {
-          trigger: '.events-title',
-          start: 'top bottom',
-          end: 'bottom -200',
-        },
-      },
-    );
-    gsap.fromTo(
-      '.video-content',
-      {
-        y: 50,
-        opacity: 0,
-      },
-      {
-        y: 0,
-        opacity: 1,
-        duration: 0.5,
-        delay: 0.7,
-        ease: 'power1.inOut',
-        scrollTrigger: {
-          trigger: '.events-content',
-          start: 'top bottom',
-          end: 'bottom -200',
-        },
-      },
-    );
-  }, []);
+  const plugin = React.useRef(
+    Autoplay({ delay: 4000, stopOnInteraction: true }),
+  );
+
   return (
-    <div className="py-10 lg:py-20 px-6 md:px-12 lg:px-48 grid lg:grid-cols-2 gap-6 lg:gap-10 video-content">
-      <div className="p-4 bg-black rounded-3xl shadow-2xl">
-        <Video src={getStarted} />
+    <Carousel
+      setApi={setApi}
+      opts={{
+        align: 'start',
+        loop: true,
+      }}
+      // @ts-ignore
+      plugins={[plugin.current]}
+      className="!size-full testimonials"
+    >
+      <CarouselContent>
+        {[video1, video2].map((video, index) => (
+          <CarouselItem className="h-[70vh]" key={index}>
+            <Video style={{ height: '100%' }} src={video} />
+          </CarouselItem>
+        ))}
+      </CarouselContent>
+      <div>
+        <span
+          onClick={() => api?.scrollNext()}
+          className="absolute z-[50] top-1/2 right-10 rounded-full p-3 hover:scale-110 transition duration-300 bg-black/50 cursor-pointer"
+        >
+          <ChevronRight className="text-white" />
+        </span>
+        <span
+          onClick={() => api?.scrollPrev()}
+          className="absolute z-[50] top-1/2 left-10 rounded-full p-3 hover:scale-110 transition duration-300 bg-black/50 cursor-pointer"
+        >
+          <ChevronLeft className="text-white" />
+        </span>
       </div>
-      <div className="p-4 bg-black rounded-3xl shadow-2xl">
-        <Video src={getStarted} />
-      </div>
-    </div>
+    </Carousel>
   );
 };
 
-export default VideosSlider;
+export default VideoSlider;

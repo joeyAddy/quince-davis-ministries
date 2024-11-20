@@ -38,7 +38,7 @@ export default function Home({
       <Events />
       <Donate />
       <Testimonials />
-      {/* <VideosSlider /> */}
+      <VideosSlider />
       <ChrismasMoments />
       <Footer />
     </main>

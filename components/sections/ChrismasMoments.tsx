@@ -71,7 +71,7 @@ const ChrismasMoments = () => {
         <div className="lg:flex-[0.4] lg:max-w-[40%] moment-image">
           <ChristmasMomentSlider />
         </div>
-        <div className="space-y-6 flex-[0.6]" ref={contentRef}>
+        <div className="space-y-9 flex-[0.6]" ref={contentRef}>
           <SectionTitle
             title={translations('christmas.title')}
             subTitle={translations('christmas.text')}
