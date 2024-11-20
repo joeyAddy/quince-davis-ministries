@@ -194,6 +194,12 @@ export const heroImages = [
   '/assets/images/him teaching/IMG_20231007_164207.jpg',
 ];
 
+export const christmasMomentsImages = [
+  '/assets/images/christmas-moments.jpg',
+  '/assets/images/christmas-moments1.jpeg',
+  '/assets/images/christmas-moments2.jpeg',
+];
+
 export interface Event {
   id: number;
   images: string[];

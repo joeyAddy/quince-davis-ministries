@@ -7,10 +7,11 @@ import {
   CarouselContent,
   CarouselItem,
 } from '@/components/ui/carousel';
-import { heroImages } from '@/constants';
+import { christmasMomentsImages } from '@/constants';
 import Autoplay from 'embla-carousel-autoplay';
 import Image from 'next/image';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { cn } from '@/lib/utils';
 
 const ChristmasMomentSlider = () => {
   const [api, setApi] = React.useState<CarouselApi>();
@@ -31,14 +32,18 @@ const ChristmasMomentSlider = () => {
       className="!size-full testimonials"
     >
       <CarouselContent>
-        {heroImages.map((image, index) => (
+        {christmasMomentsImages.map((image, index) => (
           <CarouselItem key={index}>
             <Image
-              src="/assets/images/christmas-moments.jpg"
+              src={image}
               alt="story image"
               height={1500}
               width={1000}
-              className="h-[600px] md:object-cover w-full"
+              className={cn(
+                'h-[700px] md:object-fill w-full',
+                index === 1 && 'md:object-fill',
+                index === 2 && 'md:object-fill',
+              )}
             />
           </CarouselItem>
         ))}
