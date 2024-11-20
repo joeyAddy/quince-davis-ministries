@@ -1,17 +1,17 @@
 // pages/[locale]/(home)/page.tsx
 
-import ChrismasMoments from "@/components/sections/ChrismasMoments";
-import Donate from "@/components/sections/Donate";
-import Events from "@/components/sections/Events";
-import Footer from "@/components/sections/Footer";
-import Hero from "@/components/sections/Hero";
-import Testimonials from "@/components/sections/Testimonials";
-import VideosSlider from "@/components/sections/VideosSlider";
-import { locales } from "@/i18n/config";
-import { unstable_setRequestLocale } from "next-intl/server";
+import ChrismasMoments from '@/components/sections/ChrismasMoments';
+import Donate from '@/components/sections/Donate';
+import Events from '@/components/sections/Events';
+import Footer from '@/components/sections/Footer';
+import Hero from '@/components/sections/Hero';
+import Testimonials from '@/components/sections/Testimonials';
+import VideosSlider from '@/components/sections/VideosSlider';
+import { locales } from '@/i18n/config';
+import { unstable_setRequestLocale } from 'next-intl/server';
 
 // Define the pages you want to generate statically for each locale
-const pages = ["", "events", "services", "contact-us", "about-us"];
+const pages = ['', 'events', 'services', 'contact-us', 'about-us'];
 
 export async function generateStaticParams() {
   // Generate params for each locale and each page
@@ -38,7 +38,7 @@ export default function Home({
       <Events />
       <Donate />
       <Testimonials />
-      <VideosSlider />
+      {/* <VideosSlider /> */}
       <ChrismasMoments />
       <Footer />
     </main>

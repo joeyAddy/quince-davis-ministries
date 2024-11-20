@@ -174,7 +174,7 @@ export const ministers = [
   {
     image: '/assets/images/darko.jpeg',
     title: 'Darko Milo',
-    text: 'Chairman',
+    text: 'Treasurer',
   },
   {
     image: '/assets/images/alex.jpeg',

@@ -10,6 +10,7 @@ import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/all';
 import { useTranslations } from 'next-intl';
 import LearnMoreDrawer from '@/components/modals/LearnMoreDrawer';
+import ChristmasMomentSlider from '../sliders/ChristmasMomentsSlider';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -68,13 +69,7 @@ const ChrismasMoments = () => {
 
       <div className="py-10 lg:py-20 px-6 md:px-12 lg:px-48 flex gap-10 max-lg:flex-col">
         <div className="lg:flex-[0.4] lg:max-w-[40%] moment-image">
-          <Image
-            src="/assets/images/christmas-moments.jpg"
-            alt="story image"
-            height={1500}
-            width={1000}
-            className="h-[600px] md:object-cover w-full"
-          />
+          <ChristmasMomentSlider />
         </div>
         <div className="space-y-6 flex-[0.6]" ref={contentRef}>
           <SectionTitle
