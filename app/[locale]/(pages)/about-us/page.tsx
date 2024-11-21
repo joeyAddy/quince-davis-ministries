@@ -27,14 +27,14 @@ const AboutUs = async ({
           <p>{translations('aboutUsPage.description')}</p>
           <div className="grid lg:grid-cols-2 gap-10">
             <Image
-              src="/assets/images/about-us-filler-img.jpg"
+              src="https://res.cloudinary.com/dxu0xbfen/image/upload/v1732137644/about-us-filler-img_gwxknk.jpg"
               alt="About image"
               height={1000}
               width={500}
               className="max-h-40 max-lg:w-full"
             />
             <Image
-              src="/assets/images/worshipping-hands.jpg"
+              src="https://res.cloudinary.com/dxu0xbfen/image/upload/v1732137657/worshipping-hands_ko91mq.jpg"
               alt="About image"
               height={1000}
               width={500}
@@ -43,7 +43,7 @@ const AboutUs = async ({
           </div>
         </div>
         <div className="flex-[0.5] relative">
-          <div className="lg:h-[95%] bg-center bg-cover flex-[0.5] bg-[url(/assets/images/heaven.jpg)] relative"></div>
+          <div className="lg:h-[95%] bg-center bg-cover flex-[0.5] bg-[url(https://res.cloudinary.com/dxu0xbfen/image/upload/v1732137671/heaven_i5volw.jpg)] relative"></div>
           <div className="rounded-lg lg:absolute p-5 text-white left-10 bottom-0 w-full h-fit bg-green-500 max-lg:mt-10">
             <p>{translations('aboutUsPage.scripture')}</p>
           </div>

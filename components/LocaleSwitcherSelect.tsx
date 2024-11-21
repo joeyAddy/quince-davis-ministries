@@ -1,19 +1,15 @@
-"use client";
+'use client';
 
-import clsx from "clsx";
-import { useParams } from "next/navigation";
-import { ChangeEvent, ReactNode, useTransition } from "react";
-import { Locale, usePathname, useRouter } from "@/i18n/routing";
-import { ChevronDown } from "lucide-react";
+import { useParams } from 'next/navigation';
+import { ReactNode, useTransition } from 'react';
+import { Locale, usePathname, useRouter } from '@/i18n/routing';
 import {
   Select,
   SelectContent,
   SelectGroup,
-  SelectItem,
-  SelectLabel,
   SelectTrigger,
   SelectValue,
-} from "./ui/select";
+} from './ui/select';
 
 type Props = {
   children: ReactNode;

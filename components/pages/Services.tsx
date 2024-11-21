@@ -1,12 +1,12 @@
-"use client";
+'use client';
 
-import LearnMoreDrawer from "@/components/modals/LearnMoreDrawer";
-import PageHeader from "@/components/PageHeader";
-import { Button } from "@/components/ui/button";
-import { Service } from "@/constants";
-import { useTranslations } from "next-intl";
-import Image from "next/image";
-import React, { useState } from "react";
+import LearnMoreDrawer from '@/components/modals/LearnMoreDrawer';
+import PageHeader from '@/components/PageHeader';
+import { Button } from '@/components/ui/button';
+import { Service } from '@/constants';
+import { useTranslations } from 'next-intl';
+import Image from 'next/image';
+import React, { useState } from 'react';
 
 const Services = () => {
   const translations = useTranslations();
@@ -15,52 +15,52 @@ const Services = () => {
 
   const t = useTranslations();
 
-  const services = t.raw("services");
+  const services = t.raw('services');
 
   return (
     <>
       <LearnMoreDrawer open={open} setOpen={setOpen} />
       <div>
-        <PageHeader title={translations("navigation.services")} />
+        <PageHeader title={translations('navigation.services')} />
         <div className="grid lg:grid-cols-4 gap-10 px-6 md:px-12 lg:px-48 py-10 md:py-12 lg:py-20">
           <div className="col-span-2 grid md:grid-cols-2 gap-10 max-h-fit h-fit">
             <Image
-              src="/assets/images/him teaching/IMG_20230421_193411.jpg"
+              src="https://res.cloudinary.com/dxu0xbfen/image/upload/v1732137764/IMG_20230421_193411_hjql2h.jpg"
               alt="service image"
               height={400}
               width={400}
               className="object-cover rounded-3xl hover:scale-110 transition ease-in-out delay-100 duration-300 min-h-56"
             />
             <Image
-              src="/assets/images/him teaching/IMG-20240420-WA0032.jpg"
+              src="https://res.cloudinary.com/dxu0xbfen/image/upload/v1732137650/IMG-20240420-WA0032_t8ech5.jpg"
               alt="service image"
               height={400}
               width={400}
               className="object-cover rounded-3xl hover:scale-110 transition ease-in-out delay-100 duration-300 min-h-56"
             />
             <Image
-              src="/assets/images/him teaching/IMG_20230902_160831.jpg"
+              src="https://res.cloudinary.com/dxu0xbfen/image/upload/v1732137711/IMG_20230902_160831_kznlig.jpg"
               alt="service image"
               height={400}
               width={400}
               className="object-cover rounded-3xl hover:scale-110 transition ease-in-out delay-100 duration-300 min-h-56"
             />
             <Image
-              src="/assets/images/him teaching/IMG_20230220_175945.jpg"
+              src="https://res.cloudinary.com/dxu0xbfen/image/upload/v1732137657/IMG_20230220_175945_rbk9gk.jpg"
               alt="service image"
               height={400}
               width={400}
               className="object-cover rounded-3xl hover:scale-110 transition ease-in-out delay-100 duration-300 min-h-56"
             />
             <Image
-              src="/assets/images/him teaching/IMG_20231007_164207.jpg"
+              src="https://res.cloudinary.com/dxu0xbfen/image/upload/v1732137668/IMG_20231007_164207_shxag5.jpg"
               alt="service image"
               height={400}
               width={400}
               className="object-cover rounded-3xl hover:scale-110 transition ease-in-out delay-100 duration-300 min-h-56"
             />
             <Image
-              src="/assets/images/him teaching/IMG-20240420-WA0033.jpg"
+              src="https://res.cloudinary.com/dxu0xbfen/image/upload/v1732137650/IMG-20240420-WA0033_z4da2r.jpg"
               alt="service image"
               height={400}
               width={400}
@@ -69,12 +69,12 @@ const Services = () => {
           </div>
           <div className="space-y-5 col-span-2">
             <h3 className="font-bold text-3xl">
-              {translations("servicesPage.mainTitle")}
+              {translations('servicesPage.mainTitle')}
             </h3>
             <ul className="list-disc ml-5 space-y-6">
               {services.map((service: Service) => (
                 <li key={service.title}>
-                  <span className="font-bold">{service.title}:</span>{" "}
+                  <span className="font-bold">{service.title}:</span>{' '}
                   {service.text}
                 </li>
               ))}
@@ -116,7 +116,7 @@ const Services = () => {
                 size="lg"
                 onClick={() => setOpen(true)}
               >
-                {translations("servicesPage.buttonText")}
+                {translations('servicesPage.buttonText')}
               </Button>
             </div>
           </div>

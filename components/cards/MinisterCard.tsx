@@ -1,6 +1,5 @@
-import Image from "next/image";
-import React from "react";
-import { Button } from "../ui/button";
+import Image from 'next/image';
+import React from 'react';
 
 interface MinisterCardProps {
   image: string;

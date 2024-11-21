@@ -110,7 +110,7 @@ const Hero = () => {
           <h1 className="text-white text-5xl lg:text-7xl font-extrabold text-center para uppercase leading-tight">
             Quincy Davies Ministries
           </h1>
-          <p className="text-white max-d:text-base text-xl text-center summary-text">
+          <p className="text-white max-d:text-base text-xl text-center summary-text lg:w-2/3">
             {t('summary')}
           </p>
         </div>

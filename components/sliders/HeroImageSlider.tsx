@@ -1,20 +1,17 @@
-"use client";
+'use client';
 
-import * as React from "react";
+import * as React from 'react';
 import {
   Carousel,
   type CarouselApi,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
-import TestimonialCard from "../cards/TestimonialCard";
-import { heroImages, testimonials } from "@/constants";
-import Autoplay from "embla-carousel-autoplay";
-import { cn } from "@/lib/utils";
-import Image from "next/image";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+} from '@/components/ui/carousel';
+import { heroImages } from '@/constants';
+import Autoplay from 'embla-carousel-autoplay';
+import { cn } from '@/lib/utils';
+import Image from 'next/image';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const HeroImageSlider = () => {
   const [api, setApi] = React.useState<CarouselApi>();
@@ -33,7 +30,7 @@ const HeroImageSlider = () => {
     setCount(api.scrollSnapList().length);
     setCurrent(api.selectedScrollSnap() + 1);
 
-    api.on("select", () => {
+    api.on('select', () => {
       setCurrent(api.selectedScrollSnap() + 1);
     });
   }, [api]);
@@ -42,7 +39,7 @@ const HeroImageSlider = () => {
     <Carousel
       setApi={setApi}
       opts={{
-        align: "start",
+        align: 'start',
         loop: true,
       }}
       // @ts-ignore
@@ -80,8 +77,8 @@ const HeroImageSlider = () => {
         {Array.from({ length: count }).map((_, index) => (
           <span
             className={cn(
-              "transition-all duration-300 delay-150 size-4 bg-white/60 border border-gray-200/70 rounded-full cursor-pointer",
-              index + 1 === current && "bg-green-500/60 border-none size-5",
+              'transition-all duration-300 delay-150 size-4 bg-white/60 border border-gray-200/70 rounded-full cursor-pointer',
+              index + 1 === current && 'bg-green-500/60 border-none size-5',
             )}
             onClick={() => {
               api?.scrollTo(index);

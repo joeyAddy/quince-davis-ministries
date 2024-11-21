@@ -8,10 +8,8 @@ import {
   CarouselItem,
 } from '@/components/ui/carousel';
 import Autoplay from 'embla-carousel-autoplay';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
-import Video from 'next-video';
-import video1 from '@/videos/video1.mp4';
-import video2 from '@/videos/video2.mp4';
+import { ChevronLeft, ChevronRight, PlayIcon } from 'lucide-react';
+import ReactPlayer from 'react-player';
 
 const VideoSlider = () => {
   const [api, setApi] = React.useState<CarouselApi>();
@@ -32,9 +30,27 @@ const VideoSlider = () => {
       className="!size-full testimonials"
     >
       <CarouselContent>
-        {[video1, video2].map((video, index) => (
-          <CarouselItem className="h-[70vh]" key={index}>
-            <Video style={{ height: '100%' }} src={video} />
+        {[
+          'https://res.cloudinary.com/dxu0xbfen/video/upload/v1732137219/video1_dlappp.mp4',
+          'https://res.cloudinary.com/dxu0xbfen/video/upload/v1732138247/video2_wpyhz8.mp4',
+        ].map((video, index) => (
+          <CarouselItem className="lg:h-[70vh] w-full bg-black" key={index}>
+            <ReactPlayer
+              className="rounded-full [&>video]:object-fill"
+              controls
+              width="100%"
+              height="fit"
+              style={{ aspectRatio: '16/9', objectFit: 'fill' }}
+              url={video}
+              playIcon={
+                <div className="absolute top-[40%] left-[48%]">
+                  <button className="rounded-full bg-green-600 p-7">
+                    <PlayIcon className="text-white" />
+                  </button>
+                </div>
+              }
+              light={true}
+            />
           </CarouselItem>
         ))}
       </CarouselContent>

@@ -3,7 +3,6 @@
 import React, { useRef, useState } from 'react';
 import { Button } from '../ui/button';
 import SectionTitle from '../SectionTitle';
-import Image from 'next/image';
 import { Crown, Heart } from 'lucide-react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';

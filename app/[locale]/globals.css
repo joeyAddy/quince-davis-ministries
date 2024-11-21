@@ -1,17 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
 @layer utilities {
   .bg-section {
     background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-      url(/assets/images/main-bg.jpg);
+      url(https://res.cloudinary.com/dxu0xbfen/image/upload/v1732137644/main-bg_diqvdm.jpg);
   }
 
   .bg-section-contact {
     background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-      url(/assets/images/contact-form-bg.jpg);
+      url(https://res.cloudinary.com/dxu0xbfen/image/upload/v1732137581/contact-form-bg_zayvx9.jpg);
   }
   .main-btn-bg {
     @apply bg-green-500 hover:!bg-green-500/80;
@@ -20,7 +20,7 @@
   .parallax-footer {
     background-attachment: fixed;
     background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-      url(/assets/images/footer.jpg);
+      url(https://res.cloudinary.com/dxu0xbfen/image/upload/v1732137664/footer_ethwah.jpg);
     background-size: cover;
     background-repeat: no-repeat;
   }
@@ -28,7 +28,7 @@
   .parallax-services {
     background-attachment: fixed;
     background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-      url(/assets/images/services-bg.jpg);
+      url(https://res.cloudinary.com/dxu0xbfen/image/upload/v1732137662/services-bg_aye7ol.jpg);
     background-size: cover;
     background-repeat: no-repeat;
   }
@@ -36,25 +36,19 @@
   .parallax-donate {
     background-attachment: fixed;
     background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-      url(/assets/images/foundation.jpeg);
+      url(https://res.cloudinary.com/dxu0xbfen/image/upload/v1732137645/foundation_v9gdnk.jpg);
     background-repeat: no-repeat;
   }
 
-  .parallax-chrismas {
-    background-attachment: fixed;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-      url(/assets/images/chrismas-tree.jpg);
-  }
-
   .dancing-script-regular {
-    font-family: "Dancing Script", cursive;
+    font-family: 'Dancing Script', cursive;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
   }
 
   .dancing-script-bold {
-    font-family: "Dancing Script", cursive;
+    font-family: 'Dancing Script', cursive;
     font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;
@@ -63,10 +57,4 @@
   .color-hover-transition {
     @apply hover:text-green-500 transition-colors delay-75 duration-300;
   }
-}
-
-.next-video-container {
-  padding: 2px;
-  background-color: black;
-  border-radius: 20px;
 }

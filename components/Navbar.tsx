@@ -32,7 +32,9 @@ const Navbar = ({
       <div className="flex flex-row-reverse items-center">
         <Link href="/">
           <Image
-            src={'/assets/images/QDM MINISTRY LOGO BLACK.png'}
+            src={
+              'https://res.cloudinary.com/dxu0xbfen/image/upload/v1732137642/QDM_MINISTRY_LOGO_BLACK_tzny44.png'
+            }
             alt="logo"
             width={100}
             height={100}
