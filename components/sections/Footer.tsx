@@ -1,21 +1,21 @@
-"use client";
+'use client';
 
-import Link from "next/link";
-import React, { useState } from "react";
-import { GrStarOutline } from "react-icons/gr";
-import { Input } from "../ui/input";
-import { Button } from "../ui/button";
-import axios from "axios";
-import toast from "react-hot-toast";
-import { FaSpinner } from "react-icons/fa";
-import { useTranslations } from "next-intl";
+import React, { useState } from 'react';
+import { GrStarOutline } from 'react-icons/gr';
+import { Input } from '../ui/input';
+import { Button } from '../ui/button';
+import axios from 'axios';
+import toast from 'react-hot-toast';
+import { FaSpinner } from 'react-icons/fa';
+import { useTranslations } from 'next-intl';
+import { Link } from '@/i18n/routing';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const [isLoading, setIsLoading] = useState(false);
 
-  const [email, setEmail] = useState("");
+  const [email, setEmail] = useState('');
 
   const translations = useTranslations();
 
@@ -27,8 +27,8 @@ const Footer = () => {
 
     const data = {
       sender: {
-        name: "quincy Davies Ministries",
-        address: "chatwithjohnjoseph@gmail.com",
+        name: 'quincy Davies Ministries',
+        address: 'chatwithjohnjoseph@gmail.com',
       },
       receipient: [
         {
@@ -57,13 +57,13 @@ const Footer = () => {
         </div>
       </div>
     `,
-      subject: "Thank You for Subscribing!",
+      subject: 'Thank You for Subscribing!',
     };
 
     try {
-      const response = await axios.post("/api/email", { ...data });
-      console.log("EMAIL SENDING RESPONSE", response);
-      toast.success("Email sent successfully! We will get back to you soon.");
+      const response = await axios.post('/api/email', { ...data });
+      console.log('EMAIL SENDING RESPONSE', response);
+      toast.success('Email sent successfully! We will get back to you soon.');
 
       const inHouseEmailData = {
         sender: {
@@ -72,21 +72,21 @@ const Footer = () => {
         },
         receipient: [
           {
-            name: "Quincy Davies Ministries",
-            address: "chatwithjohnjoseph@gmail.com",
+            name: 'Quincy Davies Ministries',
+            address: 'chatwithjohnjoseph@gmail.com',
           },
         ],
         message: ` ${email} Just subscribed to news letter`,
         subject: `Quincy Davies Ministries - New subscriber`,
       };
-      await axios.post("/api/email", {
+      await axios.post('/api/email', {
         ...inHouseEmailData,
       });
     } catch (error) {
-      console.log("====================================");
+      console.log('====================================');
       console.log(error);
-      console.log("====================================");
-      toast.error("Something went wrong. Please try again");
+      console.log('====================================');
+      toast.error('Something went wrong. Please try again');
     } finally {
       setIsLoading(false);
     }
@@ -103,18 +103,18 @@ const Footer = () => {
                 <div className="flex items-center space-x-2">
                   <div className="h-1 bg-green-500 w-12" />
                   <h4 className="font-bold text-3xl">
-                    {translations("navigation.about")}
+                    {translations('navigation.about')}
                   </h4>
                 </div>
                 <p className="max-lg:w-full w-96">
-                  {translations("navigation.aboutText")}
+                  {translations('navigation.aboutText')}
                 </p>
               </div>
               <div className="space-y-4">
                 <div className="flex items-center space-x-2">
                   <div className="h-1 bg-green-500 w-12" />
                   <h4 className="font-bold text-3xl whitespace-nowrap">
-                    {translations("navigation.quickLinks")}
+                    {translations('navigation.quickLinks')}
                   </h4>
                 </div>
                 <ul className="space-y-4">
@@ -124,7 +124,7 @@ const Footer = () => {
                       className="flex items-center space-x-3 color-hover-transition"
                     >
                       <GrStarOutline />
-                      <span>{translations("navigation.aboutUs")}</span>
+                      <span>{translations('navigation.aboutUs')}</span>
                     </Link>
                   </li>
                   <li>
@@ -133,7 +133,7 @@ const Footer = () => {
                       className="flex items-center space-x-3 color-hover-transition"
                     >
                       <GrStarOutline />
-                      <span>{translations("navigation.contactUs")}</span>
+                      <span>{translations('navigation.contactUs')}</span>
                     </Link>
                   </li>
                 </ul>
@@ -143,17 +143,17 @@ const Footer = () => {
               <div className="flex items-center space-x-2">
                 <div className="h-1 bg-green-500 w-12" />
                 <h4 className="font-bold text-3xl whitespace-nowrap">
-                  {translations("navigation.newsLetter.title")}
+                  {translations('navigation.newsLetter.title')}
                 </h4>
               </div>
               <p className="max-lg:w-full w-64">
-                {translations("navigation.newsLetter.text")}
+                {translations('navigation.newsLetter.text')}
               </p>
               <div className="flex">
                 <Input
                   className="rounded-none rounded-tl-lg rounded-bl-lg h-12 text-black"
                   type="email"
-                  placeholder={translations("navigation.footerInput.email")}
+                  placeholder={translations('navigation.footerInput.email')}
                   onChange={(e) => {
                     setEmail(e.target.value);
                   }}
@@ -165,7 +165,7 @@ const Footer = () => {
                   {isLoading ? (
                     <FaSpinner className="text-center animate-spin" />
                   ) : (
-                    translations("navigation.footerInput.buttonText")
+                    translations('navigation.footerInput.buttonText')
                   )}
                 </Button>
               </div>
