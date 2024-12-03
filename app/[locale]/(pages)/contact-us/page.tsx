@@ -1,9 +1,9 @@
-import ContactUsForm from "@/components/forms/ContactUsForm";
-import PageHeader from "@/components/PageHeader";
-import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
-import React from "react";
+import ContactUsForm from '@/components/forms/ContactUsForm';
+import PageHeader from '@/components/PageHeader';
+import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
+import React from 'react';
 
-import { FaLocationDot } from "react-icons/fa6";
+import { FaLocationDot } from 'react-icons/fa6';
 
 const ContactUs = async ({
   params: { locale },
@@ -14,13 +14,13 @@ const ContactUs = async ({
   const translations = await getTranslations();
   return (
     <div>
-      <PageHeader title={translations("navigation.contactUs")} />
+      <PageHeader title={translations('navigation.contactUs')} />
 
       <div className="grid lg:grid-cols-3 gap-10 mx-6 md:mx-12 lg:mx-48 py-10">
         <div className="rounded-lg flex flex-col items-center justify-center text-white bg-section space-y-4 p-10">
           <FaLocationDot className="size-10 text-white" />
           <h5 className="text-2xl font-bold">
-            {translations("contactUsPage.location")}
+            {translations('contactUsPage.location')}
           </h5>
           <p className="text-center">
             Quincy Davies Ministries e.V @Unperfekhaus Essen
@@ -30,19 +30,20 @@ const ContactUs = async ({
         <div className="rounded-lg flex flex-col items-center justify-center text-white bg-section space-y-4 p-10">
           <FaLocationDot className="size-10 text-white" />
           <h5 className="text-2xl font-bold">
-            {" "}
-            {translations("contactUsPage.phoneNumber")}
+            {' '}
+            {translations('contactUsPage.phoneNumber')}
           </h5>
           <p className="text-center">+4915906607717</p>
         </div>
         <div className="rounded-lg flex flex-col items-center justify-center text-white bg-section space-y-4 p-10">
           <FaLocationDot className="size-10 text-white" />
           <h5 className="text-2xl font-bold">
-            {" "}
-            {translations("contactUsPage.email")}
+            {' '}
+            {translations('contactUsPage.email')}
           </h5>
           <p className="text-center">
-            info@example.com <br /> info@zegen.com
+            quincydaviesministries@gmail.com <br />{' '}
+            info@quincydaviesministries.com
           </p>
         </div>
       </div>

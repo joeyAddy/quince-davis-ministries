@@ -40,7 +40,7 @@ const ChristmasMomentSlider = () => {
               height={1500}
               width={1000}
               className={cn(
-                'h-[700px] md:object-fill w-full',
+                'h-[450px] md:h-[600px] lg:h-[700px] md:object-fill w-full',
                 index === 1 && 'md:object-fill',
                 index === 2 && 'md:object-fill',
               )}

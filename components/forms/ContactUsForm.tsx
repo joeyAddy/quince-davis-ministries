@@ -1,12 +1,13 @@
-"use client";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import axios from "axios";
-import { useTranslations } from "next-intl";
-import React, { useState } from "react";
-import toast from "react-hot-toast";
-import { FaSpinner } from "react-icons/fa";
+'use client';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import { emailUrl } from '@/constants';
+import axios from 'axios';
+import { useTranslations } from 'next-intl';
+import React, { useState } from 'react';
+import toast from 'react-hot-toast';
+import { FaSpinner } from 'react-icons/fa';
 
 const ContactUsForm = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -15,10 +16,10 @@ const ContactUsForm = () => {
 
   // State for form inputs
   const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-    subject: "",
+    name: '',
+    email: '',
+    message: '',
+    subject: '',
   });
 
   // Handle input changes
@@ -42,8 +43,8 @@ const ContactUsForm = () => {
       },
       receipient: [
         {
-          name: "Quincy Davies Ministries",
-          address: "chatwithjohnjoseph@gmail.com",
+          name: 'Quincy Davies Ministries',
+          address: 'info@quincydaviesministries.com',
         },
       ],
       message: formData.message,
@@ -51,14 +52,14 @@ const ContactUsForm = () => {
     };
 
     try {
-      const response = await axios.post("/api/email", { ...data });
-      console.log("EMAIL SENDING RESPONSE", response);
-      toast.success("Email sent successfully! We will get back to you soon.");
+      const response = await axios.post(emailUrl, { ...data });
+      console.log('EMAIL SENDING RESPONSE', response);
+      toast.success('Email sent successfully! We will get back to you soon.');
     } catch (error) {
-      console.log("====================================");
+      console.log('====================================');
       console.log(error);
-      console.log("====================================");
-      toast.error("Something went wrong. Please try again");
+      console.log('====================================');
+      toast.error('Something went wrong. Please try again');
     } finally {
       setIsLoading(false);
     }
@@ -71,7 +72,7 @@ const ContactUsForm = () => {
       <Input
         type="text"
         name="name"
-        placeholder={translations("contactUsPage.form.name")}
+        placeholder={translations('contactUsPage.form.name')}
         required
         className="h-12"
         value={formData.name}
@@ -80,7 +81,7 @@ const ContactUsForm = () => {
       <Input
         type="email"
         name="email"
-        placeholder={translations("contactUsPage.form.email")}
+        placeholder={translations('contactUsPage.form.email')}
         required
         className="h-12"
         value={formData.email}
@@ -89,14 +90,14 @@ const ContactUsForm = () => {
       <Input
         type="subject"
         name="subject"
-        placeholder={translations("contactUsPage.form.subject")}
+        placeholder={translations('contactUsPage.form.subject')}
         required
         className="h-12"
         value={formData.subject}
         onChange={handleChange}
       />
       <Textarea
-        placeholder={translations("contactUsPage.form.message")}
+        placeholder={translations('contactUsPage.form.message')}
         value={formData.message}
         onChange={(e) => {
           setFormData({
@@ -113,7 +114,7 @@ const ContactUsForm = () => {
         {isLoading ? (
           <FaSpinner className="text-center animate-spin" />
         ) : (
-          translations("contactUsPage.form.buttonText")
+          translations('contactUsPage.form.buttonText')
         )}
       </Button>
     </form>
