@@ -37,10 +37,7 @@ const ContactUsForm = () => {
     setIsLoading(true);
 
     const data = {
-      sender: {
-        name: formData.name,
-        address: formData.email,
-      },
+      sender: 'info',
       receipient: [
         {
           name: 'Quincy Davies Ministries',
