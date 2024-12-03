@@ -1,10 +1,10 @@
-import { Event, events } from "@/constants";
-import React from "react";
-import Image from "next/image";
-import EventRegistration from "@/components/forms/EventRegistration";
-import PageHeader from "@/components/PageHeader";
-import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
-import { locales } from "@/i18n/config";
+import { Event, events } from '@/constants';
+import React from 'react';
+import Image from 'next/image';
+import EventRegistration from '@/components/forms/EventRegistration';
+import PageHeader from '@/components/PageHeader';
+import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
+import { locales } from '@/i18n/config';
 
 export async function generateStaticParams() {
   // Generate params for every locale and event ID
@@ -28,14 +28,14 @@ const EventDetails = async ({
   const translations = await getTranslations();
 
   const event: Event = translations
-    .raw("events")
+    .raw('events')
     .find((event: Event) => event.id === parseInt(id as string));
 
   return (
     <div>
       <PageHeader
         title={event?.title!}
-        previousPage={translations("navigation.events")}
+        previousPage={translations('navigation.events')}
       />
       <div className="max-lg:w-full mx-auto container py-16 space-y-10">
         <div className="relative h-1/2">
@@ -96,7 +96,7 @@ const EventDetails = async ({
               <div className="rounded-bl-lg rounded-br-lg border-t-0 border-dotted border-4 py-5 divide-y">
                 <div className="flex items-center justify-between mx-4 lg:mx-10 py-4">
                   <p className="font-bold">Organizer:</p>
-                  <span>Quince Davies Minstries</span>
+                  <span>Quincy Davies Minstries</span>
                 </div>
                 {event?.start && (
                   <div className="flex items-center justify-between mx-4 lg:mx-10 py-4">
